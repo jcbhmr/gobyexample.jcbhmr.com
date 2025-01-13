@@ -1,5 +1,5 @@
 /*!
-https://github.com/rust-lang/mdBook/blob/master/src/theme/book.js
+https://github.com/rust-lang/mdBook/blob/618a2fa78b29b2dd848cf6b074c9a1ecffa48d68/src/theme/book.js
 Mozilla Public License, version 2.0
 TODO: Update this file every so often to keep it in sync with the original.
 CHANGES:
