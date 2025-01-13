@@ -1,0 +1,14 @@
+[book]
+authors = ["Jacob Hummer"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Go by Example"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/{path}"
+additional-css = ["theme/custom.css"]
+
+[output.html.playground]
+editable = true
