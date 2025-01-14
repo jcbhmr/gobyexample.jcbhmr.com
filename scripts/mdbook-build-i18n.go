@@ -1,7 +1,6 @@
+// 2>/dev/null; exec go run "$0" "$@"
 //go:build ignore
 
-// 2>/dev/null; exec go run "$0" "$@"
-//
 package main
 
 import (
