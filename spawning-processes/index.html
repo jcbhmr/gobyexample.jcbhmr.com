@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example: 프로세스 생성</title>
+    <link rel=stylesheet href="../site.css">
+  </head>
+  <script type="text/javascript">
+    if (window.location.host == "gobyexample.com") {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34996217-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+  <body>
+    <div class="example" id="spawning-processes">
+      <h2><a href="./">Go by Example</a>: 프로세스 생성</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>간혹 우리의 Go 프로그램이 다른 Go가 아닌 프로세스를 띄워야 할 때가 있습니다. 예를 들어, 이 페이지의 syntax highlighting은 <a href="http://pygments.org/"><code>pygmentize</code></a>를 Go 프로그램에서 띄우는 방식으로 <a href="https://github.com/mmcgrana/gobyexample/blob/master/tools/generate.go">구현</a>되었습니다. Go에서 다른 프로세스를 띄우는 몇 가지 예제를 살펴봅시다.</p>
+
+          </td>
+          <td class="code empty leading">
+	        
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;io/ioutil&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;os/exec&quot;</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>인자와 입력을 받지 않고 stdout에 아무거나 출력하는 간단한 커맨드에서 시작해봅시다. <code>exec.Command</code>는 외부 프로세스를 표현하기 위한 객체를 만들어주는 유용한 도구입니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">dateCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nx">Command</span><span class="p">(</span><span class="s">&quot;date&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>.Output</code>은 커맨드 실행과 종료 대기, 그리고 output을 가져오는데 사용되는 유용한 도구입니다. 에러가 없다면 <code>dateOut</code>에는 날짜 정보를 담은 바이트를 저장할 겁니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">dateOut</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dateCmd</span><span class="p">.</span><span class="nx">Output</span><span class="p">()</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&gt; date&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">dateOut</span><span class="p">))</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음으로는 데이터를 <code>stdin</code>으로 파이프하여 <code>stdout</code>에서 output을 가져오는 조금 더 복잡한 케이스를 살펴보도록 하겠습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">grepCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nx">Command</span><span class="p">(</span><span class="s">&quot;grep&quot;</span><span class="p">,</span> <span class="s">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>여기서는 명시적으로 input과 output을 파이프하여 프로세스를 시작하고, input에 데이터를 쓴 뒤 나오는 output을 가져오고, 프로세스 종료를 기다립니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">grepIn</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">grepCmd</span><span class="p">.</span><span class="nx">StdinPipe</span><span class="p">()</span>
+	<span class="nx">grepOut</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">grepCmd</span><span class="p">.</span><span class="nx">StdoutPipe</span><span class="p">()</span>
+	<span class="nx">grepCmd</span><span class="p">.</span><span class="nx">Start</span><span class="p">()</span>
+	<span class="nx">grepIn</span><span class="p">.</span><span class="nx">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;hello grep\ngoodbye grep&quot;</span><span class="p">))</span>
+	<span class="nx">grepIn</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+	<span class="nx">grepBytes</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">grepOut</span><span class="p">)</span>
+	<span class="nx">grepCmd</span><span class="p">.</span><span class="nx">Wait</span><span class="p">()</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>위의 예제에서는 에러 체크를 생략했지만, 모든 경우에 대해 <code>if err != nil</code> 패턴을 사용할 수 있습니다. 또한 우리가 위에서 <code>StdoutPipe</code>의 결과만 수집했지만, 정확히 같은 방법으로 <code>StderrPipe</code>의 결과도 수집할 수 있습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&gt; grep hello&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">grepBytes</span><span class="p">))</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>프로세스를 생성할 때 명시적으로 인자별로 구분된 인자 배열을 제공하거나, 전체 커맨드가 담긴 문자열 하나를 제공한다는 점을 기억하세요. 만약 전체 커맨드를 담은 문자열 하나로 프로세스를 생성하고 싶다면 <code>bash</code>의 <code>-c</code> 옵션을 사용하면 됩니다.</p>
+
+          </td>
+          <td class="code">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">lsCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nx">Command</span><span class="p">(</span><span class="s">&quot;bash&quot;</span><span class="p">,</span> <span class="s">&quot;-c&quot;</span><span class="p">,</span> <span class="s">&quot;ls -a -l -h&quot;</span><span class="p">)</span>
+	<span class="nx">lsOut</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">lsCmd</span><span class="p">.</span><span class="nx">Output</span><span class="p">()</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;&gt; ls -a -l -h&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">lsOut</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>생성된 프로그램은 우리가 커맨드라인에서 실행한 것과 정확히 똑같은 출력값을 반환합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> go run spawning-processes.go 
+<span class="gp">&gt;</span> date
+<span class="go">Wed Oct 10 09:53:11 PDT 2012</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">&gt;</span> grep hello
+<span class="go">hello grep</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">&gt;</span> ls -a -l -h
+<span class="go">drwxr-xr-x  4 mark 136B Oct 3 16:29 .</span>
+<span class="go">drwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..</span>
+<span class="go">-rw-r--r--  1 mark 1.3K Oct 3 16:28 spawning-processes.go</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        다음 예제: <a href="/gobyexample/execing-processes">프로세스 실행</a>.
+      </p>
+      
+      <p class="footer">
+        원작자 <a href="https://twitter.com/mmcgrana">@mmcgrana</a> | 번역 <a href="https://github.com/mingrammer">@mingrammer</a> | <a href="https://github.com/mingrammer/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      </p>
+  </div>
+  </body>
+</html>

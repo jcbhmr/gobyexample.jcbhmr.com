@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example: 커맨드라인 플래그</title>
+    <link rel=stylesheet href="../site.css">
+  </head>
+  <script type="text/javascript">
+    if (window.location.host == "gobyexample.com") {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34996217-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+  <body>
+    <div class="example" id="command-line-flags">
+      <h2><a href="./">Go by Example</a>: 커맨드라인 플래그</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p><a href="http://en.wikipedia.org/wiki/Command-line_interface#Command-line_option"><em>커맨드라인 플래그 (Command-line flags)</em></a>는 커맨드라인 프로그램에 옵션을 지정하는 일반적인 방법입니다. 예를 들어, <code>wc -l</code>에서 <code>-l</code>은 커맨드라인 플래그입니다.</p>
+
+          </td>
+          <td class="code empty leading">
+	        
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>Go는 기본적인 커맨드라인 플래그 파싱을 지원하는 <code>flag</code> 패키지를 제공합니다. 이 패키지를 사용하여 예제 커맨드라인 프로그램을 구현해보겠습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s">&quot;flag&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>기본적인 플래그 선언은 문자열, 정수, 그리고 불리언 옵션에서 사용 가능합니다. 다음은 <code>&quot;foo&quot;</code>를 기본값으로 하고 간단한 설명을 가진 <code>word</code>라는 문자열 플래그의 선언입니다. <code>flag.String</code> 함수는 문자열 포인터를 반환합니다 (문자열 값이 아님) 아래에서 이 포인터를 어떻게 사용하는지 살펴보겠습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">wordPtr</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">String</span><span class="p">(</span><span class="s">&quot;word&quot;</span><span class="p">,</span> <span class="s">&quot;foo&quot;</span><span class="p">,</span> <span class="s">&quot;a string&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음은 <code>word</code> 플래그 선언과 유사한 방법을 사용해 선언한 <code>numb</code>와 <code>fork</code> 플래그입니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">numbPtr</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Int</span><span class="p">(</span><span class="s">&quot;numb&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="s">&quot;an int&quot;</span><span class="p">)</span>
+	<span class="nx">boolPtr</span> <span class="o">:=</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Bool</span><span class="p">(</span><span class="s">&quot;fork&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="s">&quot;a bool&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>프로그램의 기존에 다른 곳에서 선언된 변수를 사용해 옵션을 선언하는 것도 가능합니다. 참고로 플래그 선언 함수에 변수의 포인터를 전달해야합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="kd">var</span> <span class="nx">svar</span> <span class="kt">string</span>
+	<span class="nx">flag</span><span class="p">.</span><span class="nx">StringVar</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">svar</span><span class="p">,</span> <span class="s">&quot;svar&quot;</span><span class="p">,</span> <span class="s">&quot;bar&quot;</span><span class="p">,</span> <span class="s">&quot;a string var&quot;</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>모든 플래그가 선언되면, 커맨드라인 파싱을 실행하기 위해 <code>flag.Parse()</code>을 호출합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">flag</span><span class="p">.</span><span class="nx">Parse</span><span class="p">()</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음은 파싱된 옵션들과 후미에 위치하는 인자들을 덤프합니다. 참고로 실제 옵션값을 얻기 위해선 <code>*wordPtr</code>와 같이 포인터를 역참조 해야합니다.</p>
+
+          </td>
+          <td class="code">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;word:&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">wordPtr</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;numb:&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">numbPtr</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;fork:&quot;</span><span class="p">,</span> <span class="o">*</span><span class="nx">boolPtr</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;svar:&quot;</span><span class="p">,</span> <span class="nx">svar</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;tail:&quot;</span><span class="p">,</span> <span class="nx">flag</span><span class="p">.</span><span class="nx">Args</span><span class="p">())</span>
+<span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>커맨드라인 플래그 프로그램을 실험하려면 우선 이를 컴파일한 후 직접 결과 바이너리를 실행하는 것이 가장 좋습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> go build command-line-flags.go
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>처음엔 모든 플래그에 값을 주어 프로그램을 실행해 봅시다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -word<span class="o">=</span>opt -numb<span class="o">=</span><span class="m">7</span> -fork -svar<span class="o">=</span>flag
+<span class="go">word: opt</span>
+<span class="go">numb: 7</span>
+<span class="go">fork: true</span>
+<span class="go">svar: flag</span>
+<span class="go">tail: []</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>참고로 생략된 플래그들은 자동으로 기본값을 갖게 됩니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -word<span class="o">=</span>opt
+<span class="go">word: opt</span>
+<span class="go">numb: 42</span>
+<span class="go">fork: false</span>
+<span class="go">svar: bar</span>
+<span class="go">tail: []</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>후미에 위치한 인자들은 모든 플래그 뒤에 위치할 수 있습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -word<span class="o">=</span>opt a1 a2 a3
+<span class="go">word: opt</span>
+<span class="go">...</span>
+<span class="go">tail: [a1 a2 a3]</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>참고로 <code>flag</code> 패키지에서 모든 플래그들은 위치 인자 전에 나타나야합니다. (그렇지 않으면 플래그들은 위치 인자로 해석됩니다)</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -word<span class="o">=</span>opt a1 a2 a3 -numb<span class="o">=</span>7
+<span class="go">word: opt</span>
+<span class="go">numb: 42</span>
+<span class="go">fork: false</span>
+<span class="go">svar: bar</span>
+<span class="go">tail: [a1 a2 a3 -numb=7]</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>-h</code> 또는 <code>--help</code> 플래그를 사용하면 커맨드라인 프로그램에 대해 자동으로 생성된 도움말을 볼 수 있습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -h
+<span class="go">Usage of ./command-line-flags:</span>
+<span class="go">  -fork=false: a bool</span>
+<span class="go">  -numb=42: an int</span>
+<span class="go">  -svar=&quot;bar&quot;: a string var</span>
+<span class="go">  -word=&quot;foo&quot;: a string</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>flag</code> 패키지로 지정되지 않은 플래그를 사용하면, 프로그램은 에러 메시지를 출력하며 도움말을 다시 보여줍니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> ./command-line-flags -wat
+<span class="go">flag provided but not defined: -wat</span>
+<span class="go">Usage of ./command-line-flags:</span>
+<span class="go">...</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음장에선 또 다른 프로그램을 매개변수화하는 일반적인 방법인 환경변수에 대해 살펴보겠습니다.</p>
+
+          </td>
+          <td class="code empty">
+	        
+            
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        다음 예제: <a href="/gobyexample/environment-variables">환경변수</a>.
+      </p>
+      
+      <p class="footer">
+        원작자 <a href="https://twitter.com/mmcgrana">@mmcgrana</a> | 번역 <a href="https://github.com/mingrammer">@mingrammer</a> | <a href="https://github.com/mingrammer/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      </p>
+  </div>
+  </body>
+</html>
