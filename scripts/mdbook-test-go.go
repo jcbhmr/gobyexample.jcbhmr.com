@@ -32,12 +32,12 @@ Usage: mdbook-test-go [OPTIONS] [dir]
 
 Arguments:
   [dir]  Root directory for the book
-		 (Defaults to the current directory when omitted)
+         (Defaults to the current directory when omitted)
 
 Options:
   -d, --dest-dir <dest-dir>  Output directory for the book
                              Relative paths are interpreted relative to the book's root directory.
-							 If omitted, mdBook uses build.build-dir from book.toml or defaults to 'book'.
+                             If omitted, mdBook uses build.build-dir from book.toml or defaults to 'book'.
   -c, --chapter <chapter>
   -h, --help                 Print help
   -v, --version              Print version
@@ -57,11 +57,16 @@ Options:
 		}
 		a.dir = wd
 	} else {
-		a.dir = dir
+		dir2, err := filepath.Abs(dir)
+		if err != nil {
+			fmt.Fprint(f.Output(), err)
+			os.Exit(1)
+		}
+		a.dir = dir2
 	}
 	if *destDir != "" {
-		destDir := filepath.Join(a.dir, *destDir)
-		a.destDir = &destDir
+		destDir2 := filepath.Clean(filepath.Join(a.dir, *destDir))
+		a.destDir = &destDir2
 	}
 	if *chapter != "" {
 		chapter2 := *chapter
@@ -78,7 +83,7 @@ type bookBook struct {
 	src string
 }
 type bookBuild struct {
-	buildDir string `json:"build-dir"`
+	buildDir string
 }
 
 func bookLoadDir(dir string) (*book, error) {
@@ -102,7 +107,11 @@ func bookLoadDir(dir string) (*book, error) {
 	} else {
 		src = "src"
 	}
-	b.book.src = filepath.Join(dir, src)
+	src2, err := filepath.Abs(filepath.Join(dir, src))
+	if err != nil {
+		return nil, err
+	}
+	b.book.src = src2
 
 	var buildDir string
 	buildRe := regexp.MustCompile(`\[build\]\n[\s\S]*?build-dir\s*=\s*(".*?"|'.*?')`)
@@ -116,7 +125,8 @@ func bookLoadDir(dir string) (*book, error) {
 	} else {
 		buildDir = "book"
 	}
-	b.build.buildDir = filepath.Join(dir, buildDir)
+	buildDir2 := filepath.Clean(filepath.Join(dir, buildDir))
+	b.build.buildDir = buildDir2
 
 	return b, nil
 }
@@ -147,7 +157,7 @@ func summaryLoadDir(dir string) (*summary, error) {
 		if relativePath == "" {
 			continue
 		}
-		path := filepath.Join(dir, relativePath)
+		path := filepath.Clean(filepath.Join(dir, relativePath))
 		s.chapters = append(s.chapters, summaryChapter{title, path})
 	}
 

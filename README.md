@@ -32,6 +32,52 @@ Run the custom script that's like [`mdbook test`](https://rust-lang.github.io/md
 
 ### Translations
 
+Build the site with translations:
+
+```sh
+./scripts/mdbook-build-i18n.go
+```
+
+> [!TIP]
+> Use a static HTTP server to preview a built site.
+>
+> ```sh
+> go run github.com/eliben/static-server@latest ./book/
+> ```
+
+Create initial `po/<lang>.po` file:
+
+```sh
+# First need to generate a po/messages.pot file.
+MDBOOK_OUTPUT='{"xgettext": {}}' mdbook build --dest-dir ./po/
+
+# Now we can generate the po/<lang>.po file from the messages.pot file.
+msginit --input ./po/messages.pot --locale <lang> --output ./po/<lang>.po
+```
+
+> [!TIP]
+> Use Google Translate to pre-fill a `po/<lang>.po` file:
+>
+> ```sh
+> cargo install cloud-translate
+> cloud-translate <google-cloud-project-id> po/<lang>.po 30000
+> ```
+
+> [!WARNING]
+> `mdbook-gettext` will use the original untranslated text for all entries marked as "fuzzy" (visible as "Needs work" in Poedit). This is especially important when using cloud-translate for initial translation as all entries will be marked as "fuzzy".
+>
+> If your text isn't translated, double-check that you have removed all "fuzzy" flags from your xx.po file.
+
+Update an existing `po/<lang>.po` file:
+
+```sh
+# First generate a fresh up-to-date po/messages.pot file.
+MDBOOK_OUTPUT='{"xgettext": {}}' mdbook build --dest-dir ./po/
+
+# Now use the po/messages.pot file to update the po/<lang>.po file.
+msgmerge --update ./po/<lang>.po ./po/messages.pot
+```
+
 Contributor translations of the Go by Example site are available in:
 
 * [Chinese](https://gobyexample-cn.github.io/) by [gobyexample-cn](https://github.com/gobyexample-cn)
