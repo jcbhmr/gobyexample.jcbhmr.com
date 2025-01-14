@@ -1,21 +1,23 @@
-// 2>/dev/null; exec go run "$0" "$@"
 //go:build ignore
+
+// 2>/dev/null; exec go run "$0" "$@"
+//
 package main
 
 import (
+	"errors"
+	"flag"
+	"fmt"
 	"log"
+	"os"
 	"os/exec"
 	"path/filepath"
-	"flag"
-	"os"
-	"fmt"
 	"regexp"
 	"strings"
-	"errors"
 )
 
 type args struct {
-	dir string
+	dir     string
 	destDir *string
 }
 
@@ -64,8 +66,8 @@ Options:
 }
 
 type book struct {
-	build bookBuild
-	output bookOutput
+	build        bookBuild
+	output       bookOutput
 	preprocessor bookPreprocessor
 }
 type bookBuild struct {
@@ -90,7 +92,7 @@ func bookLoadDir(dir string) (*book, error) {
 		return nil, err
 	}
 	bookTOMLString := string(bookTOMLBytes)
-	
+
 	b := &book{}
 
 	var buildDir string
@@ -101,7 +103,7 @@ func bookLoadDir(dir string) (*book, error) {
 		if strings.Contains(buildString, "\\") {
 			return nil, errors.New("build-dir contains backslashes")
 		}
-		buildDir = buildString[1:len(buildString)-1]
+		buildDir = buildString[1 : len(buildString)-1]
 	} else {
 		buildDir = "book"
 	}
@@ -116,7 +118,7 @@ func bookLoadDir(dir string) (*book, error) {
 		if strings.Contains(siteURLString, "\\") {
 			return nil, errors.New("site-url contains backslashes")
 		}
-		siteURL = siteURLString[1:len(siteURLString)-1]
+		siteURL = siteURLString[1 : len(siteURLString)-1]
 	} else {
 		siteURL = "/"
 	}
@@ -130,7 +132,7 @@ func bookLoadDir(dir string) (*book, error) {
 		if strings.Contains(poDirString, "\\") {
 			return nil, errors.New("po-dir contains backslashes")
 		}
-		poDir = poDirString[1:len(poDirString)-1]
+		poDir = poDirString[1 : len(poDirString)-1]
 	} else {
 		poDir = "po"
 	}

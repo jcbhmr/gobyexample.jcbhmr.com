@@ -1,23 +1,25 @@
-// 2>/dev/null; exec go run "$0" "$@"
 //go:build ignore
+
+// 2>/dev/null; exec go run "$0" "$@"
+//
 package main
 
 import (
-	"log"
+	"errors"
 	"flag"
+	"fmt"
+	"log"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"regexp"
-	"strings"
-	"errors"
-	"os/exec"
-	"fmt"
 	"runtime"
 	"slices"
+	"strings"
 )
 
 type args struct {
-	dir string
+	dir     string
 	destDir *string
 	chapter *string
 }
@@ -76,7 +78,7 @@ Options:
 }
 
 type book struct {
-	book bookBook
+	book  bookBook
 	build bookBuild
 }
 type bookBook struct {
@@ -92,7 +94,7 @@ func bookLoadDir(dir string) (*book, error) {
 		return nil, err
 	}
 	bookTOMLString := string(bookTOMLBytes)
-	
+
 	b := &book{}
 
 	var src string
@@ -103,7 +105,7 @@ func bookLoadDir(dir string) (*book, error) {
 		if strings.Contains(srcString, "\\") {
 			return nil, errors.New("src contains backslashes")
 		}
-		src = srcString[1:len(srcString)-1]
+		src = srcString[1 : len(srcString)-1]
 	} else {
 		src = "src"
 	}
@@ -121,7 +123,7 @@ func bookLoadDir(dir string) (*book, error) {
 		if strings.Contains(buildString, "\\") {
 			return nil, errors.New("build-dir contains backslashes")
 		}
-		buildDir = buildString[1:len(buildString)-1]
+		buildDir = buildString[1 : len(buildString)-1]
 	} else {
 		buildDir = "book"
 	}
@@ -136,7 +138,7 @@ type summary struct {
 }
 type summaryChapter struct {
 	title string
-	path string
+	path  string
 }
 
 func summaryLoadDir(dir string) (*summary, error) {
@@ -165,10 +167,10 @@ func summaryLoadDir(dir string) (*summary, error) {
 }
 
 type goCodeBlock struct {
-	code string
-	ignore bool
+	code        string
+	ignore      bool
 	compileFail bool
-	noRun bool
+	noRun       bool
 	shouldPanic bool
 }
 
@@ -190,7 +192,7 @@ func goCodeBlockFindAllStringSubmatch(s string) ([]goCodeBlock, error) {
 
 func main() {
 	log.SetFlags(0)
-	
+
 	args2 := argsParse()
 
 	book, err := bookLoadDir(args2.dir)
@@ -255,7 +257,7 @@ func main() {
 			if err != nil {
 				log.Fatalf("could not write main.go: %v", err)
 			}
-			
+
 			cmd := exec.Command("go", "build", "./main.go")
 			cmd.Dir = tmpDir
 			_, err = cmd.CombinedOutput()
