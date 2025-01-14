@@ -1,0 +1,27 @@
+name: Publish Website
+
+on: [push, pull_request]
+
+jobs:
+  build-go-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Go
+        uses: actions/setup-go@v2
+
+      - name: Download Dependencies
+        run: go get github.com/russross/blackfriday
+
+      - name: Build the Website
+        run: ./tools/build
+
+      - name: Deploy Github Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public
