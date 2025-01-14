@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example မြန်မာဘာသာ: For</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'constants';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'if-else';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="for">
+      <h2><a href="./">Go by Example မြန်မာဘာသာ</a>: For</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p><code>for</code> က Go ရဲ့တခုထဲသော looping construct တစ်ခုဖြစ်ပါတယ်။</p>
+
+<p>တစ်ခုဖြစ်ပါတယ်။ ဒီမှာဥပမာတချို့ကိုကြည့်နိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            <a href="https://go.dev/play/p/TOFrVCXiazI"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+          <pre class="chroma">
+<span class="kn">package</span> <span class="nx">main</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>အခြေအနေတခုထဲကိုစစ်တဲ့ အခြေခံအကျဆုံးပုံစံ</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">i</span> <span class="o">:=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">3</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span>
+        <span class="nx">i</span> <span class="p">=</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ပုံမှန်အသုံးပြုနေကြ စမှတ်/အခြေအနေ/နောက်တဆင့် <code>for</code> loop</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="k">for</span> <span class="nx">j</span> <span class="o">:=</span> <span class="mi">7</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">j</span><span class="p">)</span>
+    <span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>အခြေအနေဘာမှစစ်မထားတဲ့ <code>for</code> loop ကတောက်လျှောက်
+<code>break</code> သို <code>retutrn</code> မပြန်မချင်း ထက်ခါထက်ခါ
+loop ပတ်နေမှာဖြစ်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="k">for</span> <span class="p">{</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;loop ပတ်&#34;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>continue</code> ကိုသုံးပြီးတော့ loop ရဲ့နောက်တဆင့်ကိုဆက်သွားနိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+    <span class="k">for</span> <span class="nx">n</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">n</span><span class="o">++</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">n</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+            <span class="k">continue</span>
+        <span class="p">}</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="gp">$</span> go run for.go
+<span class="go">1
+</span><span class="go">2
+</span><span class="go">3
+</span><span class="go">7
+</span><span class="go">8
+</span><span class="go">9
+</span><span class="go">loop ပတ်
+</span><span class="go">1
+</span><span class="go">3
+</span><span class="go">5</span></pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ကျွန်တော်တို့ တခြား <code>for</code> အမျိုးအစား
+<code>range</code> statements, channels, နှင့်
+တခြား data structures များကို လေ့လာတဲ့အခါမှာ
+တခြား <code>for</code> များကို ကြည့်ကြပါမယ်။</p>
+
+          </td>
+          <td class="code empty">
+            
+          
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        နောက်ဥပမာ: <a href="if-else">If/Else</a>.
+      </p>
+      
+
+    <p class="footer">
+      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> နှင့် <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+    </p>
+
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    i :\u003D 1\u000A    for i \u003C\u003D 3 {\u000A        fmt.Println(i)\u000A        i \u003D i + 1\u000A    }\u000A');codeLines.push('    for j :\u003D 7; j \u003C\u003D 9; j++ {\u000A        fmt.Println(j)\u000A    }\u000A');codeLines.push('    for {\u000A        fmt.Println(\"loop ပတ်\")\u000A        break\u000A    }\u000A');codeLines.push('    for n :\u003D 0; n \u003C\u003D 5; n++ {\u000A        if n%2 \u003D\u003D 0 {\u000A            continue\u000A        }\u000A        fmt.Println(n)\u000A    }\u000A}\u000A');codeLines.push('');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>

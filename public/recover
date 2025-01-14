@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example မြန်မာဘာသာ: Recover</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'defer';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'string-functions';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="recover">
+      <h2><a href="./">Go by Example မြန်မာဘာသာ</a>: Recover</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>Go မှာ <code>recover</code> built-in function ကို သုံးပြီး panic ကနေ <em>recover</em> နိုင်ပါတယ်။
+<code>recover</code> က <code>panic</code> ကြောင့် ပရိုဂရမ် ရပ်တန့်သွားတာကို တားဆီးပြီး
+ဆက်လက်အလုပ်လုပ်စေနိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code empty leading">
+            
+          
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ဒါဟာ ဘယ်နေရာမှာ အသုံးဝင်သလဲဆိုတဲ့ ဥပမာ: server တစ်ခုအနေနဲ့
+client connection တစ်ခုမှာ critical error ဖြစ်တိုင်း crash ဖြစ်သွားတာမျိုး မလိုချင်ပါဘူး။
+အဲဒီအစား၊ server က အဲဒီ connection ကိုပိတ်ပြီး တခြား client တွေကို
+ဆက်လက်ဝန်ဆောင်မှုပေးချင်မှာပါ။ တကယ်တော့ Go ရဲ့ <code>net/http</code> package က
+HTTP server တွေအတွက် ဒီအတိုင်းပဲ default လုပ်ထားပါတယ်။</p>
+
+          </td>
+          <td class="code empty leading">
+            
+          
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            <a href="https://go.dev/play/p/e4c4Qpp3Q13"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+          <pre class="chroma"><span class="kn">package</span> <span class="nx">main</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ဒီ function က panic ဖြစ်စေပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+<span class="kd">func</span> <span class="nf">mayPanic</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">panic</span><span class="p">(</span><span class="s">&#34;a problem&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>recover</code> ကို deferred function ထဲမှာပဲ ခေါ်ရပါမယ်။
+လက်ရှိ function မှာ panic ဖြစ်တဲ့အခါ၊ defer က activate ဖြစ်သွားပြီး
+သူ့ထဲက <code>recover</code> call က panic ကို ဖမ်းယူ(catch) ပါလိမ့်မယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>recover</code> ရဲ့ return value က <code>panic</code> ခေါ်တဲ့အခါ ပေါ်လာတဲ့ error ပဲ ဖြစ်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">    <span class="k">defer</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="nx">r</span> <span class="o">:=</span> <span class="nb">recover</span><span class="p">();</span> <span class="nx">r</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Recovered. Error:\n&#34;</span><span class="p">,</span> <span class="nx">r</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}()</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">    <span class="nf">mayPanic</span><span class="p">()</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ဒီ code က run မှာ မဟုတ်ပါဘူး၊ ဘာလို့လဲဆိုတော့ <code>mayPanic</code> က panic ဖြစ်သွားလို့ပါ။
+<code>main</code> ရဲ့ execution က panic ဖြစ်တဲ့နေရာမှာ ရပ်သွားပြီး
+defer လုပ်ထားတဲ့ closure မှာ ပြန်စပါတယ်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;After mayPanic()&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code">
+            
+          <pre class="chroma"><span class="gp">$</span> go run recover.go
+<span class="go">Recovered. Error:
+</span><span class="go"> a problem</span></pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        နောက်ဥပမာ: <a href="string-functions">String Functions</a>.
+      </p>
+      
+
+    <p class="footer">
+      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> နှင့် <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+    </p>
+
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('');codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func mayPanic() {\u000A    panic(\"a problem\")\u000A}\u000A');codeLines.push('func main() {\u000A');codeLines.push('    defer func() {\u000A        if r :\u003D recover(); r !\u003D nil {\u000A');codeLines.push('            fmt.Println(\"Recovered. Error:\\n\", r)\u000A        }\u000A    }()\u000A');codeLines.push('    mayPanic()\u000A');codeLines.push('    fmt.Println(\"After mayPanic()\")\u000A}\u000A');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>

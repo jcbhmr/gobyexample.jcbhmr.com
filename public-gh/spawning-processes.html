@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example မြန်မာဘာသာ: Spawning Processes</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'context';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'execing-processes';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="spawning-processes">
+      <h2><a href="./">Go by Example မြန်မာဘာသာ</a>: Spawning Processes</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>တစ်ခါတလေမှာ ကျွန်တော်တို့ရဲ့ Go ပရိုဂရမ်တွေဟာ Go မဟုတ်တဲ့ တခြား
+လုပ်ငန်းစဉ် (processes) တွေကို လုပ်ဆောင်ဖို့ လိုအပ်ပါတယ်။</p>
+
+          </td>
+          <td class="code empty leading">
+            
+          
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            <a href="https://go.dev/play/p/5aEn_GZhmj5"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+          <pre class="chroma"><span class="kn">package</span> <span class="nx">main</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;fmt&#34;</span>
+    <span class="s">&#34;io&#34;</span>
+    <span class="s">&#34;os/exec&#34;</span>
+<span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ကျွန်တော်တို့က argument တွေ၊ input တွေ မလိုအပ်ပဲ stdout ပေါ်မှာ တစ်ခုခုကို
+ရိုက်ထုတ်ပြတဲ့ ရိုးရှင်းတဲ့ command တစ်ခုနဲ့ စမယ်။ <code>exec.Command</code> helper က
+ဒီ ပြင်ပ လုပ်ငန်းစဉ်ကို ကိုယ်စားပြုဖို့ object တစ်ခုကို ဖန်တီးပေးပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">dateCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>Output</code> method က command ကို run ပြီး အဆုံးသတ်တဲ့အထိ စောင့်ပြီး
+သူ့ရဲ့ standard output ကို စုဆောင်းပါတယ်။
+အမှားမရှိဘူးဆိုရင် <code>dateOut</code> မှာ ရက်စွဲအချက်အလက်ပါတဲ့ bytes တွေ ပါဝင်မှာဖြစ်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">dateOut</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">dateCmd</span><span class="p">.</span><span class="nf">Output</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;&gt; date&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">dateOut</span><span class="p">))</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>Output</code> နဲ့ <code>Command</code> ရဲ့ တခြား method တွေဟာ command ကို run ဖို့
+ပြဿနာရှိခဲ့ရင် (ဥပမာ - မှားယွင်းတဲ့လမ်းကြောင်း) <code>*exec.Error</code> ကို return ပြန်ပြီး၊
+command က run ပေမယ့် non-zero return code နဲ့ ထွက်သွားခဲ့ရင်
+<code>*exec.ExitError</code> ကို return ပြန်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">_</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=</span> <span class="nx">exec</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">&#34;date&#34;</span><span class="p">,</span> <span class="s">&#34;-x&#34;</span><span class="p">).</span><span class="nf">Output</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">err</span><span class="p">.(</span><span class="kd">type</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">*</span><span class="nx">exec</span><span class="p">.</span><span class="nx">Error</span><span class="p">:</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;failed executing:&#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+        <span class="k">case</span> <span class="o">*</span><span class="nx">exec</span><span class="p">.</span><span class="nx">ExitError</span><span class="p">:</span>
+            <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;command exit rc =&#34;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nf">ExitCode</span><span class="p">())</span>
+        <span class="k">default</span><span class="p">:</span>
+            <span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>နောက်တစ်ဆင့်မှာ ပြင်ပလုပ်ငန်းစဉ်ရဲ့ <code>stdin</code> ပေါ်ကို data တွေ pipe လုပ်ပြီး
+သူ့ရဲ့ <code>stdout</code> ကနေ ရလဒ်တွေကို စုဆောင်းတဲ့ နည်းနည်းပိုရှုပ်ထွေးတဲ့ ကိစ္စကို ကြည့်ကြမယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">grepCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">&#34;grep&#34;</span><span class="p">,</span> <span class="s">&#34;hello&#34;</span><span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>ဒီမှာတော့ input/output pipes တွေကို အတိအကျ ယူပြီး၊ လုပ်ငန်းစဉ်ကို စတင်၊
+အထဲကို input တချို့ ရေးထည့်၊ ထွက်လာတဲ့ output ကို ဖတ်ယူပြီး နောက်ဆုံးမှာ
+လုပ်ငန်းစဉ် ပြီးဆုံးတဲ့အထိ စောင့်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">grepIn</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">grepCmd</span><span class="p">.</span><span class="nf">StdinPipe</span><span class="p">()</span>
+    <span class="nx">grepOut</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">grepCmd</span><span class="p">.</span><span class="nf">StdoutPipe</span><span class="p">()</span>
+    <span class="nx">grepCmd</span><span class="p">.</span><span class="nf">Start</span><span class="p">()</span>
+    <span class="nx">grepIn</span><span class="p">.</span><span class="nf">Write</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;hello grep\ngoodbye grep&#34;</span><span class="p">))</span>
+    <span class="nx">grepIn</span><span class="p">.</span><span class="nf">Close</span><span class="p">()</span>
+    <span class="nx">grepBytes</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">io</span><span class="p">.</span><span class="nf">ReadAll</span><span class="p">(</span><span class="nx">grepOut</span><span class="p">)</span>
+    <span class="nx">grepCmd</span><span class="p">.</span><span class="nf">Wait</span><span class="p">()</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>အထက်ပါ ဥပမာမှာ အမှားစစ်ဆေးမှုတွေကို ချန်လှပ်ထားပါတယ်၊ ဒါပေမယ့်
+သင်က ပုံမှန် <code>if err != nil</code> pattern ကို အားလုံးအတွက် သုံးနိုင်ပါတယ်။
+ကျွန်တော်တို့က <code>StdoutPipe</code> ရလဒ်တွေကိုပဲ စုဆောင်းထားပေမယ့် သင်က
+အတူတူပဲ <code>StderrPipe</code> ကိုလည်း စုဆောင်းနိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;&gt; grep hello&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">grepBytes</span><span class="p">))</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>မှတ်သားရန် - command တွေကို spawn လုပ်တဲ့အခါ command-line string တစ်ခုတည်းကို
+ပေးနိုင်တာမဟုတ်ဘဲ၊ အတိအကျ သတ်မှတ်ထားတဲ့ command နဲ့ argument array ကို
+ပေးဖို့ လိုအပ်ပါတယ်။ သင်က string တစ်ခုနဲ့ အပြည့်အစုံ command တစ်ခုကို
+spawn လုပ်ချင်ရင် <code>bash</code> ရဲ့ <code>-c</code> option ကို သုံးနိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+    <span class="nx">lsCmd</span> <span class="o">:=</span> <span class="nx">exec</span><span class="p">.</span><span class="nf">Command</span><span class="p">(</span><span class="s">&#34;bash&#34;</span><span class="p">,</span> <span class="s">&#34;-c&#34;</span><span class="p">,</span> <span class="s">&#34;ls -a -l -h&#34;</span><span class="p">)</span>
+    <span class="nx">lsOut</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">lsCmd</span><span class="p">.</span><span class="nf">Output</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;&gt; ls -a -l -h&#34;</span><span class="p">)</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">lsOut</span><span class="p">))</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>ဖန်တီးထားတဲ့ ပရိုဂရမ်တွေက ထွက်လာတဲ့ output ဟာ
+ကျွန်တော်တို့ command-line ကနေ
+တိုက်ရိုက် run သလိုပဲ ဖြစ်ပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+<span class="gp">$</span> go run spawning-processes.go 
+<span class="gp">&gt;</span> date
+<span class="go">Thu 05 May 2022 10:10:12 PM PDT</span></pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>date မှာ <code>-x</code> flag မရှိတဲ့အတွက်
+အမှားပြ message နဲ့အတူ
+non-zero return code နဲ့ ထွက်သွားပါလိမ့်မယ်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+<span class="go">command exited with rc = 1
+</span><span class="go"></span><span class="gp">&gt;</span> grep hello
+<span class="go">hello grep
+</span><span class="go"></span><span class="gp">&gt;</span> ls -a -l -h
+<span class="go">drwxr-xr-x  4 mark 136B Oct 3 16:29 .
+</span><span class="go">drwxr-xr-x 91 mark 3.0K Oct 3 12:50 ..
+</span><span class="go">-rw-r--r--  1 mark 1.3K Oct 3 16:28 spawning-processes.go</span></pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        နောက်ဥပမာ: <a href="execing-processes">Exec'ing Processes</a>.
+      </p>
+      
+
+    <p class="footer">
+      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> နှင့် <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+    </p>
+
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import (\u000A    \"fmt\"\u000A    \"io\"\u000A    \"os/exec\"\u000A)\u000A');codeLines.push('func main() {\u000A');codeLines.push('    dateCmd :\u003D exec.Command(\"date\")\u000A');codeLines.push('    dateOut, err :\u003D dateCmd.Output()\u000A    if err !\u003D nil {\u000A        panic(err)\u000A    }\u000A    fmt.Println(\"\u003E date\")\u000A    fmt.Println(string(dateOut))\u000A');codeLines.push('    _, err \u003D exec.Command(\"date\", \"-x\").Output()\u000A    if err !\u003D nil {\u000A        switch e :\u003D err.(type) {\u000A        case *exec.Error:\u000A            fmt.Println(\"failed executing:\", err)\u000A        case *exec.ExitError:\u000A            fmt.Println(\"command exit rc \u003D\", e.ExitCode())\u000A        default:\u000A            panic(err)\u000A        }\u000A    }\u000A');codeLines.push('    grepCmd :\u003D exec.Command(\"grep\", \"hello\")\u000A');codeLines.push('    grepIn, _ :\u003D grepCmd.StdinPipe()\u000A    grepOut, _ :\u003D grepCmd.StdoutPipe()\u000A    grepCmd.Start()\u000A    grepIn.Write([]byte(\"hello grep\\ngoodbye grep\"))\u000A    grepIn.Close()\u000A    grepBytes, _ :\u003D io.ReadAll(grepOut)\u000A    grepCmd.Wait()\u000A');codeLines.push('    fmt.Println(\"\u003E grep hello\")\u000A    fmt.Println(string(grepBytes))\u000A');codeLines.push('    lsCmd :\u003D exec.Command(\"bash\", \"-c\", \"ls -a -l -h\")\u000A    lsOut, err :\u003D lsCmd.Output()\u000A    if err !\u003D nil {\u000A        panic(err)\u000A    }\u000A    fmt.Println(\"\u003E ls -a -l -h\")\u000A    fmt.Println(string(lsOut))\u000A}\u000A');codeLines.push('');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>
