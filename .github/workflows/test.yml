@@ -1,0 +1,38 @@
+name: test
+
+on:
+  push:
+    branches: [ master, ukrainian_v2 ]
+  pull_request:
+    branches: [ master, ukrainian_v2 ]
+
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        go-version: [1.21.0]
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: ${{ matrix.go-version }}
+
+    - name: Test
+      run: tools/build
+      env:
+        VERBOSE: 1
+        # I am ok with different content in public folder.
+        # TESTING: 0
+
+    - name: github pages deployment
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/ukrainian_v2'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: './public'
