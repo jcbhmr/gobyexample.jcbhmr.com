@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51599382-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-51599382-5');
+    </script>
+
+    <meta charset="utf-8">
+    <title>サンプルで学ぶ Go 言語：Variables</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'values.html';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'constants.html';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="variables.html">
+      <h2><a href="./">サンプルで学ぶ Go 言語</a>：Variables</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>Go の<em>変数</em>は明示的に宣言され、コンパイラによってチェックされる（例えば、関数呼び出しの型安全性など）。</p>
+
+          </td>
+          <td class="code empty leading">
+            
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            <a href="http://play.golang.org/p/cHvaNt0WiLR"><img title="コードを実行する" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+            <div class="highlight"><pre><span class="kn">package</span> <span class="nx">main</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre><span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>var</code> を使って、1つまたはそれ以上の変数を宣言できる。</p>
+
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">a</span> <span class="p">=</span> <span class="s">&quot;initial&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>複数の変数を一度に宣言することもできる。</p>
+
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">b</span><span class="p">,</span> <span class="nx">c</span> <span class="kt">int</span> <span class="p">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">b</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>変数を初期化すれば Go は変数の型を推測する。</p>
+
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">d</span> <span class="p">=</span> <span class="kc">true</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">d</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>明示的に初期化していない変数の値は<em>ゼロ値</em>である。
+例えば、<code>int</code> のゼロ値は <code>0</code> である。</p>
+
+          </td>
+          <td class="code leading">
+            
+            <div class="highlight"><pre>    <span class="kd">var</span> <span class="nx">e</span> <span class="kt">int</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>:=</code> は宣言と初期化を行うための省略記法である。
+ここの例は <code>var f string = &quot;apple&quot;</code> と書くのと同じ意味である。</p>
+
+          </td>
+          <td class="code">
+            
+            <div class="highlight"><pre>    <span class="nx">f</span> <span class="o">:=</span> <span class="s">&quot;apple&quot;</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code">
+            
+            <div class="highlight"><pre><span class="gp">$</span> go run variables.go
+<span class="go">initial</span>
+<span class="go">1 2</span>
+<span class="go">true</span>
+<span class="go">0</span>
+<span class="go">apple</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        次の例：<a href="constants.html">Constants</a>
+      </p>
+      
+      <p class="footer">
+        原著者 <a href="https://markmcgranaghan.com">Mark McGranaghan</a> | 翻訳者：<a href="https://twitter.com/spinute">@spinute</a> | <a href="mailto:spinute.pages@gmail.com">フィードバック</a> | <a href="https://github.com/spinute/go-by-example/blob/master/docs/variables.html">ソースコード</a> | <a href="https://github.com/spinute/go-by-example#license">ライセンス</a>
+      </p>
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import \"fmt\"\u000A');codeLines.push('func main() {\u000A');codeLines.push('    var a = \"initial\"\u000A    fmt.Println(a)\u000A');codeLines.push('    var b, c int = 1, 2\u000A    fmt.Println(b, c)\u000A');codeLines.push('    var d = true\u000A    fmt.Println(d)\u000A');codeLines.push('    var e int\u000A    fmt.Println(e)\u000A');codeLines.push('    f := \"apple\"\u000A    fmt.Println(f)\u000A}\u000A');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>
