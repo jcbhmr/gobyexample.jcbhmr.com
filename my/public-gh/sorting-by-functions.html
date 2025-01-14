@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example မြန်မာဘာသာ: Sorting by Functions</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'sorting';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'panic';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="sorting-by-functions">
+      <h2><a href="./">Go by Example မြန်မာဘာသာ</a>: Sorting by Functions</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>တစ်ခါတလေ အက္ခရာစဉ် နံပါတ်စဉ် စသည် သဘာဝအစဉ်အလိုက် သာမက
+အခြားပုံစံမျိုးဖြင့် စဉ်ခြင်းမျိုးကိုလည်း ဆောင်ရွက်လိုပါလိမ့်မည်။ နမူနာအားဖြင့်
+ဆိုရသော် အက္ခရာစဉ်ခြင်းမျိုးမဟုတ်ပဲ အက္ခရာအလုံးအရေအတွက်အားဖြင့်
+စဉ်လိုသည်ဟု ယူဆပါစို့။ Go တွင် မိမိစဉ်လိုသည့် ပုံစံများကို အောက်ပါ
+နမူနာတွင် ကြည့်နိုင်သည်။</p>
+
+          </td>
+          <td class="code empty leading">
+            
+          
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            <a href="https://go.dev/play/p/w-IqnTLxPsv"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+          <pre class="chroma"><span class="kn">package</span> <span class="nx">main</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;fmt&#34;</span>
+    <span class="s">&#34;sort&#34;</span>
+<span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>Go မှာ custom function သုံးပြီး sort လုပ်မယ်ဆိုရင် အဲဒါနဲ့
+ကိုက်တဲ့ data type တစ်ခုလိုတယ်။ ဒီမှာ <code>byLength</code> လို့ခေါ်တဲ့ custom type တစ်ခု
+ဖန်တီးထားတယ်။​ အဲဒါက တကယ်တော့ <code>[]string</code> ကို နာမည်ပြောင်းခေါ်တာမျိုး ဖြစ်တယ်။
+<code>[]string</code> ဆိုတဲ့ type ကို <code>byLength</code> ဆိုတဲ့ type အနေနဲ့ သုံးမယ်ဆိုတာမျိုး။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+<span class="kd">type</span> <span class="nx">byLength</span> <span class="p">[]</span><span class="kt">string</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>အပေါ်မှာ ဖန်တီးထားတဲ့ type အတွက် <code>sort.Interface</code> ရေးပေးဖို့လိုတယ်။
+<code>Len</code>, <code>Less</code>၊ နဲ့ <code>Swap</code> လို့ခေါ်တဲ့ <code>Interface</code> ၃ ခု။ အဲဒီဟာတွေ ရေးပေးထားမှ
+<code>sort</code> package ထဲမှာရှိတဲ့ generic <code>Sort</code> function ကို သုံးလို့ရမှာ။ array လိုမျိုး
+type တွေအတွက်<code>Len</code> နဲ့ <code>Swap</code> အတွက် ရေးပေးရတဲ့ကုဒ်က ဆင်တူလေ့ရှိတယ်။ sort လုပ်တဲ့
+logic ရှိတဲ့နေရာက <code>Less</code> interface ပဲ။​ အဲဒီမှာ sorting logic ကို သွားရေး
+ပေးထားရတယ်။ အခုကိစ္စမှာဆို string တိုးတာပဲဖြစ်ဖြစ် လျော့တာပဲဖြစ်ဖြစ်
+string length ကိုသုံးပြီး sort လုပ်ပေးပါဆိုပြီး ခိုင်းတာမျိုး။ အဲ့လို sort ဖြစ်ဖို့
+<code>len(s[i])</code> နဲ့ <code>len(s[j])</code> တွေကို <code>Less</code> interface မှာ သုံးထားတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">byLength</span><span class="p">)</span> <span class="nf">Len</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">byLength</span><span class="p">)</span> <span class="nf">Swap</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">]</span> <span class="p">=</span> <span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">],</span> <span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="nx">byLength</span><span class="p">)</span> <span class="nf">Less</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">s</span><span class="p">[</span><span class="nx">j</span><span class="p">])</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>လိုအပ်သည့် ကုဒ်များကို နေရာတကျ ရေးပြီးသည့်အခါ မူလ <code>fruits</code> slice ကို
+<code>byLength</code> အမျိုးအစားသို့ ပြောင်းလဲလိုက်ခြင်းအားဖြင့် မိမိစဉ်လိုသည့် လောဂျစ်ကို
+အကောင်အထည် ဖော်နိုင်သွားသည်။ ထို့နောက် ၎င်း <code>byLength</code> ကို စဉ်ရန်
+<code>sort.Sort</code> အသုံးပြုသည်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fruits</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&#34;peach&#34;</span><span class="p">,</span> <span class="s">&#34;banana&#34;</span><span class="p">,</span> <span class="s">&#34;kiwi&#34;</span><span class="p">}</span>
+    <span class="nx">sort</span><span class="p">.</span><span class="nf">Sort</span><span class="p">(</span><span class="nf">byLength</span><span class="p">(</span><span class="nx">fruits</span><span class="p">))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">fruits</span><span class="p">)</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>ပရိုဂရမ်ကို ခိုင်းစေလိုက်ပါက
+မိမိဖြစ်စေချင်သည့်
+အက္ခရာအလုံးအရေအတွက်ဖြင့်
+စဉ်ထားသော list ကို
+ပြသပါမည်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+<span class="gp">$</span> go run sorting-by-functions.go
+<span class="go">[kiwi peach banana]</span></pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>စိတ်ကြိုက် ဒေတာအမျိုးအစားကို ဖန်တီးခြင်း၊
+၎င်းအမျိုးအစားအတွက် <code>Interface</code> method
+သုံးခုကို တည်ဆောက်ခြင်း၊
+၎င်းအမျိုးအစားကို အသုံးပြုထားသော collection
+တွင် sort.Sort အသုံးပြုပြီး စဉ်ခြင်း
+စသည့် ယခုလို ပုံစံမျိုးကို နမူနာယူပြီး
+Go slice များကို စိတ်ကြိုက် function
+များဖြင့် စဉ်နိုင်သည်။</p>
+
+          </td>
+          <td class="code empty">
+            
+          
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        နောက်ဥပမာ: <a href="panic">Panic</a>.
+      </p>
+      
+
+    <p class="footer">
+      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> နှင့် <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+    </p>
+
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import (\u000A    \"fmt\"\u000A    \"sort\"\u000A)\u000A');codeLines.push('type byLength []string\u000A');codeLines.push('func (s byLength) Len() int {\u000A    return len(s)\u000A}\u000Afunc (s byLength) Swap(i, j int) {\u000A    s[i], s[j] \u003D s[j], s[i]\u000A}\u000Afunc (s byLength) Less(i, j int) bool {\u000A    return len(s[i]) \u003C len(s[j])\u000A}\u000A');codeLines.push('func main() {\u000A    fruits :\u003D []string{\"peach\", \"banana\", \"kiwi\"}\u000A    sort.Sort(byLength(fruits))\u000A    fmt.Println(fruits)\u000A}\u000A');codeLines.push('');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>

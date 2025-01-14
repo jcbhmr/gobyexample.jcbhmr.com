@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example မြန်မာဘာသာ: Epoch</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <script>
+      onkeydown = (e) => {
+          
+          if (e.key == "ArrowLeft") {
+              window.location.href = 'time';
+          }
+          
+          
+          if (e.key == "ArrowRight") {
+              window.location.href = 'time-formatting-parsing';
+          }
+          
+      }
+  </script>
+  <body>
+    <div class="example" id="epoch">
+      <h2><a href="./">Go by Example မြန်မာဘာသာ</a>: Epoch</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>ပရိုဂရမ်တွေမှာ အဖြစ်များတဲ့ လိုအပ်ချက်တစ်ခုကတော့ <a href="https://en.wikipedia.org/wiki/Unix_time">Unix epoch</a> ကနေစပြီး
+ကြာခဲ့တဲ့ စက္ကန့်၊ မီလီစက္ကန့်၊ သို့မဟုတ် နာနိုစက္ကန့် အရေအတွက်ကို ရယူဖို့ပါ။
+Go မှာ ဒါကို ဘယ်လိုလုပ်ရမလဲဆိုတာ ဒီမှာရှိပါတယ်။</p>
+
+          </td>
+          <td class="code empty leading">
+            
+          
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            <a href="https://go.dev/play/p/6hAtxkidJ_P"><img title="Run code" src="play.png" class="run" /></a><img title="Copy code" src="clipboard.png" class="copy" />
+          <pre class="chroma"><span class="kn">package</span> <span class="nx">main</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kn">import</span> <span class="p">(</span>
+    <span class="s">&#34;fmt&#34;</span>
+    <span class="s">&#34;time&#34;</span>
+<span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>Unix epoch ကနေစပြီး ကြာခဲ့တဲ့အချိန်ကို စက္ကန့်၊ မီလီစက္ကန့်၊ သို့မဟုတ်
+နာနိုစက္ကန့်အလိုက် ရယူဖို့ <code>time.Now</code> ကို <code>Unix</code>၊ <code>UnixMilli</code> သို့မဟုတ် <code>UnixNano</code> နဲ့
+တွဲသုံးပါတယ်။</p>
+
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">
+    <span class="nx">now</span> <span class="o">:=</span> <span class="nx">time</span><span class="p">.</span><span class="nf">Now</span><span class="p">()</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">now</span><span class="p">)</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma">    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nf">Unix</span><span class="p">())</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nf">UnixMilli</span><span class="p">())</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nf">UnixNano</span><span class="p">())</span>
+</pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>သင့်အနေနဲ့ epoch ကနေစပြီး ကြာခဲ့တဲ့ စက္ကန့် သို့မဟုတ် နာနိုစက္ကန့် integer တွေကို
+သက်ဆိုင်ရာ <code>time</code> အဖြစ် ပြောင်းလဲနိုင်ပါတယ်။</p>
+
+          </td>
+          <td class="code">
+            
+          <pre class="chroma">
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Unix</span><span class="p">(</span><span class="nx">now</span><span class="p">.</span><span class="nf">Unix</span><span class="p">(),</span> <span class="mi">0</span><span class="p">))</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nf">Unix</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nx">now</span><span class="p">.</span><span class="nf">UnixNano</span><span class="p">()))</span>
+<span class="p">}</span>
+</pre>
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+            
+          <pre class="chroma"><span class="gp">$</span> go run epoch.go 
+<span class="go">2012-10-31 16:13:58.292387 +0000 UTC
+</span><span class="go">1351700038
+</span><span class="go">1351700038292
+</span><span class="go">1351700038292387000
+</span><span class="go">2012-10-31 16:13:58 +0000 UTC
+</span><span class="go">2012-10-31 16:13:58.292387 +0000 UTC</span></pre>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>နောက်တစ်ဆင့်မှာတော့ အချိန်နဲ့ဆက်စပ်တဲ့
+နောက်ထပ်လုပ်ငန်းတစ်ခုဖြစ်တဲ့
+အချိန် parse လုပ်ခြင်းနဲ့ format
+လုပ်ခြင်းကို ကြည့်ကြပါမယ်။</p>
+
+          </td>
+          <td class="code empty">
+            
+          
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        နောက်ဥပမာ: <a href="time-formatting-parsing">Time Formatting / Parsing</a>.
+      </p>
+      
+
+    <p class="footer">
+      by <a href="https://markmcgranaghan.com">Mark McGranaghan</a> နှင့် <a href="https://eli.thegreenplace.net">Eli Bendersky</a> | <a href="https://github.com/mmcgrana/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+    </p>
+
+    </div>
+    <script>
+      var codeLines = [];
+      codeLines.push('');codeLines.push('package main\u000A');codeLines.push('import (\u000A    \"fmt\"\u000A    \"time\"\u000A)\u000A');codeLines.push('func main() {\u000A');codeLines.push('    now :\u003D time.Now()\u000A    fmt.Println(now)\u000A');codeLines.push('    fmt.Println(now.Unix())\u000A    fmt.Println(now.UnixMilli())\u000A    fmt.Println(now.UnixNano())\u000A');codeLines.push('    fmt.Println(time.Unix(now.Unix(), 0))\u000A    fmt.Println(time.Unix(0, now.UnixNano()))\u000A}\u000A');codeLines.push('');codeLines.push('');
+    </script>
+    <script src="site.js" async></script>
+  </body>
+</html>
