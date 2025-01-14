@@ -1,0 +1,6570 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gobyexamplejcbhmrcom\n"
+"POT-Creation-Date: 2025-01-14T03:13:26Z\n"
+"PO-Revision-Date: 2025-01-14 07:40\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: gobyexamplejcbhmrcom\n"
+"X-Crowdin-Project-ID: 754263\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /main/po/messages.pot\n"
+"X-Crowdin-File-ID: 8\n"
+
+#: src/SUMMARY.md:1
+msgid "Summary"
+msgstr ""
+
+#: src/SUMMARY.md:3
+msgid "Go by Example"
+msgstr ""
+
+#: src/SUMMARY.md:7 src/hello-world.md:1
+msgid "Hello World"
+msgstr ""
+
+#: src/SUMMARY.md:8 src/values.md:1
+msgid "Values"
+msgstr ""
+
+#: src/SUMMARY.md:9 src/variables.md:1
+msgid "Variables"
+msgstr ""
+
+#: src/SUMMARY.md:10 src/constants.md:1
+msgid "Constants"
+msgstr ""
+
+#: src/SUMMARY.md:11 src/for.md:1
+msgid "For"
+msgstr ""
+
+#: src/SUMMARY.md:12 src/if-else.md:1
+msgid "If/Else"
+msgstr ""
+
+#: src/SUMMARY.md:13 src/switch.md:1
+msgid "Switch"
+msgstr ""
+
+#: src/SUMMARY.md:14 src/arrays.md:1
+msgid "Arrays"
+msgstr ""
+
+#: src/SUMMARY.md:15 src/slices.md:1
+msgid "Slices"
+msgstr ""
+
+#: src/SUMMARY.md:16 src/maps.md:1
+msgid "Maps"
+msgstr ""
+
+#: src/SUMMARY.md:17 src/functions.md:1
+msgid "Functions"
+msgstr ""
+
+#: src/SUMMARY.md:18 src/multiple-return-values.md:1
+msgid "Multiple Return Values"
+msgstr ""
+
+#: src/SUMMARY.md:19 src/variadic-functions.md:1
+msgid "Variadic Functions"
+msgstr ""
+
+#: src/SUMMARY.md:20 src/closures.md:1
+msgid "Closures"
+msgstr ""
+
+#: src/SUMMARY.md:21 src/recursion.md:1
+msgid "Recursion"
+msgstr ""
+
+#: src/SUMMARY.md:22 src/range-over-built-in-types.md:1
+msgid "Range over Built-in Types"
+msgstr ""
+
+#: src/SUMMARY.md:23 src/pointers.md:1
+msgid "Pointers"
+msgstr ""
+
+#: src/SUMMARY.md:24 src/strings-and-runes.md:1
+msgid "Strings and Runes"
+msgstr ""
+
+#: src/SUMMARY.md:25 src/structs.md:1
+msgid "Structs"
+msgstr ""
+
+#: src/SUMMARY.md:26 src/methods.md:1
+msgid "Methods"
+msgstr ""
+
+#: src/SUMMARY.md:27 src/interfaces.md:1
+msgid "Interfaces"
+msgstr ""
+
+#: src/SUMMARY.md:28 src/enums.md:1
+msgid "Enums"
+msgstr ""
+
+#: src/SUMMARY.md:29 src/struct-embedding.md:1
+msgid "Struct Embedding"
+msgstr ""
+
+#: src/SUMMARY.md:30 src/generics.md:1
+msgid "Generics"
+msgstr ""
+
+#: src/SUMMARY.md:31 src/range-over-iterators.md:1
+msgid "Range over Iterators"
+msgstr ""
+
+#: src/SUMMARY.md:32 src/errors.md:1
+msgid "Errors"
+msgstr ""
+
+#: src/SUMMARY.md:33 src/custom-errors.md:1
+msgid "Custom Errors"
+msgstr ""
+
+#: src/SUMMARY.md:34 src/goroutines.md:1
+msgid "Goroutines"
+msgstr ""
+
+#: src/SUMMARY.md:35 src/channels.md:1
+msgid "Channels"
+msgstr ""
+
+#: src/SUMMARY.md:36 src/channel-buffering.md:1
+msgid "Channel Buffering"
+msgstr ""
+
+#: src/SUMMARY.md:37 src/channel-synchronization.md:1
+msgid "Channel Synchronization"
+msgstr ""
+
+#: src/SUMMARY.md:38 src/channel-directions.md:1
+msgid "Channel Directions"
+msgstr ""
+
+#: src/SUMMARY.md:39 src/select.md:1
+msgid "Select"
+msgstr ""
+
+#: src/SUMMARY.md:40 src/timeouts.md:1
+msgid "Timeouts"
+msgstr ""
+
+#: src/SUMMARY.md:41 src/non-blocking-channel-operations.md:1
+msgid "Non-Blocking Channel Operations"
+msgstr ""
+
+#: src/SUMMARY.md:42 src/closing-channels.md:1
+msgid "Closing Channels"
+msgstr ""
+
+#: src/SUMMARY.md:43 src/range-over-channels.md:1
+msgid "Range over Channels"
+msgstr ""
+
+#: src/SUMMARY.md:44 src/timers.md:1
+msgid "Timers"
+msgstr ""
+
+#: src/SUMMARY.md:45 src/tickers.md:1
+msgid "Tickers"
+msgstr ""
+
+#: src/SUMMARY.md:46 src/worker-pools.md:1
+msgid "Worker Pools"
+msgstr ""
+
+#: src/SUMMARY.md:47 src/waitgroups.md:1
+msgid "WaitGroups"
+msgstr ""
+
+#: src/SUMMARY.md:48 src/rate-limiting.md:1
+msgid "Rate Limiting"
+msgstr ""
+
+#: src/SUMMARY.md:49 src/atomic-counters.md:1
+msgid "Atomic Counters"
+msgstr ""
+
+#: src/SUMMARY.md:50 src/mutexes.md:1
+msgid "Mutexes"
+msgstr ""
+
+#: src/SUMMARY.md:51 src/stateful-goroutines.md:1
+msgid "Stateful Goroutines"
+msgstr ""
+
+#: src/SUMMARY.md:52 src/sorting.md:1
+msgid "Sorting"
+msgstr ""
+
+#: src/SUMMARY.md:53 src/sorting-by-functions.md:1
+msgid "Sorting by Functions"
+msgstr ""
+
+#: src/SUMMARY.md:54 src/panic.md:1
+msgid "Panic"
+msgstr ""
+
+#: src/SUMMARY.md:55 src/defer.md:1
+msgid "Defer"
+msgstr ""
+
+#: src/SUMMARY.md:56 src/recover.md:1
+msgid "Recover"
+msgstr ""
+
+#: src/SUMMARY.md:57 src/string-functions.md:1
+msgid "String Functions"
+msgstr ""
+
+#: src/SUMMARY.md:58 src/string-formatting.md:1
+msgid "String Formatting"
+msgstr ""
+
+#: src/SUMMARY.md:59 src/text-templates.md:1
+msgid "Text Templates"
+msgstr ""
+
+#: src/SUMMARY.md:60 src/regular-expressions.md:1
+msgid "Regular Expressions"
+msgstr ""
+
+#: src/SUMMARY.md:61 src/json.md:1
+msgid "JSON"
+msgstr ""
+
+#: src/SUMMARY.md:62 src/xml.md:1
+msgid "XML"
+msgstr ""
+
+#: src/SUMMARY.md:63 src/time.md:1
+msgid "Time"
+msgstr ""
+
+#: src/SUMMARY.md:64 src/epoch.md:1
+msgid "Epoch"
+msgstr ""
+
+#: src/SUMMARY.md:65 src/time-formatting-parsing.md:1
+msgid "Time Formatting / Parsing"
+msgstr ""
+
+#: src/SUMMARY.md:66 src/random-numbers.md:1
+msgid "Random Numbers"
+msgstr ""
+
+#: src/SUMMARY.md:67 src/number-parsing.md:1
+msgid "Number Parsing"
+msgstr ""
+
+#: src/SUMMARY.md:68 src/url-parsing.md:1
+msgid "URL Parsing"
+msgstr ""
+
+#: src/SUMMARY.md:69 src/sha256-hashes.md:1
+msgid "SHA256 Hashes"
+msgstr ""
+
+#: src/SUMMARY.md:70 src/base64-encoding.md:1
+msgid "Base64 Encoding"
+msgstr ""
+
+#: src/SUMMARY.md:71 src/reading-files.md:1
+msgid "Reading Files"
+msgstr ""
+
+#: src/SUMMARY.md:72 src/writing-files.md:1
+msgid "Writing Files"
+msgstr ""
+
+#: src/SUMMARY.md:73 src/line-filters.md:1
+msgid "Line Filters"
+msgstr ""
+
+#: src/SUMMARY.md:74 src/file-paths.md:1
+msgid "File Paths"
+msgstr ""
+
+#: src/SUMMARY.md:75 src/directories.md:1
+msgid "Directories"
+msgstr ""
+
+#: src/SUMMARY.md:76 src/temporary-files-and-directories.md:1
+msgid "Temporary Files and Directories"
+msgstr ""
+
+#: src/SUMMARY.md:77
+msgid "Embed Directive"
+msgstr ""
+
+#: src/SUMMARY.md:78 src/testing-and-benchmarking.md:1
+msgid "Testing and Benchmarking"
+msgstr ""
+
+#: src/SUMMARY.md:79 src/command-line-arguments.md:1
+msgid "Command-Line Arguments"
+msgstr ""
+
+#: src/SUMMARY.md:80 src/command-line-flags.md:1
+msgid "Command-Line Flags"
+msgstr ""
+
+#: src/SUMMARY.md:81 src/command-line-subcommands.md:1
+msgid "Command-Line Subcommands"
+msgstr ""
+
+#: src/SUMMARY.md:82 src/environment-variables.md:1
+msgid "Environment Variables"
+msgstr ""
+
+#: src/SUMMARY.md:83 src/logging.md:1
+msgid "Logging"
+msgstr ""
+
+#: src/SUMMARY.md:84 src/http-client.md:1
+msgid "HTTP Client"
+msgstr ""
+
+#: src/SUMMARY.md:85 src/http-server.md:1
+msgid "HTTP Server"
+msgstr ""
+
+#: src/SUMMARY.md:86 src/context.md:1
+msgid "Context"
+msgstr ""
+
+#: src/SUMMARY.md:87 src/spawning-processes.md:1
+msgid "Spawning Processes"
+msgstr ""
+
+#: src/SUMMARY.md:88 src/execing-processes.md:1
+msgid "Exec'ing Processes"
+msgstr ""
+
+#: src/SUMMARY.md:89 src/signals.md:1
+msgid "Signals"
+msgstr ""
+
+#: src/SUMMARY.md:90 src/exit.md:1
+msgid "Exit"
+msgstr ""
+
+#: src/index.md:1
+msgid "[Go](https://go.dev/) is an open-source programming language designed for building scalable, secure, and reliable software. Please read the [official documentation](https://go.dev/doc/tutorial/getting-started) to learn more."
+msgstr ""
+
+#: src/index.md:3
+msgid "_Go by Example_ is a hands-on introduction to Go using annotated example programs. Check out the [first example](hello-world.md) or browse the full list below."
+msgstr ""
+
+#: src/index.md:5
+msgid "Unless stated otherwise, the examples here assume the [latest major release Go](https://go.dev/doc/devel/release) and may use new language features. If something isn't working, try upgrading to the latest version."
+msgstr ""
+
+#: src/index.md:9
+msgid "[Hello World](hello-world.md)"
+msgstr ""
+
+#: src/index.md:10
+msgid "[Values](values.md)"
+msgstr ""
+
+#: src/index.md:11
+msgid "[Variables](variables.md)"
+msgstr ""
+
+#: src/index.md:12
+msgid "[Constants](constants.md)"
+msgstr ""
+
+#: src/index.md:13
+msgid "[For](for.md)"
+msgstr ""
+
+#: src/index.md:14
+msgid "[If/Else](if-else.md)"
+msgstr ""
+
+#: src/index.md:15
+msgid "[Switch](switch.md)"
+msgstr ""
+
+#: src/index.md:16
+msgid "[Arrays](arrays.md)"
+msgstr ""
+
+#: src/index.md:17
+msgid "[Slices](slices.md)"
+msgstr ""
+
+#: src/index.md:18
+msgid "[Maps](maps.md)"
+msgstr ""
+
+#: src/index.md:19
+msgid "[Functions](functions.md)"
+msgstr ""
+
+#: src/index.md:20
+msgid "[Multiple Return Values](multiple-return-values.md)"
+msgstr ""
+
+#: src/index.md:21
+msgid "[Variadic Functions](variadic-functions.md)"
+msgstr ""
+
+#: src/index.md:22
+msgid "[Closures](closures.md)"
+msgstr ""
+
+#: src/index.md:23
+msgid "[Recursion](recursion.md)"
+msgstr ""
+
+#: src/index.md:24
+msgid "[Range over Built-in Types](range-over-built-in-types.md)"
+msgstr ""
+
+#: src/index.md:25
+msgid "[Pointers](pointers.md)"
+msgstr ""
+
+#: src/index.md:26
+msgid "[Strings and Runes](strings-and-runes.md)"
+msgstr ""
+
+#: src/index.md:27
+msgid "[Structs](structs.md)"
+msgstr ""
+
+#: src/index.md:28
+msgid "[Methods](methods.md)"
+msgstr ""
+
+#: src/index.md:29
+msgid "[Interfaces](interfaces.md)"
+msgstr ""
+
+#: src/index.md:30
+msgid "[Enums](enums.md)"
+msgstr ""
+
+#: src/index.md:31
+msgid "[Struct Embedding](struct-embedding.md)"
+msgstr ""
+
+#: src/index.md:32
+msgid "[Generics](generics.md)"
+msgstr ""
+
+#: src/index.md:33
+msgid "[Range over Iterators](range-over-iterators.md)"
+msgstr ""
+
+#: src/index.md:34
+msgid "[Errors](errors.md)"
+msgstr ""
+
+#: src/index.md:35
+msgid "[Custom Errors](custom-errors.md)"
+msgstr ""
+
+#: src/index.md:36
+msgid "[Goroutines](goroutines.md)"
+msgstr ""
+
+#: src/index.md:37
+msgid "[Channels](channels.md)"
+msgstr ""
+
+#: src/index.md:38
+msgid "[Channel Buffering](channel-buffering.md)"
+msgstr ""
+
+#: src/index.md:39
+msgid "[Channel Synchronization](channel-synchronization.md)"
+msgstr ""
+
+#: src/index.md:40
+msgid "[Channel Directions](channel-directions.md)"
+msgstr ""
+
+#: src/index.md:41
+msgid "[Select](select.md)"
+msgstr ""
+
+#: src/index.md:42
+msgid "[Timeouts](timeouts.md)"
+msgstr ""
+
+#: src/index.md:43
+msgid "[Non-Blocking Channel Operations](non-blocking-channel-operations.md)"
+msgstr ""
+
+#: src/index.md:44
+msgid "[Closing Channels](closing-channels.md)"
+msgstr ""
+
+#: src/index.md:45
+msgid "[Range over Channels](range-over-channels.md)"
+msgstr ""
+
+#: src/index.md:46
+msgid "[Timers](timers.md)"
+msgstr ""
+
+#: src/index.md:47
+msgid "[Tickers](tickers.md)"
+msgstr ""
+
+#: src/index.md:48
+msgid "[Worker Pools](worker-pools.md)"
+msgstr ""
+
+#: src/index.md:49
+msgid "[WaitGroups](waitgroups.md)"
+msgstr ""
+
+#: src/index.md:50
+msgid "[Rate Limiting](rate-limiting.md)"
+msgstr ""
+
+#: src/index.md:51
+msgid "[Atomic Counters](atomic-counters.md)"
+msgstr ""
+
+#: src/index.md:52
+msgid "[Mutexes](mutexes.md)"
+msgstr ""
+
+#: src/index.md:53
+msgid "[Stateful Goroutines](stateful-goroutines.md)"
+msgstr ""
+
+#: src/index.md:54
+msgid "[Sorting](sorting.md)"
+msgstr ""
+
+#: src/index.md:55
+msgid "[Sorting by Functions](sorting-by-functions.md)"
+msgstr ""
+
+#: src/index.md:56
+msgid "[Panic](panic.md)"
+msgstr ""
+
+#: src/index.md:57
+msgid "[Defer](defer.md)"
+msgstr ""
+
+#: src/index.md:58
+msgid "[Recover](recover.md)"
+msgstr ""
+
+#: src/index.md:59
+msgid "[String Functions](string-functions.md)"
+msgstr ""
+
+#: src/index.md:60
+msgid "[String Formatting](string-formatting.md)"
+msgstr ""
+
+#: src/index.md:61
+msgid "[Text Templates](text-templates.md)"
+msgstr ""
+
+#: src/index.md:62
+msgid "[Regular Expressions](regular-expressions.md)"
+msgstr ""
+
+#: src/index.md:63
+msgid "[JSON](json.md)"
+msgstr ""
+
+#: src/index.md:64
+msgid "[XML](xml.md)"
+msgstr ""
+
+#: src/index.md:65
+msgid "[Time](time.md)"
+msgstr ""
+
+#: src/index.md:66
+msgid "[Epoch](epoch.md)"
+msgstr ""
+
+#: src/index.md:67
+msgid "[Time Formatting / Parsing](time-formatting-parsing.md)"
+msgstr ""
+
+#: src/index.md:68
+msgid "[Random Numbers](random-numbers.md)"
+msgstr ""
+
+#: src/index.md:69
+msgid "[Number Parsing](number-parsing.md)"
+msgstr ""
+
+#: src/index.md:70
+msgid "[URL Parsing](url-parsing.md)"
+msgstr ""
+
+#: src/index.md:71
+msgid "[SHA256 Hashes](sha256-hashes.md)"
+msgstr ""
+
+#: src/index.md:72
+msgid "[Base64 Encoding](base64-encoding.md)"
+msgstr ""
+
+#: src/index.md:73
+msgid "[Reading Files](reading-files.md)"
+msgstr ""
+
+#: src/index.md:74
+msgid "[Writing Files](writing-files.md)"
+msgstr ""
+
+#: src/index.md:75
+msgid "[Line Filters](line-filters.md)"
+msgstr ""
+
+#: src/index.md:76
+msgid "[File Paths](file-paths.md)"
+msgstr ""
+
+#: src/index.md:77
+msgid "[Directories](directories.md)"
+msgstr ""
+
+#: src/index.md:78
+msgid "[Temporary Files and Directories](temporary-files-and-directories.md)"
+msgstr ""
+
+#: src/index.md:79
+msgid "[Embed Directive](embed-directive.md)"
+msgstr ""
+
+#: src/index.md:80
+msgid "[Testing and Benchmarking](testing-and-benchmarking.md)"
+msgstr ""
+
+#: src/index.md:81
+msgid "[Command-Line Arguments](command-line-arguments.md)"
+msgstr ""
+
+#: src/index.md:82
+msgid "[Command-Line Flags](command-line-flags.md)"
+msgstr ""
+
+#: src/index.md:83
+msgid "[Command-Line Subcommands](command-line-subcommands.md)"
+msgstr ""
+
+#: src/index.md:84
+msgid "[Environment Variables](environment-variables.md)"
+msgstr ""
+
+#: src/index.md:85
+msgid "[Logging](logging.md)"
+msgstr ""
+
+#: src/index.md:86
+msgid "[HTTP Client](http-client.md)"
+msgstr ""
+
+#: src/index.md:87
+msgid "[HTTP Server](http-server.md)"
+msgstr ""
+
+#: src/index.md:88
+msgid "[Context](context.md)"
+msgstr ""
+
+#: src/index.md:89
+msgid "[Spawning Processes](spawning-processes.md)"
+msgstr ""
+
+#: src/index.md:90
+msgid "[Exec'ing Processes](execing-processes.md)"
+msgstr ""
+
+#: src/index.md:91
+msgid "[Signals](signals.md)"
+msgstr ""
+
+#: src/index.md:92
+msgid "[Exit](exit.md)"
+msgstr ""
+
+#: src/index.md:94
+msgid "FAQ"
+msgstr ""
+
+#: src/index.md:96
+msgid "I found a problem with the examples; what do I do?"
+msgstr ""
+
+#: src/index.md:98
+msgid "We're very happy to fix problem reports and accept contributions! Please submit [an issue](https://github.com/jcbhmt/gobyexample.jcbhmr.com/issues) or send a Pull Request. See `CONTRIBUTING.md` for more details."
+msgstr ""
+
+#: src/index.md:102
+msgid "What version of Go is required to run these examples?"
+msgstr ""
+
+#: src/index.md:104
+msgid "Given Go's strong [backwards compatibility guarantees](https://go.dev/doc/go1compat), we expect the vast majority of examples to work on the latest released version of Go as well as many older releases going back years."
+msgstr ""
+
+#: src/index.md:108
+msgid "That said, some examples show off new features added in recent releases; therefore, it's recommended to try running examples with the latest officially released Go version (see Go's [release history](https://go.dev/doc/devel/release) for details)."
+msgstr ""
+
+#: src/index.md:112
+msgid "I'm getting output in a different order from the example. Is the example wrong?"
+msgstr ""
+
+#: src/index.md:114
+msgid "Some of the examples demonstrate concurrent code which has a non-deterministic execution order. It depends on how the Go runtime schedules its goroutines and may vary by operating system, CPU architecture, or even Go version."
+msgstr ""
+
+#: src/index.md:118
+msgid "Similarly, examples that iterate over maps may produce items in a different order from what you're getting on your machine. This is because the order of iteration over maps in Go is [not specified and is not guaranteed to be the same from one iteration to the next](https://go.dev/ref/spec#RangeClause)."
+msgstr ""
+
+#: src/index.md:123
+msgid "It doesn't mean anything is wrong with the example. Typically the code in these examples will be insensitive to the actual order of the output; if the code is sensitive to the order - that's probably a bug - so feel free to report it."
+msgstr ""
+
+#: src/hello-world.md:4
+msgid "// Our first program will print the classic \"hello world\"\n"
+"// message. Here's the full source code.\n"
+msgstr ""
+
+#: src/hello-world.md:8 src/values.md:10 src/variables.md:10
+#: src/constants.md:10 src/for.md:9 src/if-else.md:9 src/switch.md:10
+#: src/arrays.md:11 src/slices.md:10 src/maps.md:10 src/functions.md:9
+#: src/multiple-return-values.md:10 src/variadic-functions.md:11
+#: src/closures.md:11 src/recursion.md:10 src/range-over-built-in-types.md:11
+#: src/pointers.md:10 src/strings-and-runes.md:16 src/structs.md:10
+#: src/methods.md:8 src/interfaces.md:10 src/enums.md:13
+#: src/struct-embedding.md:12 src/generics.md:9 src/range-over-iterators.md:11
+#: src/errors.md:21 src/custom-errors.md:13 src/goroutines.md:9
+#: src/channels.md:11 src/channel-buffering.md:13
+#: src/channel-synchronization.md:13 src/channel-directions.md:11
+#: src/select.md:11 src/timeouts.md:12
+#: src/non-blocking-channel-operations.md:11 src/closing-channels.md:10
+#: src/range-over-channels.md:11 src/timers.md:13 src/tickers.md:13
+#: src/worker-pools.md:10 src/waitgroups.md:10 src/rate-limiting.md:13
+#: src/atomic-counters.md:14 src/mutexes.md:12 src/stateful-goroutines.md:16
+#: src/sorting.md:11 src/sorting-by-functions.md:14 src/defer.md:12
+#: src/recover.md:18 src/string-functions.md:11 src/string-formatting.md:11
+#: src/regular-expressions.md:12 src/json.md:12 src/xml.md:11 src/time.md:10
+#: src/epoch.md:12 src/time-formatting-parsing.md:10 src/random-numbers.md:11
+#: src/number-parsing.md:12 src/url-parsing.md:10 src/sha256-hashes.md:16
+#: src/base64-encoding.md:14 src/reading-files.md:12 src/writing-files.md:11
+#: src/line-filters.md:16 src/file-paths.md:11 src/directories.md:10
+#: src/temporary-files-and-directories.md:13 src/testing-and-benchmarking.md:15
+#: src/command-line-arguments.md:12 src/command-line-flags.md:16
+#: src/command-line-subcommands.md:15 src/environment-variables.md:12
+#: src/logging.md:14 src/http-client.md:12 src/http-server.md:9
+#: src/context.md:13 src/spawning-processes.md:10 src/signals.md:14
+#: src/exit.md:10
+msgid "\"fmt\""
+msgstr ""
+
+#: src/hello-world.md:11
+msgid "\"hello world\""
+msgstr ""
+
+#: src/hello-world.md:16
+msgid "# To run the program, put the code in `hello-world.go` and\n"
+"# use `go run`.\n"
+msgstr ""
+
+#: src/hello-world.md:20
+msgid "# Sometimes we'll want to build our programs into\n"
+"# binaries. We can do this using `go build`.\n"
+msgstr ""
+
+#: src/hello-world.md:26
+msgid "# We can then execute the built binary directly.\n"
+msgstr ""
+
+#: src/hello-world.md:30
+msgid "# Now that we can run and build basic Go programs, let's\n"
+"# learn more about the language.\n"
+msgstr ""
+
+#: src/values.md:4
+msgid "// Go has various value types including strings,\n"
+"// integers, floats, booleans, etc. Here are a few\n"
+"// basic examples.\n"
+msgstr ""
+
+#: src/values.md:14
+msgid "// Strings, which can be added together with `+`.\n"
+msgstr ""
+
+#: src/values.md:15 src/range-over-built-in-types.md:51
+#: src/reading-files.md:100
+msgid "\"go\""
+msgstr ""
+
+#: src/values.md:15
+msgid "\"lang\""
+msgstr ""
+
+#: src/values.md:17
+msgid "// Integers and floats.\n"
+msgstr ""
+
+#: src/values.md:18
+msgid "\"1+1 =\""
+msgstr ""
+
+#: src/values.md:19
+msgid "\"7.0/3.0 =\""
+msgstr ""
+
+#: src/values.md:21
+msgid "// Booleans, with boolean operators as you'd expect.\n"
+msgstr ""
+
+#: src/variables.md:4
+msgid "// In Go, _variables_ are explicitly declared and used by\n"
+"// the compiler to e.g. check type-correctness of function\n"
+"// calls.\n"
+msgstr ""
+
+#: src/variables.md:14
+msgid "// `var` declares 1 or more variables.\n"
+msgstr ""
+
+#: src/variables.md:15
+msgid "\"initial\""
+msgstr ""
+
+#: src/variables.md:18
+msgid "// You can declare multiple variables at once.\n"
+msgstr ""
+
+#: src/variables.md:22
+msgid "// Go will infer the type of initialized variables.\n"
+msgstr ""
+
+#: src/variables.md:26
+msgid "// Variables declared without a corresponding\n"
+"\t// initialization are _zero-valued_. For example, the\n"
+"\t// zero value for an `int` is `0`.\n"
+msgstr ""
+
+#: src/variables.md:32
+msgid "// The `:=` syntax is shorthand for declaring and\n"
+"\t// initializing a variable, e.g. for\n"
+"\t// `var f string = \"apple\"` in this case.\n"
+"\t// This syntax is only available inside functions.\n"
+msgstr ""
+
+#: src/variables.md:36 src/range-over-built-in-types.md:36 src/json.md:50
+#: src/json.md:54 src/json.md:64 src/json.md:74 src/json.md:126 src/json.md:144
+#: src/json.md:145 src/json.md:146 src/json.md:147 src/json.md:153
+msgid "\"apple\""
+msgstr ""
+
+#: src/constants.md:4
+msgid "// Go supports _constants_ of character, string, boolean,\n"
+"// and numeric values.\n"
+msgstr ""
+
+#: src/constants.md:11 src/interfaces.md:11
+msgid "\"math\""
+msgstr ""
+
+#: src/constants.md:13
+msgid "// `const` declares a constant value.\n"
+msgstr ""
+
+#: src/constants.md:15
+msgid "\"constant\""
+msgstr ""
+
+#: src/constants.md:20
+msgid "// A `const` statement can appear anywhere a `var`\n"
+"\t// statement can.\n"
+msgstr ""
+
+#: src/constants.md:24
+msgid "// Constant expressions perform arithmetic with\n"
+"\t// arbitrary precision.\n"
+msgstr ""
+
+#: src/constants.md:29
+msgid "// A numeric constant has no type until it's given\n"
+"\t// one, such as by an explicit conversion.\n"
+msgstr ""
+
+#: src/constants.md:33
+msgid "// A number can be given a type by using it in a\n"
+"\t// context that requires one, such as a variable\n"
+"\t// assignment or function call. For example, here\n"
+"\t// `math.Sin` expects a `float64`.\n"
+msgstr ""
+
+#: src/for.md:4
+msgid "// `for` is Go's only looping construct. Here are\n"
+"// some basic types of `for` loops.\n"
+msgstr ""
+
+#: src/for.md:13
+msgid "// The most basic type, with a single condition.\n"
+msgstr ""
+
+#: src/for.md:20
+msgid "// A classic initial/condition/after `for` loop.\n"
+msgstr ""
+
+#: src/for.md:25
+msgid "// Another way of accomplishing the basic \"do this\n"
+"\t// N times\" iteration is `range` over an integer.\n"
+msgstr ""
+
+#: src/for.md:28
+msgid "\"range\""
+msgstr ""
+
+#: src/for.md:31
+msgid "// `for` without a condition will loop repeatedly\n"
+"\t// until you `break` out of the loop or `return` from\n"
+"\t// the enclosing function.\n"
+msgstr ""
+
+#: src/for.md:35
+msgid "\"loop\""
+msgstr ""
+
+#: src/for.md:39
+msgid "// You can also `continue` to the next iteration of\n"
+"\t// the loop.\n"
+msgstr ""
+
+#: src/for.md:65
+msgid "# We'll see some other `for` forms later when we look at\n"
+"# `range` statements, channels, and other data\n"
+"# structures.\n"
+msgstr ""
+
+#: src/if-else.md:4
+msgid "// Branching with `if` and `else` in Go is\n"
+"// straight-forward.\n"
+msgstr ""
+
+#: src/if-else.md:13
+msgid "// Here's a basic example.\n"
+msgstr ""
+
+#: src/if-else.md:15
+msgid "\"7 is even\""
+msgstr ""
+
+#: src/if-else.md:17
+msgid "\"7 is odd\""
+msgstr ""
+
+#: src/if-else.md:20
+msgid "// You can have an `if` statement without an else.\n"
+msgstr ""
+
+#: src/if-else.md:22
+msgid "\"8 is divisible by 4\""
+msgstr ""
+
+#: src/if-else.md:25
+msgid "// Logical operators like `&&` and `||` are often\n"
+"\t// useful in conditions.\n"
+msgstr ""
+
+#: src/if-else.md:28
+msgid "\"either 8 or 7 are even\""
+msgstr ""
+
+#: src/if-else.md:31
+msgid "// A statement can precede conditionals; any variables\n"
+"\t// declared in this statement are available in the current\n"
+"\t// and all subsequent branches.\n"
+msgstr ""
+
+#: src/if-else.md:35
+msgid "\"is negative\""
+msgstr ""
+
+#: src/if-else.md:37
+msgid "\"has 1 digit\""
+msgstr ""
+
+#: src/if-else.md:39
+msgid "\"has multiple digits\""
+msgstr ""
+
+#: src/if-else.md:42
+msgid "// Note that you don't need parentheses around conditions\n"
+"// in Go, but that the braces are required.\n"
+msgstr ""
+
+#: src/if-else.md:53
+msgid "# There is no [ternary if](https://en.wikipedia.org/wiki/%3F:)\n"
+"# in Go, so you'll need to use a full `if` statement even\n"
+"# for basic conditions.\n"
+msgstr ""
+
+#: src/switch.md:4
+msgid "// _Switch statements_ express conditionals across many\n"
+"// branches.\n"
+msgstr ""
+
+#: src/switch.md:11 src/goroutines.md:10 src/channel-synchronization.md:14
+#: src/select.md:12 src/timeouts.md:13 src/timers.md:14 src/tickers.md:14
+#: src/worker-pools.md:11 src/waitgroups.md:12 src/rate-limiting.md:14
+#: src/stateful-goroutines.md:19 src/time.md:11 src/epoch.md:13
+#: src/time-formatting-parsing.md:11 src/logging.md:97 src/logging.md:99
+#: src/context.md:15
+msgid "\"time\""
+msgstr ""
+
+#: src/switch.md:16
+msgid "// Here's a basic `switch`.\n"
+msgstr ""
+
+#: src/switch.md:18
+msgid "\"Write \""
+msgstr ""
+
+#: src/switch.md:18
+msgid "\" as \""
+msgstr ""
+
+#: src/switch.md:21 src/select.md:26 src/range-over-channels.md:17
+msgid "\"one\""
+msgstr ""
+
+#: src/switch.md:23 src/select.md:30 src/range-over-channels.md:18
+msgid "\"two\""
+msgstr ""
+
+#: src/switch.md:25
+msgid "\"three\""
+msgstr ""
+
+#: src/switch.md:28
+msgid "// You can use commas to separate multiple expressions\n"
+"\t// in the same `case` statement. We use the optional\n"
+"\t// `default` case in this example as well.\n"
+msgstr ""
+
+#: src/switch.md:33
+msgid "\"It's the weekend\""
+msgstr ""
+
+#: src/switch.md:35
+msgid "\"It's a weekday\""
+msgstr ""
+
+#: src/switch.md:38
+msgid "// `switch` without an expression is an alternate way\n"
+"\t// to express if/else logic. Here we also show how the\n"
+"\t// `case` expressions can be non-constants.\n"
+msgstr ""
+
+#: src/switch.md:44
+msgid "\"It's before noon\""
+msgstr ""
+
+#: src/switch.md:46
+msgid "\"It's after noon\""
+msgstr ""
+
+#: src/switch.md:49
+msgid "// A type `switch` compares types instead of values.  You\n"
+"\t// can use this to discover the type of an interface\n"
+"\t// value.  In this example, the variable `t` will have the\n"
+"\t// type corresponding to its clause.\n"
+msgstr ""
+
+#: src/switch.md:56
+msgid "\"I'm a bool\""
+msgstr ""
+
+#: src/switch.md:58
+msgid "\"I'm an int\""
+msgstr ""
+
+#: src/switch.md:60
+msgid "\"Don't know type %T\\n\""
+msgstr ""
+
+#: src/switch.md:65
+msgid "\"hey\""
+msgstr ""
+
+#: src/switch.md:72
+msgid "'s a weekday\n"
+"It'"
+msgstr ""
+
+#: src/switch.md:74
+msgid "'m a bool\n"
+"I'"
+msgstr ""
+
+#: src/switch.md:76
+msgid "'t know type string\n"
+msgstr ""
+
+#: src/arrays.md:4
+msgid "// In Go, an _array_ is a numbered sequence of elements of a\n"
+"// specific length. In typical Go code, [slices](slices) are\n"
+"// much more common; arrays are useful in some special\n"
+"// scenarios.\n"
+msgstr ""
+
+#: src/arrays.md:15
+msgid "// Here we create an array `a` that will hold exactly\n"
+"\t// 5 `int`s. The type of elements and length are both\n"
+"\t// part of the array's type. By default an array is\n"
+"\t// zero-valued, which for `int`s means `0`s.\n"
+msgstr ""
+
+#: src/arrays.md:20 src/slices.md:31
+msgid "\"emp:\""
+msgstr ""
+
+#: src/arrays.md:22
+msgid "// We can set a value at an index using the\n"
+"\t// `array[index] = value` syntax, and get a value with\n"
+"\t// `array[index]`.\n"
+msgstr ""
+
+#: src/arrays.md:26 src/slices.md:37
+msgid "\"set:\""
+msgstr ""
+
+#: src/arrays.md:27 src/slices.md:38
+msgid "\"get:\""
+msgstr ""
+
+#: src/arrays.md:29
+msgid "// The builtin `len` returns the length of an array.\n"
+msgstr ""
+
+#: src/arrays.md:30 src/slices.md:31 src/slices.md:41 src/maps.md:41
+msgid "\"len:\""
+msgstr ""
+
+#: src/arrays.md:32
+msgid "// Use this syntax to declare and initialize an array\n"
+"\t// in one line.\n"
+msgstr ""
+
+#: src/arrays.md:35 src/arrays.md:40 src/slices.md:77
+msgid "\"dcl:\""
+msgstr ""
+
+#: src/arrays.md:37
+msgid "// You can also have the compiler count the number of\n"
+"\t// elements for you with `...`\n"
+msgstr ""
+
+#: src/arrays.md:42
+msgid "// If you specify the index with `:`, the elements in\n"
+"\t// between will be zeroed.\n"
+msgstr ""
+
+#: src/arrays.md:45 src/regular-expressions.md:37
+msgid "\"idx:\""
+msgstr ""
+
+#: src/arrays.md:47
+msgid "// Array types are one-dimensional, but you can\n"
+"\t// compose types to build multi-dimensional data\n"
+"\t// structures.\n"
+msgstr ""
+
+#: src/arrays.md:56 src/arrays.md:64 src/slices.md:97
+msgid "\"2d: \""
+msgstr ""
+
+#: src/arrays.md:58
+msgid "// You can create and initialize multi-dimensional\n"
+"\t// arrays at once too.\n"
+msgstr ""
+
+#: src/arrays.md:69
+msgid "# Note that arrays appear in the form `[v1 v2 v3 ...]`\n"
+"# when printed with `fmt.Println`.\n"
+msgstr ""
+
+#: src/slices.md:4
+msgid "// _Slices_ are an important data type in Go, giving\n"
+"// a more powerful interface to sequences than arrays.\n"
+msgstr ""
+
+#: src/slices.md:11 src/range-over-iterators.md:13 src/sorting.md:12
+#: src/sorting-by-functions.md:15
+msgid "\"slices\""
+msgstr ""
+
+#: src/slices.md:16
+msgid "// Unlike arrays, slices are typed only by the\n"
+"\t// elements they contain (not the number of elements).\n"
+"\t// An uninitialized slice equals to nil and has\n"
+"\t// length 0.\n"
+msgstr ""
+
+#: src/slices.md:21
+msgid "\"uninit:\""
+msgstr ""
+
+#: src/slices.md:23
+msgid "// To create an empty slice with non-zero length, use\n"
+"\t// the builtin `make`. Here we make a slice of\n"
+"\t// `string`s of length `3` (initially zero-valued).\n"
+"\t// By default a new slice's capacity is equal to its\n"
+"\t// length; if we know the slice is going to grow ahead\n"
+"\t// of time, it's possible to pass a capacity explicitly\n"
+"\t// as an additional parameter to `make`.\n"
+msgstr ""
+
+#: src/slices.md:31
+msgid "\"cap:\""
+msgstr ""
+
+#: src/slices.md:33
+msgid "// We can set and get just like with arrays.\n"
+msgstr ""
+
+#: src/slices.md:34 src/range-over-built-in-types.md:36 src/mutexes.md:40
+#: src/mutexes.md:58 src/mutexes.md:59 src/sorting.md:20
+#: src/string-functions.md:33 src/string-functions.md:34
+msgid "\"a\""
+msgstr ""
+
+#: src/slices.md:35 src/range-over-built-in-types.md:36 src/mutexes.md:40
+#: src/mutexes.md:60 src/sorting.md:20 src/string-functions.md:33
+#: src/string-formatting.md:99 src/string-formatting.md:102
+msgid "\"b\""
+msgstr ""
+
+#: src/slices.md:36 src/sorting.md:20
+msgid "\"c\""
+msgstr ""
+
+#: src/slices.md:40
+msgid "// `len` returns the length of the slice as expected.\n"
+msgstr ""
+
+#: src/slices.md:43
+msgid "// In addition to these basic operations, slices\n"
+"\t// support several more that make them richer than\n"
+"\t// arrays. One is the builtin `append`, which\n"
+"\t// returns a slice containing one or more new values.\n"
+"\t// Note that we need to accept a return value from\n"
+"\t// `append` as we may get a new slice value.\n"
+msgstr ""
+
+#: src/slices.md:49
+msgid "\"d\""
+msgstr ""
+
+#: src/slices.md:50 src/string-functions.md:32
+msgid "\"e\""
+msgstr ""
+
+#: src/slices.md:50
+msgid "\"f\""
+msgstr ""
+
+#: src/slices.md:51
+msgid "\"apd:\""
+msgstr ""
+
+#: src/slices.md:53
+msgid "// Slices can also be `copy`'d. Here we create an\n"
+"\t// empty slice `c` of the same length as `s` and copy\n"
+"\t// into `c` from `s`.\n"
+msgstr ""
+
+#: src/slices.md:58
+msgid "\"cpy:\""
+msgstr ""
+
+#: src/slices.md:60
+msgid "// Slices support a \"slice\" operator with the syntax\n"
+"\t// `slice[low:high]`. For example, this gets a slice\n"
+"\t// of the elements `s[2]`, `s[3]`, and `s[4]`.\n"
+msgstr ""
+
+#: src/slices.md:64
+msgid "\"sl1:\""
+msgstr ""
+
+#: src/slices.md:66
+msgid "// This slices up to (but excluding) `s[5]`.\n"
+msgstr ""
+
+#: src/slices.md:68
+msgid "\"sl2:\""
+msgstr ""
+
+#: src/slices.md:70
+msgid "// And this slices up from (and including) `s[2]`.\n"
+msgstr ""
+
+#: src/slices.md:72
+msgid "\"sl3:\""
+msgstr ""
+
+#: src/slices.md:74
+msgid "// We can declare and initialize a variable for slice\n"
+"\t// in a single line as well.\n"
+msgstr ""
+
+#: src/slices.md:76 src/slices.md:81
+msgid "\"g\""
+msgstr ""
+
+#: src/slices.md:76 src/slices.md:81
+msgid "\"h\""
+msgstr ""
+
+#: src/slices.md:76 src/slices.md:81
+msgid "\"i\""
+msgstr ""
+
+#: src/slices.md:79
+msgid "// The `slices` package contains a number of useful\n"
+"\t// utility functions for slices.\n"
+msgstr ""
+
+#: src/slices.md:83
+msgid "\"t == t2\""
+msgstr ""
+
+#: src/slices.md:86
+msgid "// Slices can be composed into multi-dimensional data\n"
+"\t// structures. The length of the inner slices can\n"
+"\t// vary, unlike with multi-dimensional arrays.\n"
+msgstr ""
+
+#: src/slices.md:102
+msgid "# Note that while slices are different types than arrays,\n"
+"# they are rendered similarly by `fmt.Println`.\n"
+msgstr ""
+
+#: src/slices.md:118
+msgid "# Check out this [great blog post](https://go.dev/blog/slices-intro)\n"
+"# by the Go team for more details on the design and\n"
+"# implementation of slices in Go.\n"
+msgstr ""
+
+#: src/slices.md:122
+msgid "# Now that we've seen arrays and slices we'll look at\n"
+"# Go's other key builtin data structure: maps.\n"
+msgstr ""
+
+#: src/maps.md:4
+msgid "// _Maps_ are Go's built-in [associative data type](https://en.wikipedia.org/wiki/Associative_array)\n"
+"// (sometimes called _hashes_ or _dicts_ in other languages).\n"
+msgstr ""
+
+#: src/maps.md:11
+msgid "\"maps\""
+msgstr ""
+
+#: src/maps.md:16
+msgid "// To create an empty map, use the builtin `make`:\n"
+"\t// `make(map[key-type]val-type)`.\n"
+msgstr ""
+
+#: src/maps.md:20
+msgid "// Set key/value pairs using typical `name[key] = val`\n"
+"\t// syntax.\n"
+msgstr ""
+
+#: src/maps.md:22 src/maps.md:30
+msgid "\"k1\""
+msgstr ""
+
+#: src/maps.md:23 src/maps.md:45 src/maps.md:60
+msgid "\"k2\""
+msgstr ""
+
+#: src/maps.md:25
+msgid "// Printing a map with e.g. `fmt.Println` will show all of\n"
+"\t// its key/value pairs.\n"
+msgstr ""
+
+#: src/maps.md:27 src/maps.md:46 src/maps.md:51 src/maps.md:66
+msgid "\"map:\""
+msgstr ""
+
+#: src/maps.md:29
+msgid "// Get a value for a key with `name[key]`.\n"
+msgstr ""
+
+#: src/maps.md:31
+msgid "\"v1:\""
+msgstr ""
+
+#: src/maps.md:33
+msgid "// If the key doesn't exist, the\n"
+"\t// [zero value](https://go.dev/ref/spec#The_zero_value) of the\n"
+"\t// value type is returned.\n"
+msgstr ""
+
+#: src/maps.md:36
+msgid "\"k3\""
+msgstr ""
+
+#: src/maps.md:37
+msgid "\"v3:\""
+msgstr ""
+
+#: src/maps.md:39
+msgid "// The builtin `len` returns the number of key/value\n"
+"\t// pairs when called on a map.\n"
+msgstr ""
+
+#: src/maps.md:43
+msgid "// The builtin `delete` removes key/value pairs from\n"
+"\t// a map.\n"
+msgstr ""
+
+#: src/maps.md:48
+msgid "// To remove *all* key/value pairs from a map, use\n"
+"\t// the `clear` builtin.\n"
+msgstr ""
+
+#: src/maps.md:53
+msgid "// The optional second return value when getting a\n"
+"\t// value from a map indicates if the key was present\n"
+"\t// in the map. This can be used to disambiguate\n"
+"\t// between missing keys and keys with zero values\n"
+"\t// like `0` or `\"\"`. Here we didn't need the value\n"
+"\t// itself, so we ignored it with the _blank identifier_\n"
+"\t// `_`.\n"
+msgstr ""
+
+#: src/maps.md:61
+msgid "\"prs:\""
+msgstr ""
+
+#: src/maps.md:63
+msgid "// You can also declare and initialize a new map in\n"
+"\t// the same line with this syntax.\n"
+msgstr ""
+
+#: src/maps.md:65 src/maps.md:70 src/generics.md:65 src/string-functions.md:35
+#: src/string-functions.md:36 src/string-formatting.md:99
+#: src/string-formatting.md:102 src/command-line-flags.md:27
+#: src/command-line-flags.md:105 src/command-line-subcommands.md:24
+#: src/command-line-subcommands.md:45
+msgid "\"foo\""
+msgstr ""
+
+#: src/maps.md:65 src/maps.md:70 src/generics.md:65
+#: src/command-line-flags.md:39 src/command-line-flags.md:104
+#: src/command-line-subcommands.md:30 src/command-line-subcommands.md:51
+msgid "\"bar\""
+msgstr ""
+
+#: src/maps.md:68
+msgid "// The `maps` package contains a number of useful\n"
+"\t// utility functions for maps.\n"
+msgstr ""
+
+#: src/maps.md:72
+msgid "\"n == n2\""
+msgstr ""
+
+#: src/maps.md:78
+msgid "# Note that maps appear in the form `map[k:v k:v]` when\n"
+"# printed with `fmt.Println`.\n"
+msgstr ""
+
+#: src/functions.md:4
+msgid "// _Functions_ are central in Go. We'll learn about\n"
+"// functions with a few different examples.\n"
+msgstr ""
+
+#: src/functions.md:10
+msgid "// Here's a function that takes two `int`s and returns\n"
+"// their sum as an `int`.\n"
+msgstr ""
+
+#: src/functions.md:15
+msgid "// Go requires explicit returns, i.e. it won't\n"
+"\t// automatically return the value of the last\n"
+"\t// expression.\n"
+msgstr ""
+
+#: src/functions.md:20
+msgid "// When you have multiple consecutive parameters of\n"
+"// the same type, you may omit the type name for the\n"
+"// like-typed parameters up to the final parameter that\n"
+"// declares the type.\n"
+msgstr ""
+
+#: src/functions.md:31
+msgid "// Call a function just as you'd expect, with\n"
+"\t// `name(args)`.\n"
+msgstr ""
+
+#: src/functions.md:34
+msgid "\"1+2 =\""
+msgstr ""
+
+#: src/functions.md:37
+msgid "\"1+2+3 =\""
+msgstr ""
+
+#: src/functions.md:45
+msgid "# There are several other features to Go functions. One is\n"
+"# multiple return values, which we'll look at next.\n"
+msgstr ""
+
+#: src/multiple-return-values.md:4
+msgid "// Go has built-in support for _multiple return values_.\n"
+"// This feature is used often in idiomatic Go, for example\n"
+"// to return both result and error values from a function.\n"
+msgstr ""
+
+#: src/multiple-return-values.md:11
+msgid "// The `(int, int)` in this function signature shows that\n"
+"// the function returns 2 `int`s.\n"
+msgstr ""
+
+#: src/multiple-return-values.md:20
+msgid "// Here we use the 2 different return values from the\n"
+"\t// call with _multiple assignment_.\n"
+msgstr ""
+
+#: src/multiple-return-values.md:26
+msgid "// If you only want a subset of the returned values,\n"
+"\t// use the blank identifier `_`.\n"
+msgstr ""
+
+#: src/multiple-return-values.md:38
+msgid "# Accepting a variable number of arguments is another nice\n"
+"# feature of Go functions; we'll look at this next.\n"
+msgstr ""
+
+#: src/variadic-functions.md:4
+msgid "// [_Variadic functions_](https://en.wikipedia.org/wiki/Variadic_function)\n"
+"// can be called with any number of trailing arguments.\n"
+"// For example, `fmt.Println` is a common variadic\n"
+"// function.\n"
+msgstr ""
+
+#: src/variadic-functions.md:12
+msgid "// Here's a function that will take an arbitrary number\n"
+"// of `int`s as arguments.\n"
+msgstr ""
+
+#: src/variadic-functions.md:16 src/xml.md:40 src/xml.md:70
+#: src/directories.md:60 src/directories.md:75 src/directories.md:96
+msgid "\" \""
+msgstr ""
+
+#: src/variadic-functions.md:18
+msgid "// Within the function, the type of `nums` is\n"
+"\t// equivalent to `[]int`. We can call `len(nums)`,\n"
+"\t// iterate over it with `range`, etc.\n"
+msgstr ""
+
+#: src/variadic-functions.md:29
+msgid "// Variadic functions can be called in the usual way\n"
+"\t// with individual arguments.\n"
+msgstr ""
+
+#: src/variadic-functions.md:34
+msgid "// If you already have multiple args in a slice,\n"
+"\t// apply them to a variadic function using\n"
+"\t// `func(slice...)` like this.\n"
+msgstr ""
+
+#: src/variadic-functions.md:47
+msgid "# Another key aspect of functions in Go is their ability\n"
+"# to form closures, which we'll look at next.\n"
+msgstr ""
+
+#: src/closures.md:4
+msgid "// Go supports [_anonymous functions_](https://en.wikipedia.org/wiki/Anonymous_function),\n"
+"// which can form <a href=\"https://en.wikipedia.org/wiki/Closure_(computer_science)\"><em>closures</em></a>.\n"
+"// Anonymous functions are useful when you want to define\n"
+"// a function inline without having to name it.\n"
+msgstr ""
+
+#: src/closures.md:12
+msgid "// This function `intSeq` returns another function, which\n"
+"// we define anonymously in the body of `intSeq`. The\n"
+"// returned function _closes over_ the variable `i` to\n"
+"// form a closure.\n"
+msgstr ""
+
+#: src/closures.md:27
+msgid "// We call `intSeq`, assigning the result (a function)\n"
+"\t// to `nextInt`. This function value captures its\n"
+"\t// own `i` value, which will be updated each time\n"
+"\t// we call `nextInt`.\n"
+msgstr ""
+
+#: src/closures.md:33
+msgid "// See the effect of the closure by calling `nextInt`\n"
+"\t// a few times.\n"
+msgstr ""
+
+#: src/closures.md:39
+msgid "// To confirm that the state is unique to that\n"
+"\t// particular function, create and test a new one.\n"
+msgstr ""
+
+#: src/closures.md:52
+msgid "# The last feature of functions we'll look at for now is\n"
+"# recursion.\n"
+msgstr ""
+
+#: src/recursion.md:4
+msgid "// Go supports\n"
+"// <a href=\"https://en.wikipedia.org/wiki/Recursion_(computer_science)\"><em>recursive functions</em></a>.\n"
+"// Here's a classic example.\n"
+msgstr ""
+
+#: src/recursion.md:11
+msgid "// This `fact` function calls itself until it reaches the\n"
+"// base case of `fact(0)`.\n"
+msgstr ""
+
+#: src/recursion.md:24
+msgid "// Anonymous functions can also be recursive, but this requires\n"
+"\t// explicitly declaring a variable with `var` to store\n"
+"\t// the function before it's defined.\n"
+msgstr ""
+
+#: src/recursion.md:34
+msgid "// Since `fib` was previously declared in `main`, Go\n"
+"\t\t// knows which function to call with `fib` here.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:4
+msgid "// _range_ iterates over elements in a variety of\n"
+"// built-in data structures. Let's see how to\n"
+"// use `range` with some of the data structures\n"
+"// we've already learned.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:15
+msgid "// Here we use `range` to sum the numbers in a slice.\n"
+"\t// Arrays work like this too.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:22
+msgid "\"sum:\""
+msgstr ""
+
+#: src/range-over-built-in-types.md:24
+msgid "// `range` on arrays and slices provides both the\n"
+"\t// index and value for each entry. Above we didn't\n"
+"\t// need the index, so we ignored it with the\n"
+"\t// blank identifier `_`. Sometimes we actually want\n"
+"\t// the indexes though.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:31
+msgid "\"index:\""
+msgstr ""
+
+#: src/range-over-built-in-types.md:35
+msgid "// `range` on map iterates over key/value pairs.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:36 src/sorting-by-functions.md:19
+msgid "\"banana\""
+msgstr ""
+
+#: src/range-over-built-in-types.md:38
+msgid "\"%s -> %s\\n\""
+msgstr ""
+
+#: src/range-over-built-in-types.md:41
+msgid "// `range` can also iterate over just the keys of a map.\n"
+msgstr ""
+
+#: src/range-over-built-in-types.md:43
+msgid "\"key:\""
+msgstr ""
+
+#: src/range-over-built-in-types.md:46
+msgid "// `range` on strings iterates over Unicode code\n"
+"\t// points. The first value is the starting byte index\n"
+"\t// of the `rune` and the second the `rune` itself.\n"
+"\t// See [Strings and Runes](strings-and-runes) for more\n"
+"\t// details.\n"
+msgstr ""
+
+#: src/pointers.md:4
+msgid "// Go supports <em><a href=\"https://en.wikipedia.org/wiki/Pointer_(computer_programming)\">pointers</a></em>,\n"
+"// allowing you to pass references to values and records\n"
+"// within your program.\n"
+msgstr ""
+
+#: src/pointers.md:11
+msgid "// We'll show how pointers work in contrast to values with\n"
+"// 2 functions: `zeroval` and `zeroptr`. `zeroval` has an\n"
+"// `int` parameter, so arguments will be passed to it by\n"
+"// value. `zeroval` will get a copy of `ival` distinct\n"
+"// from the one in the calling function.\n"
+msgstr ""
+
+#: src/pointers.md:20
+msgid "// `zeroptr` in contrast has an `*int` parameter, meaning\n"
+"// that it takes an `int` pointer. The `*iptr` code in the\n"
+"// function body then _dereferences_ the pointer from its\n"
+"// memory address to the current value at that address.\n"
+"// Assigning a value to a dereferenced pointer changes the\n"
+"// value at the referenced address.\n"
+msgstr ""
+
+#: src/pointers.md:33
+msgid "\"initial:\""
+msgstr ""
+
+#: src/pointers.md:36
+msgid "\"zeroval:\""
+msgstr ""
+
+#: src/pointers.md:38
+msgid "// The `&i` syntax gives the memory address of `i`,\n"
+"\t// i.e. a pointer to `i`.\n"
+msgstr ""
+
+#: src/pointers.md:41
+msgid "\"zeroptr:\""
+msgstr ""
+
+#: src/pointers.md:43
+msgid "// Pointers can be printed too.\n"
+msgstr ""
+
+#: src/pointers.md:44
+msgid "\"pointer:\""
+msgstr ""
+
+#: src/pointers.md:49
+msgid "# `zeroval` doesn't change the `i` in `main`, but\n"
+"# `zeroptr` does because it has a reference to\n"
+"# the memory address for that variable.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:4
+msgid "// A Go string is a read-only slice of bytes. The language\n"
+"// and the standard library treat strings specially - as\n"
+"// containers of text encoded in [UTF-8](https://en.wikipedia.org/wiki/UTF-8).\n"
+"// In other languages, strings are made of \"characters\".\n"
+"// In Go, the concept of a character is called a `rune` - it's\n"
+"// an integer that represents a Unicode code point.\n"
+"// [This Go blog post](https://go.dev/blog/strings) is a good\n"
+"// introduction to the topic.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:17
+msgid "\"unicode/utf8\""
+msgstr ""
+
+#: src/strings-and-runes.md:22
+msgid "// `s` is a `string` assigned a literal value\n"
+"\t// representing the word \"hello\" in the Thai\n"
+"\t// language. Go string literals are UTF-8\n"
+"\t// encoded text.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:26
+msgid "\"สวัสดี\""
+msgstr ""
+
+#: src/strings-and-runes.md:28
+msgid "// Since strings are equivalent to `[]byte`, this\n"
+"\t// will produce the length of the raw bytes stored within.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:30
+msgid "\"Len:\""
+msgstr ""
+
+#: src/strings-and-runes.md:32
+msgid "// Indexing into a string produces the raw byte values at\n"
+"\t// each index. This loop generates the hex values of all\n"
+"\t// the bytes that constitute the code points in `s`.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:36
+msgid "\"%x \""
+msgstr ""
+
+#: src/strings-and-runes.md:40
+msgid "// To count how many _runes_ are in a string, we can use\n"
+"\t// the `utf8` package. Note that the run-time of\n"
+"\t// `RuneCountInString` depends on the size of the string,\n"
+"\t// because it has to decode each UTF-8 rune sequentially.\n"
+"\t// Some Thai characters are represented by UTF-8 code points\n"
+"\t// that can span multiple bytes, so the result of this count\n"
+"\t// may be surprising.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:47
+msgid "\"Rune count:\""
+msgstr ""
+
+#: src/strings-and-runes.md:49
+msgid "// A `range` loop handles strings specially and decodes\n"
+"\t// each `rune` along with its offset in the string.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:52 src/strings-and-runes.md:60
+msgid "\"%#U starts at %d\\n\""
+msgstr ""
+
+#: src/strings-and-runes.md:55
+msgid "// We can achieve the same iteration by using the\n"
+"\t// `utf8.DecodeRuneInString` function explicitly.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:57
+msgid "\"\\nUsing DecodeRuneInString\""
+msgstr ""
+
+#: src/strings-and-runes.md:63
+msgid "// This demonstrates passing a `rune` value to a function.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:70
+msgid "// Values enclosed in single quotes are _rune literals_. We\n"
+"\t// can compare a `rune` value to a rune literal directly.\n"
+msgstr ""
+
+#: src/strings-and-runes.md:72
+msgid "'t'"
+msgstr ""
+
+#: src/strings-and-runes.md:73
+msgid "\"found tee\""
+msgstr ""
+
+#: src/strings-and-runes.md:74 src/strings-and-runes.md:85
+#: src/strings-and-runes.md:88 src/strings-and-runes.md:93
+#: src/strings-and-runes.md:97
+msgid "'ส'"
+msgstr ""
+
+#: src/strings-and-runes.md:75
+msgid "\"found so sua\""
+msgstr ""
+
+#: src/strings-and-runes.md:86 src/strings-and-runes.md:95
+msgid "'ว'"
+msgstr ""
+
+#: src/strings-and-runes.md:87 src/strings-and-runes.md:96
+msgid "'ั'"
+msgstr ""
+
+#: src/strings-and-runes.md:89 src/strings-and-runes.md:99
+msgid "'ด'"
+msgstr ""
+
+#: src/strings-and-runes.md:90 src/strings-and-runes.md:100
+msgid "'ี'"
+msgstr ""
+
+#: src/structs.md:4
+msgid "// Go's _structs_ are typed collections of fields.\n"
+"// They're useful for grouping data together to form\n"
+"// records.\n"
+msgstr ""
+
+#: src/structs.md:11
+msgid "// This `person` struct type has `name` and `age` fields.\n"
+msgstr ""
+
+#: src/structs.md:17
+msgid "// `newPerson` constructs a new person struct with the given name.\n"
+msgstr ""
+
+#: src/structs.md:20
+msgid "// Go is a garbage collected language; you can safely\n"
+"\t// return a pointer to a local variable - it will only\n"
+"\t// be cleaned up by the garbage collector when there\n"
+"\t// are no active references to it.\n"
+msgstr ""
+
+#: src/structs.md:31
+msgid "// This syntax creates a new struct.\n"
+msgstr ""
+
+#: src/structs.md:32
+msgid "\"Bob\""
+msgstr ""
+
+#: src/structs.md:34
+msgid "// You can name the fields when initializing a struct.\n"
+msgstr ""
+
+#: src/structs.md:35
+msgid "\"Alice\""
+msgstr ""
+
+#: src/structs.md:37
+msgid "// Omitted fields will be zero-valued.\n"
+msgstr ""
+
+#: src/structs.md:38
+msgid "\"Fred\""
+msgstr ""
+
+#: src/structs.md:40
+msgid "// An `&` prefix yields a pointer to the struct.\n"
+msgstr ""
+
+#: src/structs.md:41
+msgid "\"Ann\""
+msgstr ""
+
+#: src/structs.md:43
+msgid "// It's idiomatic to encapsulate new struct creation in constructor functions\n"
+msgstr ""
+
+#: src/structs.md:44
+msgid "\"Jon\""
+msgstr ""
+
+#: src/structs.md:46
+msgid "// Access struct fields with a dot.\n"
+msgstr ""
+
+#: src/structs.md:47
+msgid "\"Sean\""
+msgstr ""
+
+#: src/structs.md:50
+msgid "// You can also use dots with struct pointers - the\n"
+"\t// pointers are automatically dereferenced.\n"
+msgstr ""
+
+#: src/structs.md:55
+msgid "// Structs are mutable.\n"
+msgstr ""
+
+#: src/structs.md:59
+msgid "// If a struct type is only used for a single value, we don't\n"
+"\t// have to give it a name. The value can have an anonymous\n"
+"\t// struct type. This technique is commonly used for\n"
+"\t// [table-driven tests](testing-and-benchmarking).\n"
+msgstr ""
+
+#: src/structs.md:67
+msgid "\"Rex\""
+msgstr ""
+
+#: src/methods.md:4
+msgid "// Go supports _methods_ defined on struct types.\n"
+msgstr ""
+
+#: src/methods.md:13
+msgid "// This `area` method has a _receiver type_ of `*rect`.\n"
+msgstr ""
+
+#: src/methods.md:18
+msgid "// Methods can be defined for either pointer or value\n"
+"// receiver types. Here's an example of a value receiver.\n"
+msgstr ""
+
+#: src/methods.md:28
+msgid "// Here we call the 2 methods defined for our struct.\n"
+msgstr ""
+
+#: src/methods.md:29 src/methods.md:38
+msgid "\"area: \""
+msgstr ""
+
+#: src/methods.md:30 src/methods.md:39
+msgid "\"perim:\""
+msgstr ""
+
+#: src/methods.md:32
+msgid "// Go automatically handles conversion between values\n"
+"\t// and pointers for method calls. You may want to use\n"
+"\t// a pointer receiver type to avoid copying on method\n"
+"\t// calls or to allow the method to mutate the\n"
+"\t// receiving struct.\n"
+msgstr ""
+
+#: src/methods.md:49
+msgid "# Next we'll look at Go's mechanism for grouping and\n"
+"# naming related sets of methods: interfaces.\n"
+msgstr ""
+
+#: src/interfaces.md:4
+msgid "// _Interfaces_ are named collections of method\n"
+"// signatures.\n"
+msgstr ""
+
+#: src/interfaces.md:13
+msgid "// Here's a basic interface for geometric shapes.\n"
+msgstr ""
+
+#: src/interfaces.md:19
+msgid "// For our example we'll implement this interface on\n"
+"// `rect` and `circle` types.\n"
+msgstr ""
+
+#: src/interfaces.md:28
+msgid "// To implement an interface in Go, we just need to\n"
+"// implement all the methods in the interface. Here we\n"
+"// implement `geometry` on `rect`s.\n"
+msgstr ""
+
+#: src/interfaces.md:38
+msgid "// The implementation for `circle`s.\n"
+msgstr ""
+
+#: src/interfaces.md:46
+msgid "// If a variable has an interface type, then we can call\n"
+"// methods that are in the named interface. Here's a\n"
+"// generic `measure` function taking advantage of this\n"
+"// to work on any `geometry`.\n"
+msgstr ""
+
+#: src/interfaces.md:56
+msgid "// Sometimes it's useful to know the runtime type of an\n"
+"// interface value. One option is using a *type assertion*\n"
+"// as shown here; another is a [type `switch`](switch).\n"
+msgstr ""
+
+#: src/interfaces.md:62
+msgid "\"circle with radius\""
+msgstr ""
+
+#: src/interfaces.md:70
+msgid "// The `circle` and `rect` struct types both\n"
+"\t// implement the `geometry` interface so we can use\n"
+"\t// instances of\n"
+"\t// these structs as arguments to `measure`.\n"
+msgstr ""
+
+#: src/interfaces.md:91
+msgid "# To understand how Go's interfaces work under the hood,\n"
+"# check out this [blog post](https://research.swtch.com/interfaces).\n"
+msgstr ""
+
+#: src/enums.md:4
+msgid "// _Enumerated types_ (enums) are a special case of\n"
+"// [sum types](https://en.wikipedia.org/wiki/Algebraic_data_type).\n"
+"// An enum is a type that has a fixed number of possible\n"
+"// values, each with a distinct name. Go doesn't have an\n"
+"// enum type as a distinct language feature, but enums\n"
+"// are simple to implement using existing language idioms.\n"
+msgstr ""
+
+#: src/enums.md:14
+msgid "// Our enum type `ServerState` has an underlying `int` type.\n"
+msgstr ""
+
+#: src/enums.md:17
+msgid "// The possible values for `ServerState` are defined as\n"
+"// constants. The special keyword [iota](https://go.dev/ref/spec#Iota)\n"
+"// generates successive constant values automatically; in this\n"
+"// case 0, 1, 2 and so on.\n"
+msgstr ""
+
+#: src/enums.md:28
+msgid "// By implementing the [fmt.Stringer](https://pkg.go.dev/fmt#Stringer)\n"
+"// interface, values of `ServerState` can be printed out or converted\n"
+"// to strings.\n"
+"//\n"
+"// This can get cumbersome if there are many possible values. In such\n"
+"// cases the [stringer tool](https://pkg.go.dev/golang.org/x/tools/cmd/stringer)\n"
+"// can be used in conjunction with `go:generate` to automate the\n"
+"// process. See [this post](https://eli.thegreenplace.net/2021/a-comprehensive-guide-to-go-generate)\n"
+"// for a longer explanation.\n"
+msgstr ""
+
+#: src/enums.md:39
+msgid "\"idle\""
+msgstr ""
+
+#: src/enums.md:40
+msgid "\"connected\""
+msgstr ""
+
+#: src/enums.md:41 src/string-formatting.md:112
+msgid "\"error\""
+msgstr ""
+
+#: src/enums.md:42
+msgid "\"retrying\""
+msgstr ""
+
+#: src/enums.md:52
+msgid "// If we have a value of type `int`, we cannot pass it to `transition` - the\n"
+"\t// compiler will complain about type mismatch. This provides some degree of\n"
+"\t// compile-time type safety for enums.\n"
+msgstr ""
+
+#: src/enums.md:59
+msgid "// transition emulates a state transition for a\n"
+"// server; it takes the existing state and returns\n"
+"// a new state.\n"
+msgstr ""
+
+#: src/enums.md:68
+msgid "// Suppose we check some predicates here to\n"
+"\t\t// determine the next state...\n"
+msgstr ""
+
+#: src/enums.md:74
+msgid "\"unknown state: %s\""
+msgstr ""
+
+#: src/struct-embedding.md:4
+msgid "// Go supports _embedding_ of structs and interfaces\n"
+"// to express a more seamless _composition_ of types.\n"
+"// This is not to be confused with [`//go:embed`](embed-directive) which is\n"
+"// a go directive introduced in Go version 1.16+ to embed\n"
+"// files and folders into the application binary.\n"
+msgstr ""
+
+#: src/struct-embedding.md:19
+msgid "\"base with num=%v\""
+msgstr ""
+
+#: src/struct-embedding.md:21
+msgid "// A `container` _embeds_ a `base`. An embedding looks\n"
+"// like a field without a name.\n"
+msgstr ""
+
+#: src/struct-embedding.md:31
+msgid "// When creating structs with literals, we have to\n"
+"\t// initialize the embedding explicitly; here the\n"
+"\t// embedded type serves as the field name.\n"
+msgstr ""
+
+#: src/struct-embedding.md:38
+msgid "\"some name\""
+msgstr ""
+
+#: src/struct-embedding.md:41
+msgid "// We can access the base's fields directly on `co`,\n"
+"\t// e.g. `co.num`.\n"
+msgstr ""
+
+#: src/struct-embedding.md:43
+msgid "\"co={num: %v, str: %v}\\n\""
+msgstr ""
+
+#: src/struct-embedding.md:45
+msgid "// Alternatively, we can spell out the full path using\n"
+"\t// the embedded type name.\n"
+msgstr ""
+
+#: src/struct-embedding.md:47
+msgid "\"also num:\""
+msgstr ""
+
+#: src/struct-embedding.md:49
+msgid "// Since `container` embeds `base`, the methods of\n"
+"\t// `base` also become methods of a `container`. Here\n"
+"\t// we invoke a method that was embedded from `base`\n"
+"\t// directly on `co`.\n"
+msgstr ""
+
+#: src/struct-embedding.md:53
+msgid "\"describe:\""
+msgstr ""
+
+#: src/struct-embedding.md:59
+msgid "// Embedding structs with methods may be used to bestow\n"
+"\t// interface implementations onto other structs. Here\n"
+"\t// we see that a `container` now implements the\n"
+"\t// `describer` interface because it embeds `base`.\n"
+msgstr ""
+
+#: src/struct-embedding.md:64
+msgid "\"describer:\""
+msgstr ""
+
+#: src/struct-embedding.md:70
+msgid "{num: 1, str: some name}"
+msgstr ""
+
+#: src/generics.md:4
+msgid "// Starting with version 1.18, Go has added support for\n"
+"// _generics_, also known as _type parameters_.\n"
+msgstr ""
+
+#: src/generics.md:10
+msgid "// As an example of a generic function, `SlicesIndex` takes\n"
+"// a slice of any `comparable` type and an element of that\n"
+"// type and returns the index of the first occurrence of\n"
+"// v in s, or -1 if not present. The `comparable` constraint\n"
+"// means that we can compare values of this type with the\n"
+"// `==` and `!=` operators. For a more thorough explanation\n"
+"// of this type signature, see [this blog post](https://go.dev/blog/deconstructing-type-parameters).\n"
+"// Note that this function exists in the standard library\n"
+"// as [slices.Index](https://pkg.go.dev/slices#Index).\n"
+msgstr ""
+
+#: src/generics.md:28
+msgid "// As an example of a generic type, `List` is a\n"
+"// singly-linked list with values of any type.\n"
+msgstr ""
+
+#: src/generics.md:39
+msgid "// We can define methods on generic types just like we\n"
+"// do on regular types, but we have to keep the type\n"
+"// parameters in place. The type is `List[T]`, not `List`.\n"
+msgstr ""
+
+#: src/generics.md:52
+msgid "// AllElements returns all the List elements as a slice.\n"
+"// In the next example we'll see a more idiomatic way\n"
+"// of iterating over all elements of custom types.\n"
+msgstr ""
+
+#: src/generics.md:65 src/generics.md:72 src/generics.md:75
+msgid "\"zoo\""
+msgstr ""
+
+#: src/generics.md:67
+msgid "// When invoking generic functions, we can often rely\n"
+"\t// on _type inference_. Note that we don't have to\n"
+"\t// specify the types for `S` and `E` when\n"
+"\t// calling `SlicesIndex` - the compiler infers them\n"
+"\t// automatically.\n"
+msgstr ""
+
+#: src/generics.md:72
+msgid "\"index of zoo:\""
+msgstr ""
+
+#: src/generics.md:74
+msgid "// ... though we could also specify them explicitly.\n"
+msgstr ""
+
+#: src/generics.md:81
+msgid "\"list:\""
+msgstr ""
+
+#: src/range-over-iterators.md:4
+msgid "// Starting with version 1.23, Go has added support for\n"
+"// [iterators](https://go.dev/blog/range-functions),\n"
+"// which lets us range over pretty much anything!\n"
+msgstr ""
+
+#: src/range-over-iterators.md:12
+msgid "\"iter\""
+msgstr ""
+
+#: src/range-over-iterators.md:15
+msgid "// Let's look at the `List` type from the\n"
+"// [previous example](generics) again. In that example\n"
+"// we had an `AllElements` method that returned a slice\n"
+"// of all elements in the list. With Go iterators, we\n"
+"// can do it better - as shown below.\n"
+msgstr ""
+
+#: src/range-over-iterators.md:39
+msgid "// All returns an _iterator_, which in Go is a function\n"
+"// with a [special signature](https://pkg.go.dev/iter#Seq).\n"
+msgstr ""
+
+#: src/range-over-iterators.md:44
+msgid "// The iterator function takes another function as\n"
+"\t\t// a parameter, called `yield` by convention (but\n"
+"\t\t// the name can be arbitrary). It will call `yield` for\n"
+"\t\t// every element we want to iterate over, and note `yield`'s\n"
+"\t\t// return value for a potential early termination.\n"
+msgstr ""
+
+#: src/range-over-iterators.md:56
+msgid "// Iteration doesn't require an underlying data structure,\n"
+"// and doesn't even have to be finite! Here's a function\n"
+"// returning an iterator over Fibonacci numbers: it keeps\n"
+"// running as long as `yield` keeps returning `true`.\n"
+msgstr ""
+
+#: src/range-over-iterators.md:80
+msgid "// Since `List.All` returns an iterator, we can use it\n"
+"\t// in a regular `range` loop.\n"
+msgstr ""
+
+#: src/range-over-iterators.md:86
+msgid "// Packages like [slices](https://pkg.go.dev/slices) have\n"
+"\t// a number of useful functions to work with iterators.\n"
+"\t// For example, `Collect` takes any iterator and collects\n"
+"\t// all its values into a slice.\n"
+msgstr ""
+
+#: src/range-over-iterators.md:91 src/regular-expressions.md:56
+msgid "\"all:\""
+msgstr ""
+
+#: src/range-over-iterators.md:95
+msgid "// Once the loop hits `break` or an early return, the `yield` function\n"
+"\t\t// passed to the iterator will return `false`.\n"
+msgstr ""
+
+#: src/errors.md:4
+msgid "// In Go it's idiomatic to communicate errors via an\n"
+"// explicit, separate return value. This contrasts with\n"
+"// the exceptions used in languages like Java and Ruby and\n"
+"// the overloaded single result / error value sometimes\n"
+"// used in C. Go's approach makes it easy to see which\n"
+"// functions return errors and to handle them using the\n"
+"// same language constructs employed for other,\n"
+"// non-error tasks.\n"
+"//\n"
+"// See the documentation of the [errors package](https://pkg.go.dev/errors)\n"
+"// and [this blog post](https://go.dev/blog/go1.13-errors) for additional\n"
+"// details.\n"
+msgstr ""
+
+#: src/errors.md:20 src/custom-errors.md:12
+msgid "\"errors\""
+msgstr ""
+
+#: src/errors.md:23
+msgid "// By convention, errors are the last return value and\n"
+"// have type `error`, a built-in interface.\n"
+msgstr ""
+
+#: src/errors.md:28
+msgid "// `errors.New` constructs a basic `error` value\n"
+"\t\t// with the given error message.\n"
+msgstr ""
+
+#: src/errors.md:30
+msgid "\"can't work with 42\""
+msgstr ""
+
+#: src/errors.md:33
+msgid "// A `nil` value in the error position indicates that\n"
+"\t// there was no error.\n"
+msgstr ""
+
+#: src/errors.md:37
+msgid "// A sentinel error is a predeclared variable that is used to\n"
+"// signify a specific error condition.\n"
+msgstr ""
+
+#: src/errors.md:40
+msgid "\"no more tea available\""
+msgstr ""
+
+#: src/errors.md:41
+msgid "\"can't boil water\""
+msgstr ""
+
+#: src/errors.md:48
+msgid "// We can wrap errors with higher-level errors to add\n"
+"\t\t// context. The simplest way to do this is with the\n"
+"\t\t// `%w` verb in `fmt.Errorf`. Wrapped errors\n"
+"\t\t// create a logical chain (A wraps B, which wraps C, etc.)\n"
+"\t\t// that can be queried with functions like `errors.Is`\n"
+"\t\t// and `errors.As`.\n"
+msgstr ""
+
+#: src/errors.md:54
+msgid "\"making tea: %w\""
+msgstr ""
+
+#: src/errors.md:62
+msgid "// It's common to use an inline error check in the `if`\n"
+"\t\t// line.\n"
+msgstr ""
+
+#: src/errors.md:65
+msgid "\"f failed:\""
+msgstr ""
+
+#: src/errors.md:67
+msgid "\"f worked:\""
+msgstr ""
+
+#: src/errors.md:74
+msgid "// `errors.Is` checks that a given error (or any error in its chain)\n"
+"\t\t\t// matches a specific error value. This is especially useful with wrapped or\n"
+"\t\t\t// nested errors, allowing you to identify specific error types or sentinel\n"
+"\t\t\t// errors in a chain of errors.\n"
+msgstr ""
+
+#: src/errors.md:79
+msgid "\"We should buy new tea!\""
+msgstr ""
+
+#: src/errors.md:81
+msgid "\"Now it is dark.\""
+msgstr ""
+
+#: src/errors.md:83
+msgid "\"unknown error: %s\\n\""
+msgstr ""
+
+#: src/errors.md:88
+msgid "\"Tea is ready!\""
+msgstr ""
+
+#: src/errors.md:96
+msgid "'t work with 42\n"
+"Tea is ready!\n"
+"Tea is ready!\n"
+"We should buy new tea!\n"
+"Tea is ready!\n"
+"Now it is dark.\n"
+msgstr ""
+
+#: src/custom-errors.md:4
+msgid "// It's possible to use custom types as `error`s by\n"
+"// implementing the `Error()` method on them. Here's a\n"
+"// variant on the example above that uses a custom type\n"
+"// to explicitly represent an argument error.\n"
+msgstr ""
+
+#: src/custom-errors.md:15
+msgid "// A custom error type usually has the suffix \"Error\".\n"
+msgstr ""
+
+#: src/custom-errors.md:21
+msgid "// Adding this `Error` method makes `argError` implement\n"
+"// the `error` interface.\n"
+msgstr ""
+
+#: src/custom-errors.md:25
+msgid "\"%d - %s\""
+msgstr ""
+
+#: src/custom-errors.md:31
+msgid "// Return our custom error.\n"
+msgstr ""
+
+#: src/custom-errors.md:32
+msgid "\"can't work with it\""
+msgstr ""
+
+#: src/custom-errors.md:39
+msgid "// `errors.As` is a more advanced version of `errors.Is`.\n"
+"\t// It checks that a given error (or any error in its chain)\n"
+"\t// matches a specific error type and converts to a value\n"
+"\t// of that type, returning `true`. If there's no match, it\n"
+"\t// returns `false`.\n"
+msgstr ""
+
+#: src/custom-errors.md:50
+msgid "\"err doesn't match argError\""
+msgstr ""
+
+#: src/custom-errors.md:58
+msgid "'t work with it\n"
+msgstr ""
+
+#: src/goroutines.md:4
+msgid "// A _goroutine_ is a lightweight thread of execution.\n"
+msgstr ""
+
+#: src/goroutines.md:15
+msgid "\":\""
+msgstr ""
+
+#: src/goroutines.md:21
+msgid "// Suppose we have a function call `f(s)`. Here's how\n"
+"\t// we'd call that in the usual way, running it\n"
+"\t// synchronously.\n"
+msgstr ""
+
+#: src/goroutines.md:24
+msgid "\"direct\""
+msgstr ""
+
+#: src/goroutines.md:26
+msgid "// To invoke this function in a goroutine, use\n"
+"\t// `go f(s)`. This new goroutine will execute\n"
+"\t// concurrently with the calling one.\n"
+msgstr ""
+
+#: src/goroutines.md:29
+msgid "\"goroutine\""
+msgstr ""
+
+#: src/goroutines.md:31
+msgid "// You can also start a goroutine for an anonymous\n"
+"\t// function call.\n"
+msgstr ""
+
+#: src/goroutines.md:35
+msgid "\"going\""
+msgstr ""
+
+#: src/goroutines.md:37
+msgid "// Our two function calls are running asynchronously in\n"
+"\t// separate goroutines now. Wait for them to finish\n"
+"\t// (for a more robust approach, use a [WaitGroup](waitgroups)).\n"
+msgstr ""
+
+#: src/goroutines.md:41 src/channel-synchronization.md:23
+msgid "\"done\""
+msgstr ""
+
+#: src/goroutines.md:46
+msgid "# When we run this program, we see the output of the\n"
+"# blocking call first, then the output of the two\n"
+"# goroutines. The goroutines' output may be interleaved,\n"
+"# because goroutines are being run concurrently by the\n"
+"# Go runtime.\n"
+msgstr ""
+
+#: src/goroutines.md:60
+msgid "# Next we'll look at a complement to goroutines in\n"
+"# concurrent Go programs: channels.\n"
+msgstr ""
+
+#: src/channels.md:4
+msgid "// _Channels_ are the pipes that connect concurrent\n"
+"// goroutines. You can send values into channels from one\n"
+"// goroutine and receive those values into another\n"
+"// goroutine.\n"
+msgstr ""
+
+#: src/channels.md:15
+msgid "// Create a new channel with `make(chan val-type)`.\n"
+"\t// Channels are typed by the values they convey.\n"
+msgstr ""
+
+#: src/channels.md:19
+msgid "// _Send_ a value into a channel using the `channel <-`\n"
+"\t// syntax. Here we send `\"ping\"`  to the `messages`\n"
+"\t// channel we made above, from a new goroutine.\n"
+msgstr ""
+
+#: src/channels.md:22
+msgid "\"ping\""
+msgstr ""
+
+#: src/channels.md:24
+msgid "// The `<-channel` syntax _receives_ a value from the\n"
+"\t// channel. Here we'll receive the `\"ping\"` message\n"
+"\t// we sent above and print it out.\n"
+msgstr ""
+
+#: src/channels.md:33
+msgid "# When we run the program the `\"ping\"` message is\n"
+"# successfully passed from one goroutine to another via\n"
+"# our channel.\n"
+msgstr ""
+
+#: src/channels.md:38
+msgid "# By default sends and receives block until both the\n"
+"# sender and receiver are ready. This property allowed\n"
+"# us to wait at the end of our program for the `\"ping\"`\n"
+"# message without having to use any other synchronization.\n"
+msgstr ""
+
+#: src/channel-buffering.md:4
+msgid "// By default channels are _unbuffered_, meaning that they\n"
+"// will only accept sends (`chan <-`) if there is a\n"
+"// corresponding receive (`<- chan`) ready to receive the\n"
+"// sent value. _Buffered channels_ accept a limited\n"
+"// number of  values without a corresponding receiver for\n"
+"// those values.\n"
+msgstr ""
+
+#: src/channel-buffering.md:17
+msgid "// Here we `make` a channel of strings buffering up to\n"
+"\t// 2 values.\n"
+msgstr ""
+
+#: src/channel-buffering.md:21
+msgid "// Because this channel is buffered, we can send these\n"
+"\t// values into the channel without a corresponding\n"
+"\t// concurrent receive.\n"
+msgstr ""
+
+#: src/channel-buffering.md:24
+msgid "\"buffered\""
+msgstr ""
+
+#: src/channel-buffering.md:25
+msgid "\"channel\""
+msgstr ""
+
+#: src/channel-buffering.md:27
+msgid "// Later we can receive these two values as usual.\n"
+msgstr ""
+
+#: src/channel-synchronization.md:4
+msgid "// We can use channels to synchronize execution\n"
+"// across goroutines. Here's an example of using a\n"
+"// blocking receive to wait for a goroutine to finish.\n"
+"// When waiting for multiple goroutines to finish,\n"
+"// you may prefer to use a [WaitGroup](waitgroups).\n"
+msgstr ""
+
+#: src/channel-synchronization.md:16
+msgid "// This is the function we'll run in a goroutine. The\n"
+"// `done` channel will be used to notify another\n"
+"// goroutine that this function's work is done.\n"
+msgstr ""
+
+#: src/channel-synchronization.md:21
+msgid "\"working...\""
+msgstr ""
+
+#: src/channel-synchronization.md:25
+msgid "// Send a value to notify that we're done.\n"
+msgstr ""
+
+#: src/channel-synchronization.md:31
+msgid "// Start a worker goroutine, giving it the channel to\n"
+"\t// notify on.\n"
+msgstr ""
+
+#: src/channel-synchronization.md:36
+msgid "// Block until we receive a notification from the\n"
+"\t// worker on the channel.\n"
+msgstr ""
+
+#: src/channel-synchronization.md:45
+msgid "# If you removed the `<- done` line from this program, the\n"
+"# program would exit before the `worker` even\n"
+"# started.\n"
+msgstr ""
+
+#: src/channel-directions.md:4
+msgid "// When using channels as function parameters, you can\n"
+"// specify if a channel is meant to only send or receive\n"
+"// values. This specificity increases the type-safety of\n"
+"// the program.\n"
+msgstr ""
+
+#: src/channel-directions.md:12
+msgid "// This `ping` function only accepts a channel for sending\n"
+"// values. It would be a compile-time error to try to\n"
+"// receive on this channel.\n"
+msgstr ""
+
+#: src/channel-directions.md:19
+msgid "// The `pong` function accepts one channel for receives\n"
+"// (`pings`) and a second for sends (`pongs`).\n"
+msgstr ""
+
+#: src/channel-directions.md:30
+msgid "\"passed message\""
+msgstr ""
+
+#: src/select.md:4
+msgid "// Go's _select_ lets you wait on multiple channel\n"
+"// operations. Combining goroutines and channels with\n"
+"// select is a powerful feature of Go.\n"
+msgstr ""
+
+#: src/select.md:17
+msgid "// For our example we'll select across two channels.\n"
+msgstr ""
+
+#: src/select.md:21
+msgid "// Each channel will receive a value after some amount\n"
+"\t// of time, to simulate e.g. blocking RPC operations\n"
+"\t// executing in concurrent goroutines.\n"
+msgstr ""
+
+#: src/select.md:33
+msgid "// We'll use `select` to await both of these values\n"
+"\t// simultaneously, printing each one as it arrives.\n"
+msgstr ""
+
+#: src/select.md:38 src/select.md:40
+msgid "\"received\""
+msgstr ""
+
+#: src/select.md:47
+msgid "# We receive the values `\"one\"` and then `\"two\"` as\n"
+"# expected.\n"
+msgstr ""
+
+#: src/select.md:52
+msgid "# Note that the total execution time is only ~2 seconds\n"
+"# since both the 1 and 2 second `Sleeps` execute\n"
+"# concurrently.\n"
+msgstr ""
+
+#: src/timeouts.md:4
+msgid "// _Timeouts_ are important for programs that connect to\n"
+"// external resources or that otherwise need to bound\n"
+"// execution time. Implementing timeouts in Go is easy and\n"
+"// elegant thanks to channels and `select`.\n"
+msgstr ""
+
+#: src/timeouts.md:18
+msgid "// For our example, suppose we're executing an external\n"
+"\t// call that returns its result on a channel `c1`\n"
+"\t// after 2s. Note that the channel is buffered, so the\n"
+"\t// send in the goroutine is nonblocking. This is a\n"
+"\t// common pattern to prevent goroutine leaks in case the\n"
+"\t// channel is never read.\n"
+msgstr ""
+
+#: src/timeouts.md:27
+msgid "\"result 1\""
+msgstr ""
+
+#: src/timeouts.md:30
+msgid "// Here's the `select` implementing a timeout.\n"
+"\t// `res := <-c1` awaits the result and `<-time.After`\n"
+"\t// awaits a value to be sent after the timeout of\n"
+"\t// 1s. Since `select` proceeds with the first\n"
+"\t// receive that's ready, we'll take the timeout case\n"
+"\t// if the operation takes more than the allowed 1s.\n"
+msgstr ""
+
+#: src/timeouts.md:40
+msgid "\"timeout 1\""
+msgstr ""
+
+#: src/timeouts.md:43
+msgid "// If we allow a longer timeout of 3s, then the receive\n"
+"\t// from `c2` will succeed and we'll print the result.\n"
+msgstr ""
+
+#: src/timeouts.md:48
+msgid "\"result 2\""
+msgstr ""
+
+#: src/timeouts.md:54
+msgid "\"timeout 2\""
+msgstr ""
+
+#: src/timeouts.md:60
+msgid "# Running this program shows the first operation timing\n"
+"# out and the second succeeding.\n"
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:4
+msgid "// Basic sends and receives on channels are blocking.\n"
+"// However, we can use `select` with a `default` clause to\n"
+"// implement _non-blocking_ sends, receives, and even\n"
+"// non-blocking multi-way `select`s.\n"
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:17
+msgid "// Here's a non-blocking receive. If a value is\n"
+"\t// available on `messages` then `select` will take\n"
+"\t// the `<-messages` `case` with that value. If not\n"
+"\t// it will immediately take the `default` case.\n"
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:23
+#: src/non-blocking-channel-operations.md:46
+msgid "\"received message\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:25
+msgid "\"no message received\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:28
+msgid "// A non-blocking send works similarly. Here `msg`\n"
+"\t// cannot be sent to the `messages` channel, because\n"
+"\t// the channel has no buffer and there is no receiver.\n"
+"\t// Therefore the `default` case is selected.\n"
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:32
+msgid "\"hi\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:35
+msgid "\"sent message\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:37
+msgid "\"no message sent\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:40
+msgid "// We can use multiple `case`s above the `default`\n"
+"\t// clause to implement a multi-way non-blocking\n"
+"\t// select. Here we attempt non-blocking receives\n"
+"\t// on both `messages` and `signals`.\n"
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:48
+msgid "\"received signal\""
+msgstr ""
+
+#: src/non-blocking-channel-operations.md:50
+msgid "\"no activity\""
+msgstr ""
+
+#: src/closing-channels.md:4
+msgid "// _Closing_ a channel indicates that no more values\n"
+"// will be sent on it. This can be useful to communicate\n"
+"// completion to the channel's receivers.\n"
+msgstr ""
+
+#: src/closing-channels.md:11
+msgid "// In this example we'll use a `jobs` channel to\n"
+"// communicate work to be done from the `main()` goroutine\n"
+"// to a worker goroutine. When we have no more jobs for\n"
+"// the worker we'll `close` the `jobs` channel.\n"
+msgstr ""
+
+#: src/closing-channels.md:20
+msgid "// Here's the worker goroutine. It repeatedly receives\n"
+"\t// from `jobs` with `j, more := <-jobs`. In this\n"
+"\t// special 2-value form of receive, the `more` value\n"
+"\t// will be `false` if `jobs` has been `close`d and all\n"
+"\t// values in the channel have already been received.\n"
+"\t// We use this to notify on `done` when we've worked\n"
+"\t// all our jobs.\n"
+msgstr ""
+
+#: src/closing-channels.md:31
+msgid "\"received job\""
+msgstr ""
+
+#: src/closing-channels.md:33
+msgid "\"received all jobs\""
+msgstr ""
+
+#: src/closing-channels.md:40
+msgid "// This sends 3 jobs to the worker over the `jobs`\n"
+"\t// channel, then closes it.\n"
+msgstr ""
+
+#: src/closing-channels.md:44
+msgid "\"sent job\""
+msgstr ""
+
+#: src/closing-channels.md:47
+msgid "\"sent all jobs\""
+msgstr ""
+
+#: src/closing-channels.md:49
+msgid "// We await the worker using the\n"
+"\t// [synchronization](channel-synchronization) approach\n"
+"\t// we saw earlier.\n"
+msgstr ""
+
+#: src/closing-channels.md:54
+msgid "// Reading from a closed channel succeeds immediately,\n"
+"\t// returning the zero value of the underlying type.\n"
+"\t// The optional second return value is `true` if the\n"
+"\t// value received was delivered by a successful send\n"
+"\t// operation to the channel, or `false` if it was a\n"
+"\t// zero value generated because the channel is closed\n"
+"\t// and empty.\n"
+msgstr ""
+
+#: src/closing-channels.md:62
+msgid "\"received more jobs:\""
+msgstr ""
+
+#: src/closing-channels.md:77
+msgid "# The idea of closed channels leads naturally to our next\n"
+"# example: `range` over channels.\n"
+msgstr ""
+
+#: src/range-over-channels.md:4
+msgid "// In a [previous](range-over-built-in-types) example we saw how `for` and\n"
+"// `range` provide iteration over basic data structures.\n"
+"// We can also use this syntax to iterate over\n"
+"// values received from a channel.\n"
+msgstr ""
+
+#: src/range-over-channels.md:15
+msgid "// We'll iterate over 2 values in the `queue` channel.\n"
+msgstr ""
+
+#: src/range-over-channels.md:21
+msgid "// This `range` iterates over each element as it's\n"
+"\t// received from `queue`. Because we `close`d the\n"
+"\t// channel above, the iteration terminates after\n"
+"\t// receiving the 2 elements.\n"
+msgstr ""
+
+#: src/range-over-channels.md:35
+msgid "# This example also showed that it's possible to close\n"
+"# a non-empty channel but still have the remaining\n"
+"# values be received.\n"
+msgstr ""
+
+#: src/timers.md:4
+msgid "// We often want to execute Go code at some point in the\n"
+"// future, or repeatedly at some interval. Go's built-in\n"
+"// _timer_ and _ticker_ features make both of these tasks\n"
+"// easy. We'll look first at timers and then\n"
+"// at [tickers](tickers).\n"
+msgstr ""
+
+#: src/timers.md:19
+msgid "// Timers represent a single event in the future. You\n"
+"\t// tell the timer how long you want to wait, and it\n"
+"\t// provides a channel that will be notified at that\n"
+"\t// time. This timer will wait 2 seconds.\n"
+msgstr ""
+
+#: src/timers.md:25
+msgid "// The `<-timer1.C` blocks on the timer's channel `C`\n"
+"\t// until it sends a value indicating that the timer\n"
+"\t// fired.\n"
+msgstr ""
+
+#: src/timers.md:29
+msgid "\"Timer 1 fired\""
+msgstr ""
+
+#: src/timers.md:31
+msgid "// If you just wanted to wait, you could have used\n"
+"\t// `time.Sleep`. One reason a timer may be useful is\n"
+"\t// that you can cancel the timer before it fires.\n"
+"\t// Here's an example of that.\n"
+msgstr ""
+
+#: src/timers.md:38
+msgid "\"Timer 2 fired\""
+msgstr ""
+
+#: src/timers.md:42
+msgid "\"Timer 2 stopped\""
+msgstr ""
+
+#: src/timers.md:45
+msgid "// Give the `timer2` enough time to fire, if it ever\n"
+"\t// was going to, to show it is in fact stopped.\n"
+msgstr ""
+
+#: src/tickers.md:4
+msgid "// [Timers](timers) are for when you want to do\n"
+"// something once in the future - _tickers_ are for when\n"
+"// you want to do something repeatedly at regular\n"
+"// intervals. Here's an example of a ticker that ticks\n"
+"// periodically until we stop it.\n"
+msgstr ""
+
+#: src/tickers.md:19
+msgid "// Tickers use a similar mechanism to timers: a\n"
+"\t// channel that is sent values. Here we'll use the\n"
+"\t// `select` builtin on the channel to await the\n"
+"\t// values as they arrive every 500ms.\n"
+msgstr ""
+
+#: src/tickers.md:32
+msgid "\"Tick at\""
+msgstr ""
+
+#: src/tickers.md:37
+msgid "// Tickers can be stopped like timers. Once a ticker\n"
+"\t// is stopped it won't receive any more values on its\n"
+"\t// channel. We'll stop ours after 1600ms.\n"
+msgstr ""
+
+#: src/tickers.md:43
+msgid "\"Ticker stopped\""
+msgstr ""
+
+#: src/tickers.md:48
+msgid "# When we run this program the ticker should tick 3 times\n"
+"# before we stop it.\n"
+msgstr ""
+
+#: src/worker-pools.md:4
+msgid "// In this example we'll look at how to implement\n"
+"// a _worker pool_ using goroutines and channels.\n"
+msgstr ""
+
+#: src/worker-pools.md:13
+msgid "// Here's the worker, of which we'll run several\n"
+"// concurrent instances. These workers will receive\n"
+"// work on the `jobs` channel and send the corresponding\n"
+"// results on `results`. We'll sleep a second per job to\n"
+"// simulate an expensive task.\n"
+msgstr ""
+
+#: src/worker-pools.md:21 src/worker-pools.md:23
+msgid "\"worker\""
+msgstr ""
+
+#: src/worker-pools.md:21
+msgid "\"started  job\""
+msgstr ""
+
+#: src/worker-pools.md:23
+msgid "\"finished job\""
+msgstr ""
+
+#: src/worker-pools.md:30
+msgid "// In order to use our pool of workers we need to send\n"
+"\t// them work and collect their results. We make 2\n"
+"\t// channels for this.\n"
+msgstr ""
+
+#: src/worker-pools.md:37
+msgid "// This starts up 3 workers, initially blocked\n"
+"\t// because there are no jobs yet.\n"
+msgstr ""
+
+#: src/worker-pools.md:43
+msgid "// Here we send 5 `jobs` and then `close` that\n"
+"\t// channel to indicate that's all the work we have.\n"
+msgstr ""
+
+#: src/worker-pools.md:50
+msgid "// Finally we collect all the results of the work.\n"
+"\t// This also ensures that the worker goroutines have\n"
+"\t// finished. An alternative way to wait for multiple\n"
+"\t// goroutines is to use a [WaitGroup](waitgroups).\n"
+msgstr ""
+
+#: src/worker-pools.md:61
+msgid "# Our running program shows the 5 jobs being executed by\n"
+"# various workers. The program only takes about 2 seconds\n"
+"# despite doing about 5 seconds of total work because\n"
+"# there are 3 workers operating concurrently.\n"
+msgstr ""
+
+#: src/waitgroups.md:4
+msgid "// To wait for multiple goroutines to finish, we can\n"
+"// use a *wait group*.\n"
+msgstr ""
+
+#: src/waitgroups.md:11 src/atomic-counters.md:15 src/mutexes.md:13
+msgid "\"sync\""
+msgstr ""
+
+#: src/waitgroups.md:14
+msgid "// This is the function we'll run in every goroutine.\n"
+msgstr ""
+
+#: src/waitgroups.md:17
+msgid "\"Worker %d starting\\n\""
+msgstr ""
+
+#: src/waitgroups.md:19
+msgid "// Sleep to simulate an expensive task.\n"
+msgstr ""
+
+#: src/waitgroups.md:21
+msgid "\"Worker %d done\\n\""
+msgstr ""
+
+#: src/waitgroups.md:26
+msgid "// This WaitGroup is used to wait for all the\n"
+"\t// goroutines launched here to finish. Note: if a WaitGroup is\n"
+"\t// explicitly passed into functions, it should be done *by pointer*.\n"
+msgstr ""
+
+#: src/waitgroups.md:31
+msgid "// Launch several goroutines and increment the WaitGroup\n"
+"\t// counter for each.\n"
+msgstr ""
+
+#: src/waitgroups.md:36
+msgid "// Wrap the worker call in a closure that makes sure to tell\n"
+"\t\t// the WaitGroup that this worker is done. This way the worker\n"
+"\t\t// itself does not have to be aware of the concurrency primitives\n"
+"\t\t// involved in its execution.\n"
+msgstr ""
+
+#: src/waitgroups.md:46
+msgid "// Block until the WaitGroup counter goes back to 0;\n"
+"\t// all the workers notified they're done.\n"
+msgstr ""
+
+#: src/waitgroups.md:50
+msgid "// Note that this approach has no straightforward way\n"
+"\t// to propagate errors from workers. For more\n"
+"\t// advanced use cases, consider using the\n"
+"\t// [errgroup package](https://pkg.go.dev/golang.org/x/sync/errgroup).\n"
+msgstr ""
+
+#: src/waitgroups.md:69
+msgid "# The order of workers starting up and finishing\n"
+"# is likely to be different for each invocation.\n"
+msgstr ""
+
+#: src/rate-limiting.md:4
+msgid "// [_Rate limiting_](https://en.wikipedia.org/wiki/Rate_limiting)\n"
+"// is an important mechanism for controlling resource\n"
+"// utilization and maintaining quality of service. Go\n"
+"// elegantly supports rate limiting with goroutines,\n"
+"// channels, and [tickers](tickers).\n"
+msgstr ""
+
+#: src/rate-limiting.md:19
+msgid "// First we'll look at basic rate limiting. Suppose\n"
+"\t// we want to limit our handling of incoming requests.\n"
+"\t// We'll serve these requests off a channel of the\n"
+"\t// same name.\n"
+msgstr ""
+
+#: src/rate-limiting.md:29
+msgid "// This `limiter` channel will receive a value\n"
+"\t// every 200 milliseconds. This is the regulator in\n"
+"\t// our rate limiting scheme.\n"
+msgstr ""
+
+#: src/rate-limiting.md:34
+msgid "// By blocking on a receive from the `limiter` channel\n"
+"\t// before serving each request, we limit ourselves to\n"
+"\t// 1 request every 200 milliseconds.\n"
+msgstr ""
+
+#: src/rate-limiting.md:39 src/rate-limiting.md:72
+msgid "\"request\""
+msgstr ""
+
+#: src/rate-limiting.md:42
+msgid "// We may want to allow short bursts of requests in\n"
+"\t// our rate limiting scheme while preserving the\n"
+"\t// overall rate limit. We can accomplish this by\n"
+"\t// buffering our limiter channel. This `burstyLimiter`\n"
+"\t// channel will allow bursts of up to 3 events.\n"
+msgstr ""
+
+#: src/rate-limiting.md:49
+msgid "// Fill up the channel to represent allowed bursting.\n"
+msgstr ""
+
+#: src/rate-limiting.md:54
+msgid "// Every 200 milliseconds we'll try to add a new\n"
+"\t// value to `burstyLimiter`, up to its limit of 3.\n"
+msgstr ""
+
+#: src/rate-limiting.md:62
+msgid "// Now simulate 5 more incoming requests. The first\n"
+"\t// 3 of these will benefit from the burst capability\n"
+"\t// of `burstyLimiter`.\n"
+msgstr ""
+
+#: src/rate-limiting.md:78
+msgid "# Running our program we see the first batch of requests\n"
+"# handled once every ~200 milliseconds as desired.\n"
+msgstr ""
+
+#: src/rate-limiting.md:86
+msgid "# For the second batch of requests we serve the first\n"
+"# 3 immediately because of the burstable rate limiting,\n"
+"# then serve the remaining 2 with ~200ms delays each.\n"
+msgstr ""
+
+#: src/atomic-counters.md:4
+msgid "// The primary mechanism for managing state in Go is\n"
+"// communication over channels. We saw this for example\n"
+"// with [worker pools](worker-pools). There are a few other\n"
+"// options for managing state though. Here we'll\n"
+"// look at using the `sync/atomic` package for _atomic\n"
+"// counters_ accessed by multiple goroutines.\n"
+msgstr ""
+
+#: src/atomic-counters.md:16 src/stateful-goroutines.md:18
+msgid "\"sync/atomic\""
+msgstr ""
+
+#: src/atomic-counters.md:21
+msgid "// We'll use an atomic integer type to represent our\n"
+"\t// (always-positive) counter.\n"
+msgstr ""
+
+#: src/atomic-counters.md:25
+msgid "// A WaitGroup will help us wait for all goroutines\n"
+"\t// to finish their work.\n"
+msgstr ""
+
+#: src/atomic-counters.md:29
+msgid "// We'll start 50 goroutines that each increment the\n"
+"\t// counter exactly 1000 times.\n"
+msgstr ""
+
+#: src/atomic-counters.md:37
+msgid "// To atomically increment the counter we use `Add`.\n"
+msgstr ""
+
+#: src/atomic-counters.md:45
+msgid "// Wait until all the goroutines are done.\n"
+msgstr ""
+
+#: src/atomic-counters.md:48
+msgid "// Here no goroutines are writing to 'ops', but using\n"
+"\t// `Load` it's safe to atomically read a value even while\n"
+"\t// other goroutines are (atomically) updating it.\n"
+msgstr ""
+
+#: src/atomic-counters.md:51
+msgid "\"ops:\""
+msgstr ""
+
+#: src/atomic-counters.md:56
+msgid "# We expect to get exactly 50,000 operations. Had we\n"
+"# used a non-atomic integer and incremented it with\n"
+"# `ops++`, we'd likely get a different number,\n"
+"# changing between runs, because the goroutines\n"
+"# would interfere with each other. Moreover, we'd\n"
+"# get data race failures when running with the\n"
+"# `-race` flag.\n"
+msgstr ""
+
+#: src/atomic-counters.md:65
+msgid "# Next we'll look at mutexes, another tool for managing\n"
+"# state.\n"
+msgstr ""
+
+#: src/mutexes.md:4
+msgid "// In the previous example we saw how to manage simple\n"
+"// counter state using [atomic operations](atomic-counters).\n"
+"// For more complex state we can use a [_mutex_](https://en.wikipedia.org/wiki/Mutual_exclusion)\n"
+"// to safely access data across multiple goroutines.\n"
+msgstr ""
+
+#: src/mutexes.md:15
+msgid "// Container holds a map of counters; since we want to\n"
+"// update it concurrently from multiple goroutines, we\n"
+"// add a `Mutex` to synchronize access.\n"
+"// Note that mutexes must not be copied, so if this\n"
+"// `struct` is passed around, it should be done by\n"
+"// pointer.\n"
+msgstr ""
+
+#: src/mutexes.md:28
+msgid "// Lock the mutex before accessing `counters`; unlock\n"
+"\t// it at the end of the function using a [defer](defer)\n"
+"\t// statement.\n"
+msgstr ""
+
+#: src/mutexes.md:38
+msgid "// Note that the zero value of a mutex is usable as-is, so no\n"
+"\t\t// initialization is required here.\n"
+msgstr ""
+
+#: src/mutexes.md:45
+msgid "// This function increments a named counter\n"
+"\t// in a loop.\n"
+msgstr ""
+
+#: src/mutexes.md:54
+msgid "// Run several goroutines concurrently; note\n"
+"\t// that they all access the same `Container`,\n"
+"\t// and two of them access the same counter.\n"
+msgstr ""
+
+#: src/mutexes.md:62
+msgid "// Wait for the goroutines to finish\n"
+msgstr ""
+
+#: src/mutexes.md:69
+msgid "# Running the program shows that the counters\n"
+"# updated as expected.\n"
+msgstr ""
+
+#: src/mutexes.md:73
+msgid "# Next we'll look at implementing this same state\n"
+"# management task using only goroutines and channels.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:4
+msgid "// In the previous example we used explicit locking with\n"
+"// [mutexes](mutexes) to synchronize access to shared state\n"
+"// across multiple goroutines. Another option is to use the\n"
+"// built-in synchronization features of  goroutines and\n"
+"// channels to achieve the same result. This channel-based\n"
+"// approach aligns with Go's ideas of sharing memory by\n"
+"// communicating and having each piece of data owned\n"
+"// by exactly 1 goroutine.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:17
+msgid "\"math/rand\""
+msgstr ""
+
+#: src/stateful-goroutines.md:21
+msgid "// In this example our state will be owned by a single\n"
+"// goroutine. This will guarantee that the data is never\n"
+"// corrupted with concurrent access. In order to read or\n"
+"// write that state, other goroutines will send messages\n"
+"// to the owning goroutine and receive corresponding\n"
+"// replies. These `readOp` and `writeOp` `struct`s\n"
+"// encapsulate those requests and a way for the owning\n"
+"// goroutine to respond.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:42
+msgid "// As before we'll count how many operations we perform.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:46
+msgid "// The `reads` and `writes` channels will be used by\n"
+"\t// other goroutines to issue read and write requests,\n"
+"\t// respectively.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:52
+msgid "// Here is the goroutine that owns the `state`, which\n"
+"\t// is a map as in the previous example but now private\n"
+"\t// to the stateful goroutine. This goroutine repeatedly\n"
+"\t// selects on the `reads` and `writes` channels,\n"
+"\t// responding to requests as they arrive. A response\n"
+"\t// is executed by first performing the requested\n"
+"\t// operation and then sending a value on the response\n"
+"\t// channel `resp` to indicate success (and the desired\n"
+"\t// value in the case of `reads`).\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:74
+msgid "// This starts 100 goroutines to issue reads to the\n"
+"\t// state-owning goroutine via the `reads` channel.\n"
+"\t// Each read requires constructing a `readOp`, sending\n"
+"\t// it over the `reads` channel, and then receiving the\n"
+"\t// result over the provided `resp` channel.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:93
+msgid "// We start 10 writes as well, using a similar\n"
+"\t// approach.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:110
+msgid "// Let the goroutines work for a second.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:113
+msgid "// Finally, capture and report the op counts.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:115
+msgid "\"readOps:\""
+msgstr ""
+
+#: src/stateful-goroutines.md:117
+msgid "\"writeOps:\""
+msgstr ""
+
+#: src/stateful-goroutines.md:122
+msgid "# Running our program shows that the goroutine-based\n"
+"# state management example completes about 80,000\n"
+"# total operations.\n"
+msgstr ""
+
+#: src/stateful-goroutines.md:128
+msgid "# For this particular case the goroutine-based approach\n"
+"# was a bit more involved than the mutex-based one. It\n"
+"# might be useful in certain cases though, for example\n"
+"# where you have other channels involved or when managing\n"
+"# multiple such mutexes would be error-prone. You should\n"
+"# use whichever approach feels most natural, especially\n"
+"# with respect to understanding the correctness of your\n"
+"# program.\n"
+msgstr ""
+
+#: src/sorting.md:4
+msgid "// Go's `slices` package implements sorting for builtins\n"
+"// and user-defined types. We'll look at sorting for\n"
+"// builtins first.\n"
+msgstr ""
+
+#: src/sorting.md:17
+msgid "// Sorting functions are generic, and work for any\n"
+"\t// _ordered_ built-in type. For a list of ordered\n"
+"\t// types, see [cmp.Ordered](https://pkg.go.dev/cmp#Ordered).\n"
+msgstr ""
+
+#: src/sorting.md:22
+msgid "\"Strings:\""
+msgstr ""
+
+#: src/sorting.md:24
+msgid "// An example of sorting `int`s.\n"
+msgstr ""
+
+#: src/sorting.md:27
+msgid "\"Ints:   \""
+msgstr ""
+
+#: src/sorting.md:29
+msgid "// We can also use the `slices` package to check if\n"
+"\t// a slice is already in sorted order.\n"
+msgstr ""
+
+#: src/sorting.md:32
+msgid "\"Sorted: \""
+msgstr ""
+
+#: src/sorting-by-functions.md:4
+msgid "// Sometimes we'll want to sort a collection by something\n"
+"// other than its natural order. For example, suppose we\n"
+"// wanted to sort strings by their length instead of\n"
+"// alphabetically. Here's an example of custom sorts\n"
+"// in Go.\n"
+msgstr ""
+
+#: src/sorting-by-functions.md:13
+msgid "\"cmp\""
+msgstr ""
+
+#: src/sorting-by-functions.md:19 src/regular-expressions.md:19
+#: src/regular-expressions.md:29 src/regular-expressions.md:68 src/json.md:50
+#: src/json.md:64 src/json.md:74 src/json.md:144 src/json.md:146
+#: src/json.md:147
+msgid "\"peach\""
+msgstr ""
+
+#: src/sorting-by-functions.md:19
+msgid "\"kiwi\""
+msgstr ""
+
+#: src/sorting-by-functions.md:21
+msgid "// We implement a comparison function for string\n"
+"\t// lengths. `cmp.Compare` is helpful for this.\n"
+msgstr ""
+
+#: src/sorting-by-functions.md:27
+msgid "// Now we can call `slices.SortFunc` with this custom\n"
+"\t// comparison function to sort `fruits` by name length.\n"
+msgstr ""
+
+#: src/sorting-by-functions.md:32
+msgid "// We can use the same technique to sort a slice of\n"
+"\t// values that aren't built-in types.\n"
+msgstr ""
+
+#: src/sorting-by-functions.md:40
+msgid "\"Jax\""
+msgstr ""
+
+#: src/sorting-by-functions.md:41
+msgid "\"TJ\""
+msgstr ""
+
+#: src/sorting-by-functions.md:42
+msgid "\"Alex\""
+msgstr ""
+
+#: src/sorting-by-functions.md:45
+msgid "// Sort `people` by age using `slices.SortFunc`.\n"
+"\t//\n"
+"\t// Note: if the `Person` struct is large,\n"
+"\t// you may want the slice to contain `*Person` instead\n"
+"\t// and adjust the sorting function accordingly. If in\n"
+"\t// doubt, [benchmark](testing-and-benchmarking)!\n"
+msgstr ""
+
+#: src/panic.md:4
+msgid "// A `panic` typically means something went unexpectedly\n"
+"// wrong. Mostly we use it to fail fast on errors that\n"
+"// shouldn't occur during normal operation, or that we\n"
+"// aren't prepared to handle gracefully.\n"
+msgstr ""
+
+#: src/panic.md:11 src/defer.md:13 src/string-formatting.md:12
+#: src/text-templates.md:12 src/json.md:13 src/reading-files.md:14
+#: src/writing-files.md:12 src/line-filters.md:17 src/directories.md:12
+#: src/temporary-files-and-directories.md:14 src/command-line-arguments.md:13
+#: src/command-line-subcommands.md:16 src/environment-variables.md:13
+#: src/logging.md:16 src/execing-processes.md:17 src/signals.md:15
+#: src/exit.md:11
+msgid "\"os\""
+msgstr ""
+
+#: src/panic.md:15
+msgid "// We'll use panic throughout this site to check for\n"
+"\t// unexpected errors. This is the only program on the\n"
+"\t// site designed to panic.\n"
+msgstr ""
+
+#: src/panic.md:18 src/recover.md:22
+msgid "\"a problem\""
+msgstr ""
+
+#: src/panic.md:20
+msgid "// A common use of panic is to abort if a function\n"
+"\t// returns an error value that we don't know how to\n"
+"\t// (or want to) handle. Here's an example of\n"
+"\t// `panic`king if we get an unexpected error when creating a new file.\n"
+msgstr ""
+
+#: src/panic.md:24
+msgid "\"/tmp/file\""
+msgstr ""
+
+#: src/panic.md:32
+msgid "# Running this program will cause it to panic, print\n"
+"# an error message and goroutine traces, and exit with\n"
+"# a non-zero status.\n"
+msgstr ""
+
+#: src/panic.md:35
+msgid "# When first panic in `main` fires, the program exits\n"
+"# without reaching the rest of the code. If you'd like\n"
+"# to see the program try to create a temp file, comment\n"
+"# the first panic out.\n"
+msgstr ""
+
+#: src/panic.md:48
+msgid "# Note that unlike some languages which use exceptions\n"
+"# for handling of many errors, in Go it is idiomatic\n"
+"# to use error-indicating return values wherever possible.\n"
+msgstr ""
+
+#: src/defer.md:4
+msgid "// _Defer_ is used to ensure that a function call is\n"
+"// performed later in a program's execution, usually for\n"
+"// purposes of cleanup. `defer` is often used where e.g.\n"
+"// `ensure` and `finally` would be used in other languages.\n"
+msgstr ""
+
+#: src/defer.md:15
+msgid "// Suppose we wanted to create a file, write to it,\n"
+"// and then close when we're done. Here's how we could\n"
+"// do that with `defer`.\n"
+msgstr ""
+
+#: src/defer.md:21
+msgid "// Immediately after getting a file object with\n"
+"\t// `createFile`, we defer the closing of that file\n"
+"\t// with `closeFile`. This will be executed at the end\n"
+"\t// of the enclosing function (`main`), after\n"
+"\t// `writeFile` has finished.\n"
+msgstr ""
+
+#: src/defer.md:26
+msgid "\"/tmp/defer.txt\""
+msgstr ""
+
+#: src/defer.md:32
+msgid "\"creating\""
+msgstr ""
+
+#: src/defer.md:41
+msgid "\"writing\""
+msgstr ""
+
+#: src/defer.md:42
+msgid "\"data\""
+msgstr ""
+
+#: src/defer.md:47
+msgid "\"closing\""
+msgstr ""
+
+#: src/defer.md:49
+msgid "// It's important to check for errors when closing a\n"
+"\t// file, even in a deferred function.\n"
+msgstr ""
+
+#: src/defer.md:52
+msgid "\"error: %v\\n\""
+msgstr ""
+
+#: src/defer.md:59
+msgid "# Running the program confirms that the file is closed\n"
+"# after being written.\n"
+msgstr ""
+
+#: src/recover.md:4
+msgid "// Go makes it possible to _recover_ from a panic, by\n"
+"// using the `recover` built-in function. A `recover` can\n"
+"// stop a `panic` from aborting the program and let it\n"
+"// continue with execution instead.\n"
+msgstr ""
+
+#: src/recover.md:8
+msgid "// An example of where this can be useful: a server\n"
+"// wouldn't want to crash if one of the client connections\n"
+"// exhibits a critical error. Instead, the server would\n"
+"// want to close that connection and continue serving\n"
+"// other clients. In fact, this is what Go's `net/http`\n"
+"// does by default for HTTP servers.\n"
+msgstr ""
+
+#: src/recover.md:19
+msgid "// This function panics.\n"
+msgstr ""
+
+#: src/recover.md:26
+msgid "// `recover` must be called within a deferred function.\n"
+"\t// When the enclosing function panics, the defer will\n"
+"\t// activate and a `recover` call within it will catch\n"
+"\t// the panic.\n"
+msgstr ""
+
+#: src/recover.md:32
+msgid "// The return value of `recover` is the error raised in\n"
+"\t\t\t// the call to `panic`.\n"
+msgstr ""
+
+#: src/recover.md:34
+msgid "\"Recovered. Error:\\n\""
+msgstr ""
+
+#: src/recover.md:40
+msgid "// This code will not run, because `mayPanic` panics.\n"
+"\t// The execution of `main` stops at the point of the\n"
+"\t// panic and resumes in the deferred closure.\n"
+msgstr ""
+
+#: src/recover.md:43
+msgid "\"After mayPanic()\""
+msgstr ""
+
+#: src/string-functions.md:4
+msgid "// The standard library's `strings` package provides many\n"
+"// useful string-related functions. Here are some examples\n"
+"// to give you a sense of the package.\n"
+msgstr ""
+
+#: src/string-functions.md:12 src/json.md:14 src/line-filters.md:18
+#: src/file-paths.md:13 src/environment-variables.md:14
+msgid "\"strings\""
+msgstr ""
+
+#: src/string-functions.md:14
+msgid "// We alias `fmt.Println` to a shorter name as we'll use\n"
+"// it a lot below.\n"
+msgstr ""
+
+#: src/string-functions.md:21
+msgid "// Here's a sample of the functions available in\n"
+"\t// `strings`. Since these are functions from the\n"
+"\t// package, not methods on the string object itself,\n"
+"\t// we need pass the string in question as the first\n"
+"\t// argument to the function. You can find more\n"
+"\t// functions in the [`strings`](https://pkg.go.dev/strings)\n"
+"\t// package docs.\n"
+msgstr ""
+
+#: src/string-functions.md:28
+msgid "\"Contains:  \""
+msgstr ""
+
+#: src/string-functions.md:28 src/string-functions.md:29
+#: src/string-functions.md:30 src/string-functions.md:31
+#: src/string-functions.md:32 src/string-functions.md:39
+msgid "\"test\""
+msgstr ""
+
+#: src/string-functions.md:28
+msgid "\"es\""
+msgstr ""
+
+#: src/string-functions.md:29
+msgid "\"Count:     \""
+msgstr ""
+
+#: src/string-functions.md:29
+msgid "\"t\""
+msgstr ""
+
+#: src/string-functions.md:30
+msgid "\"HasPrefix: \""
+msgstr ""
+
+#: src/string-functions.md:30
+msgid "\"te\""
+msgstr ""
+
+#: src/string-functions.md:31
+msgid "\"HasSuffix: \""
+msgstr ""
+
+#: src/string-functions.md:31
+msgid "\"st\""
+msgstr ""
+
+#: src/string-functions.md:32
+msgid "\"Index:     \""
+msgstr ""
+
+#: src/string-functions.md:33
+msgid "\"Join:      \""
+msgstr ""
+
+#: src/string-functions.md:33 src/string-functions.md:37
+msgid "\"-\""
+msgstr ""
+
+#: src/string-functions.md:34
+msgid "\"Repeat:    \""
+msgstr ""
+
+#: src/string-functions.md:35 src/string-functions.md:36
+msgid "\"Replace:   \""
+msgstr ""
+
+#: src/string-functions.md:35 src/string-functions.md:36
+msgid "\"o\""
+msgstr ""
+
+#: src/string-functions.md:35 src/string-functions.md:36
+msgid "\"0\""
+msgstr ""
+
+#: src/string-functions.md:37
+msgid "\"Split:     \""
+msgstr ""
+
+#: src/string-functions.md:37
+msgid "\"a-b-c-d-e\""
+msgstr ""
+
+#: src/string-functions.md:38
+msgid "\"ToLower:   \""
+msgstr ""
+
+#: src/string-functions.md:38
+msgid "\"TEST\""
+msgstr ""
+
+#: src/string-functions.md:39
+msgid "\"ToUpper:   \""
+msgstr ""
+
+#: src/string-formatting.md:4
+msgid "// Go offers excellent support for string formatting in\n"
+"// the `printf` tradition. Here are some examples of\n"
+"// common string formatting tasks.\n"
+msgstr ""
+
+#: src/string-formatting.md:21
+msgid "// Go offers several printing \"verbs\" designed to\n"
+"\t// format general Go values. For example, this prints\n"
+"\t// an instance of our `point` struct.\n"
+msgstr ""
+
+#: src/string-formatting.md:25
+msgid "\"struct1: %v\\n\""
+msgstr ""
+
+#: src/string-formatting.md:27
+msgid "// If the value is a struct, the `%+v` variant will\n"
+"\t// include the struct's field names.\n"
+msgstr ""
+
+#: src/string-formatting.md:29
+msgid "\"struct2: %+v\\n\""
+msgstr ""
+
+#: src/string-formatting.md:31
+msgid "// The `%#v` variant prints a Go syntax representation\n"
+"\t// of the value, i.e. the source code snippet that\n"
+"\t// would produce that value.\n"
+msgstr ""
+
+#: src/string-formatting.md:34
+msgid "\"struct3: %#v\\n\""
+msgstr ""
+
+#: src/string-formatting.md:36
+msgid "// To print the type of a value, use `%T`.\n"
+msgstr ""
+
+#: src/string-formatting.md:37
+msgid "\"type: %T\\n\""
+msgstr ""
+
+#: src/string-formatting.md:39
+msgid "// Formatting booleans is straight-forward.\n"
+msgstr ""
+
+#: src/string-formatting.md:40
+msgid "\"bool: %t\\n\""
+msgstr ""
+
+#: src/string-formatting.md:42
+msgid "// There are many options for formatting integers.\n"
+"\t// Use `%d` for standard, base-10 formatting.\n"
+msgstr ""
+
+#: src/string-formatting.md:44
+msgid "\"int: %d\\n\""
+msgstr ""
+
+#: src/string-formatting.md:46
+msgid "// This prints a binary representation.\n"
+msgstr ""
+
+#: src/string-formatting.md:47
+msgid "\"bin: %b\\n\""
+msgstr ""
+
+#: src/string-formatting.md:49
+msgid "// This prints the character corresponding to the\n"
+"\t// given integer.\n"
+msgstr ""
+
+#: src/string-formatting.md:51
+msgid "\"char: %c\\n\""
+msgstr ""
+
+#: src/string-formatting.md:53
+msgid "// `%x` provides hex encoding.\n"
+msgstr ""
+
+#: src/string-formatting.md:54
+msgid "\"hex: %x\\n\""
+msgstr ""
+
+#: src/string-formatting.md:56
+msgid "// There are also several formatting options for\n"
+"\t// floats. For basic decimal formatting use `%f`.\n"
+msgstr ""
+
+#: src/string-formatting.md:58
+msgid "\"float1: %f\\n\""
+msgstr ""
+
+#: src/string-formatting.md:60
+msgid "// `%e` and `%E` format the float in (slightly\n"
+"\t// different versions of) scientific notation.\n"
+msgstr ""
+
+#: src/string-formatting.md:62
+msgid "\"float2: %e\\n\""
+msgstr ""
+
+#: src/string-formatting.md:63
+msgid "\"float3: %E\\n\""
+msgstr ""
+
+#: src/string-formatting.md:65
+msgid "// For basic string printing use `%s`.\n"
+msgstr ""
+
+#: src/string-formatting.md:66
+msgid "\"str1: %s\\n\""
+msgstr ""
+
+#: src/string-formatting.md:66 src/string-formatting.md:69
+#: src/string-formatting.md:131
+msgid "\"\\\"string\\\"\""
+msgstr ""
+
+#: src/string-formatting.md:68
+msgid "// To double-quote strings as in Go source, use `%q`.\n"
+msgstr ""
+
+#: src/string-formatting.md:69
+msgid "\"str2: %q\\n\""
+msgstr ""
+
+#: src/string-formatting.md:71
+msgid "// As with integers seen earlier, `%x` renders\n"
+"\t// the string in base-16, with two output characters\n"
+"\t// per byte of input.\n"
+msgstr ""
+
+#: src/string-formatting.md:74
+msgid "\"str3: %x\\n\""
+msgstr ""
+
+#: src/string-formatting.md:74
+msgid "\"hex this\""
+msgstr ""
+
+#: src/string-formatting.md:76
+msgid "// To print a representation of a pointer, use `%p`.\n"
+msgstr ""
+
+#: src/string-formatting.md:77
+msgid "\"pointer: %p\\n\""
+msgstr ""
+
+#: src/string-formatting.md:79
+msgid "// When formatting numbers you will often want to\n"
+"\t// control the width and precision of the resulting\n"
+"\t// figure. To specify the width of an integer, use a\n"
+"\t// number after the `%` in the verb. By default the\n"
+"\t// result will be right-justified and padded with\n"
+"\t// spaces.\n"
+msgstr ""
+
+#: src/string-formatting.md:85
+msgid "\"width1: |%6d|%6d|\\n\""
+msgstr ""
+
+#: src/string-formatting.md:87
+msgid "// You can also specify the width of printed floats,\n"
+"\t// though usually you'll also want to restrict the\n"
+"\t// decimal precision at the same time with the\n"
+"\t// width.precision syntax.\n"
+msgstr ""
+
+#: src/string-formatting.md:91
+msgid "\"width2: |%6.2f|%6.2f|\\n\""
+msgstr ""
+
+#: src/string-formatting.md:93
+msgid "// To left-justify, use the `-` flag.\n"
+msgstr ""
+
+#: src/string-formatting.md:94
+msgid "\"width3: |%-6.2f|%-6.2f|\\n\""
+msgstr ""
+
+#: src/string-formatting.md:96
+msgid "// You may also want to control width when formatting\n"
+"\t// strings, especially to ensure that they align in\n"
+"\t// table-like output. For basic right-justified width.\n"
+msgstr ""
+
+#: src/string-formatting.md:99
+msgid "\"width4: |%6s|%6s|\\n\""
+msgstr ""
+
+#: src/string-formatting.md:101
+msgid "// To left-justify use the `-` flag as with numbers.\n"
+msgstr ""
+
+#: src/string-formatting.md:102
+msgid "\"width5: |%-6s|%-6s|\\n\""
+msgstr ""
+
+#: src/string-formatting.md:104
+msgid "// So far we've seen `Printf`, which prints the\n"
+"\t// formatted string to `os.Stdout`. `Sprintf` formats\n"
+"\t// and returns a string without printing it anywhere.\n"
+msgstr ""
+
+#: src/string-formatting.md:107
+msgid "\"sprintf: a %s\""
+msgstr ""
+
+#: src/string-formatting.md:107 src/string-formatting.md:130
+msgid "\"string\""
+msgstr ""
+
+#: src/string-formatting.md:110
+msgid "// You can format+print to `io.Writers` other than\n"
+"\t// `os.Stdout` using `Fprintf`.\n"
+msgstr ""
+
+#: src/string-formatting.md:112
+msgid "\"io: an %s\\n\""
+msgstr ""
+
+#: src/text-templates.md:4
+msgid "// Go offers built-in support for creating dynamic content or showing customized\n"
+"// output to the user with the `text/template` package. A sibling package\n"
+"// named `html/template` provides the same API but has additional security\n"
+"// features and should be used for generating HTML.\n"
+msgstr ""
+
+#: src/text-templates.md:13
+msgid "\"text/template\""
+msgstr ""
+
+#: src/text-templates.md:18
+msgid "// We can create a new template and parse its body from\n"
+"\t// a string.\n"
+"\t// Templates are a mix of static text and \"actions\" enclosed in\n"
+"\t// `{{...}}` that are used to dynamically insert content.\n"
+msgstr ""
+
+#: src/text-templates.md:22
+msgid "\"t1\""
+msgstr ""
+
+#: src/text-templates.md:23
+msgid "\"Value is {{.}}\\n\""
+msgstr ""
+
+#: src/text-templates.md:28
+msgid "// Alternatively, we can use the `template.Must` function to\n"
+"\t// panic in case `Parse` returns an error. This is especially\n"
+"\t// useful for templates initialized in the global scope.\n"
+msgstr ""
+
+#: src/text-templates.md:31
+msgid "\"Value: {{.}}\\n\""
+msgstr ""
+
+#: src/text-templates.md:33
+msgid "// By \"executing\" the template we generate its text with\n"
+"\t// specific values for its actions. The `{{.}}` action is\n"
+"\t// replaced by the value passed as a parameter to `Execute`.\n"
+msgstr ""
+
+#: src/text-templates.md:36
+msgid "\"some text\""
+msgstr ""
+
+#: src/text-templates.md:39 src/text-templates.md:81
+msgid "\"Go\""
+msgstr ""
+
+#: src/text-templates.md:40 src/text-templates.md:82
+msgid "\"Rust\""
+msgstr ""
+
+#: src/text-templates.md:41 src/text-templates.md:83
+msgid "\"C++\""
+msgstr ""
+
+#: src/text-templates.md:42 src/text-templates.md:84
+msgid "\"C#\""
+msgstr ""
+
+#: src/text-templates.md:45
+msgid "// Helper function we'll use below.\n"
+msgstr ""
+
+#: src/text-templates.md:50
+msgid "// If the data is a struct we can use the `{{.FieldName}}` action to access\n"
+"\t// its fields. The fields should be exported to be accessible when a\n"
+"\t// template is executing.\n"
+msgstr ""
+
+#: src/text-templates.md:53
+msgid "\"t2\""
+msgstr ""
+
+#: src/text-templates.md:53
+msgid "\"Name: {{.Name}}\\n\""
+msgstr ""
+
+#: src/text-templates.md:57
+msgid "\"Jane Doe\""
+msgstr ""
+
+#: src/text-templates.md:59
+msgid "// The same applies to maps; with maps there is no restriction on the\n"
+"\t// case of key names.\n"
+msgstr ""
+
+#: src/text-templates.md:62
+msgid "\"Name\""
+msgstr ""
+
+#: src/text-templates.md:62
+msgid "\"Mickey Mouse\""
+msgstr ""
+
+#: src/text-templates.md:65
+msgid "// if/else provide conditional execution for templates. A value is considered\n"
+"\t// false if it's the default value of a type, such as 0, an empty string,\n"
+"\t// nil pointer, etc.\n"
+"\t// This sample demonstrates another\n"
+"\t// feature of templates: using `-` in actions to trim whitespace.\n"
+msgstr ""
+
+#: src/text-templates.md:70
+msgid "\"t3\""
+msgstr ""
+
+#: src/text-templates.md:71
+msgid "\"{{if . -}} yes {{else -}} no {{end}}\\n\""
+msgstr ""
+
+#: src/text-templates.md:72
+msgid "\"not empty\""
+msgstr ""
+
+#: src/text-templates.md:73 src/directories.md:37
+#: src/temporary-files-and-directories.md:31
+#: src/temporary-files-and-directories.md:57 src/command-line-subcommands.md:26
+msgid "\"\""
+msgstr ""
+
+#: src/text-templates.md:75
+msgid "// range blocks let us loop through slices, arrays, maps or channels. Inside\n"
+"\t// the range block `{{.}}` is set to the current item of the iteration.\n"
+msgstr ""
+
+#: src/text-templates.md:77
+msgid "\"t4\""
+msgstr ""
+
+#: src/text-templates.md:78
+msgid "\"Range: {{range .}}{{.}} {{end}}\\n\""
+msgstr ""
+
+#: src/regular-expressions.md:4
+msgid "// Go offers built-in support for [regular expressions](https://en.wikipedia.org/wiki/Regular_expression).\n"
+"// Here are some examples of  common regexp-related tasks\n"
+"// in Go.\n"
+msgstr ""
+
+#: src/regular-expressions.md:11 src/logging.md:13
+msgid "\"bytes\""
+msgstr ""
+
+#: src/regular-expressions.md:13
+msgid "\"regexp\""
+msgstr ""
+
+#: src/regular-expressions.md:18
+msgid "// This tests whether a pattern matches a string.\n"
+msgstr ""
+
+#: src/regular-expressions.md:19 src/regular-expressions.md:25
+#: src/regular-expressions.md:75
+msgid "\"p([a-z]+)ch\""
+msgstr ""
+
+#: src/regular-expressions.md:22
+msgid "// Above we used a string pattern directly, but for\n"
+"\t// other regexp tasks you'll need to `Compile` an\n"
+"\t// optimized `Regexp` struct.\n"
+msgstr ""
+
+#: src/regular-expressions.md:27
+msgid "// Many methods are available on these structs. Here's\n"
+"\t// a match test like we saw earlier.\n"
+msgstr ""
+
+#: src/regular-expressions.md:31
+msgid "// This finds the match for the regexp.\n"
+msgstr ""
+
+#: src/regular-expressions.md:32 src/regular-expressions.md:37
+#: src/regular-expressions.md:43 src/regular-expressions.md:47
+msgid "\"peach punch\""
+msgstr ""
+
+#: src/regular-expressions.md:34
+msgid "// This also finds the first match but returns the\n"
+"\t// start and end indexes for the match instead of the\n"
+"\t// matching text.\n"
+msgstr ""
+
+#: src/regular-expressions.md:39
+msgid "// The `Submatch` variants include information about\n"
+"\t// both the whole-pattern matches and the submatches\n"
+"\t// within those matches. For example this will return\n"
+"\t// information for both `p([a-z]+)ch` and `([a-z]+)`.\n"
+msgstr ""
+
+#: src/regular-expressions.md:45
+msgid "// Similarly this will return information about the\n"
+"\t// indexes of matches and submatches.\n"
+msgstr ""
+
+#: src/regular-expressions.md:49
+msgid "// The `All` variants of these functions apply to all\n"
+"\t// matches in the input, not just the first. For\n"
+"\t// example to find all matches for a regexp.\n"
+msgstr ""
+
+#: src/regular-expressions.md:52 src/regular-expressions.md:57
+#: src/regular-expressions.md:62
+msgid "\"peach punch pinch\""
+msgstr ""
+
+#: src/regular-expressions.md:54
+msgid "// These `All` variants are available for the other\n"
+"\t// functions we saw above as well.\n"
+msgstr ""
+
+#: src/regular-expressions.md:59
+msgid "// Providing a non-negative integer as the second\n"
+"\t// argument to these functions will limit the number\n"
+"\t// of matches.\n"
+msgstr ""
+
+#: src/regular-expressions.md:64
+msgid "// Our examples above had string arguments and used\n"
+"\t// names like `MatchString`. We can also provide\n"
+"\t// `[]byte` arguments and drop `String` from the\n"
+"\t// function name.\n"
+msgstr ""
+
+#: src/regular-expressions.md:70
+msgid "// When creating global variables with regular\n"
+"\t// expressions you can use the `MustCompile` variation\n"
+"\t// of `Compile`. `MustCompile` panics instead of\n"
+"\t// returning an error, which makes it safer to use for\n"
+"\t// global variables.\n"
+msgstr ""
+
+#: src/regular-expressions.md:76
+msgid "\"regexp:\""
+msgstr ""
+
+#: src/regular-expressions.md:78
+msgid "// The `regexp` package can also be used to replace\n"
+"\t// subsets of strings with other values.\n"
+msgstr ""
+
+#: src/regular-expressions.md:80 src/regular-expressions.md:84
+msgid "\"a peach\""
+msgstr ""
+
+#: src/regular-expressions.md:80
+msgid "\"<fruit>\""
+msgstr ""
+
+#: src/regular-expressions.md:82
+msgid "// The `Func` variant allows you to transform matched\n"
+"\t// text with a given function.\n"
+msgstr ""
+
+#: src/regular-expressions.md:105
+msgid "# For a complete reference on Go regular expressions check\n"
+"# the [`regexp`](https://pkg.go.dev/regexp) package docs.\n"
+msgstr ""
+
+#: src/json.md:4
+msgid "// Go offers built-in support for JSON encoding and\n"
+"// decoding, including to and from built-in and custom\n"
+"// data types.\n"
+msgstr ""
+
+#: src/json.md:11
+msgid "\"encoding/json\""
+msgstr ""
+
+#: src/json.md:16
+msgid "// We'll use these two structs to demonstrate encoding and\n"
+"// decoding of custom types below.\n"
+msgstr ""
+
+#: src/json.md:23
+msgid "// Only exported fields will be encoded/decoded in JSON.\n"
+"// Fields must start with capital letters to be exported.\n"
+msgstr ""
+
+#: src/json.md:27
+msgid "`json:\"page\"`"
+msgstr ""
+
+#: src/json.md:28
+msgid "`json:\"fruits\"`"
+msgstr ""
+
+#: src/json.md:33
+msgid "// First we'll look at encoding basic data types to\n"
+"\t// JSON strings. Here are some examples for atomic\n"
+"\t// values.\n"
+msgstr ""
+
+#: src/json.md:45 src/json.md:142
+msgid "\"gopher\""
+msgstr ""
+
+#: src/json.md:48
+msgid "// And here are some for slices and maps, which encode\n"
+"\t// to JSON arrays and objects as you'd expect.\n"
+msgstr ""
+
+#: src/json.md:50 src/json.md:64 src/json.md:74 src/json.md:144 src/json.md:146
+#: src/json.md:147
+msgid "\"pear\""
+msgstr ""
+
+#: src/json.md:54 src/json.md:126 src/json.md:145 src/json.md:153
+msgid "\"lettuce\""
+msgstr ""
+
+#: src/json.md:58
+msgid "// The JSON package can automatically encode your\n"
+"\t// custom data types. It will only include exported\n"
+"\t// fields in the encoded output and will by default\n"
+"\t// use those names as the JSON keys.\n"
+msgstr ""
+
+#: src/json.md:68
+msgid "// You can use tags on struct field declarations\n"
+"\t// to customize the encoded JSON key names. Check the\n"
+"\t// definition of `response2` above to see an example\n"
+"\t// of such tags.\n"
+msgstr ""
+
+#: src/json.md:78
+msgid "// Now let's look at decoding JSON data into Go\n"
+"\t// values. Here's an example for a generic data\n"
+"\t// structure.\n"
+msgstr ""
+
+#: src/json.md:81
+msgid "`{\"num\":6.13,\"strs\":[\"a\",\"b\"]}`"
+msgstr ""
+
+#: src/json.md:83
+msgid "// We need to provide a variable where the JSON\n"
+"\t// package can put the decoded data. This\n"
+"\t// `map[string]interface{}` will hold a map of strings\n"
+"\t// to arbitrary data types.\n"
+msgstr ""
+
+#: src/json.md:89
+msgid "// Here's the actual decoding, and a check for\n"
+"\t// associated errors.\n"
+msgstr ""
+
+#: src/json.md:96
+msgid "// In order to use the values in the decoded map,\n"
+"\t// we'll need to convert them to their appropriate type.\n"
+"\t// For example here we convert the value in `num` to\n"
+"\t// the expected `float64` type.\n"
+msgstr ""
+
+#: src/json.md:100
+msgid "\"num\""
+msgstr ""
+
+#: src/json.md:103
+msgid "// Accessing nested data requires a series of\n"
+"\t// conversions.\n"
+msgstr ""
+
+#: src/json.md:105
+msgid "\"strs\""
+msgstr ""
+
+#: src/json.md:109
+msgid "// We can also decode JSON into custom data types.\n"
+"\t// This has the advantages of adding additional\n"
+"\t// type-safety to our programs and eliminating the\n"
+"\t// need for type assertions when accessing the decoded\n"
+"\t// data.\n"
+msgstr ""
+
+#: src/json.md:114
+msgid "`{\"page\": 1, \"fruits\": [\"apple\", \"peach\"]}`"
+msgstr ""
+
+#: src/json.md:120
+msgid "// In the examples above we always used bytes and\n"
+"\t// strings as intermediates between the data and\n"
+"\t// JSON representation on standard out. We can also\n"
+"\t// stream JSON encodings directly to `os.Writer`s like\n"
+"\t// `os.Stdout` or even HTTP response bodies.\n"
+msgstr ""
+
+#: src/json.md:129
+msgid "// Streaming reads from `os.Reader`s like `os.Stdin`\n"
+"\t// or HTTP request bodies is done with `json.Decoder`.\n"
+msgstr ""
+
+#: src/json.md:146
+msgid "\"Page\""
+msgstr ""
+
+#: src/json.md:146
+msgid "\"Fruits\""
+msgstr ""
+
+#: src/json.md:147
+msgid "\"page\""
+msgstr ""
+
+#: src/json.md:147
+msgid "\"fruits\""
+msgstr ""
+
+#: src/json.md:156
+msgid "# We've covered the basic of JSON in Go here, but check\n"
+"# out the [JSON and Go](https://go.dev/blog/json)\n"
+"# blog post and [JSON package docs](https://pkg.go.dev/encoding/json)\n"
+"# for more.\n"
+msgstr ""
+
+#: src/xml.md:4
+msgid "// Go offers built-in support for XML and XML-like\n"
+"// formats with the `encoding/xml` package.\n"
+msgstr ""
+
+#: src/xml.md:10
+msgid "\"encoding/xml\""
+msgstr ""
+
+#: src/xml.md:13
+msgid "// Plant will be mapped to XML. Similarly to the\n"
+"// JSON examples, field tags contain directives for the\n"
+"// encoder and decoder. Here we use some special features\n"
+"// of the XML package: the `XMLName` field name dictates\n"
+"// the name of the XML element representing this struct;\n"
+"// `id,attr` means that the `Id` field is an XML\n"
+"// _attribute_ rather than a nested element.\n"
+msgstr ""
+
+#: src/xml.md:22
+msgid "`xml:\"plant\"`"
+msgstr ""
+
+#: src/xml.md:23
+msgid "`xml:\"id,attr\"`"
+msgstr ""
+
+#: src/xml.md:24
+msgid "`xml:\"name\"`"
+msgstr ""
+
+#: src/xml.md:25
+msgid "`xml:\"origin\"`"
+msgstr ""
+
+#: src/xml.md:29
+msgid "\"Plant id=%v, name=%v, origin=%v\""
+msgstr ""
+
+#: src/xml.md:34
+msgid "\"Coffee\""
+msgstr ""
+
+#: src/xml.md:35
+msgid "\"Ethiopia\""
+msgstr ""
+
+#: src/xml.md:35
+msgid "\"Brazil\""
+msgstr ""
+
+#: src/xml.md:37
+msgid "// Emit XML representing our plant; using\n"
+"\t// `MarshalIndent` to produce a more\n"
+"\t// human-readable output.\n"
+msgstr ""
+
+#: src/xml.md:40 src/xml.md:70
+msgid "\"  \""
+msgstr ""
+
+#: src/xml.md:43
+msgid "// To add a generic XML header to the output, append\n"
+"\t// it explicitly.\n"
+msgstr ""
+
+#: src/xml.md:47
+msgid "// Use `Unmarshal` to parse a stream of bytes with XML\n"
+"\t// into a data structure. If the XML is malformed or\n"
+"\t// cannot be mapped onto Plant, a descriptive error\n"
+"\t// will be returned.\n"
+msgstr ""
+
+#: src/xml.md:57
+msgid "\"Tomato\""
+msgstr ""
+
+#: src/xml.md:58
+msgid "\"Mexico\""
+msgstr ""
+
+#: src/xml.md:58
+msgid "\"California\""
+msgstr ""
+
+#: src/xml.md:60
+msgid "// The `parent>child>plant` field tag tells the encoder\n"
+"\t// to nest all `plant`s under `<parent><child>...`\n"
+msgstr ""
+
+#: src/xml.md:63
+msgid "`xml:\"nesting\"`"
+msgstr ""
+
+#: src/xml.md:64
+msgid "`xml:\"parent>child>plant\"`"
+msgstr ""
+
+#: src/xml.md:77 src/xml.md:83 src/xml.md:92
+msgid "\"27\""
+msgstr ""
+
+#: src/xml.md:82
+msgid "\"1.0\""
+msgstr ""
+
+#: src/xml.md:82
+msgid "\"UTF-8\""
+msgstr ""
+
+#: src/xml.md:97
+msgid "\"81\""
+msgstr ""
+
+#: src/time.md:4
+msgid "// Go offers extensive support for times and durations;\n"
+"// here are some examples.\n"
+msgstr ""
+
+#: src/time.md:17
+msgid "// We'll start by getting the current time.\n"
+msgstr ""
+
+#: src/time.md:21
+msgid "// You can build a `time` struct by providing the\n"
+"\t// year, month, day, etc. Times are always associated\n"
+"\t// with a `Location`, i.e. time zone.\n"
+msgstr ""
+
+#: src/time.md:28
+msgid "// You can extract the various components of the time\n"
+"\t// value as expected.\n"
+msgstr ""
+
+#: src/time.md:39
+msgid "// The Monday-Sunday `Weekday` is also available.\n"
+msgstr ""
+
+#: src/time.md:42
+msgid "// These methods compare two times, testing if the\n"
+"\t// first occurs before, after, or at the same time\n"
+"\t// as the second, respectively.\n"
+msgstr ""
+
+#: src/time.md:49
+msgid "// The `Sub` methods returns a `Duration` representing\n"
+"\t// the interval between two times.\n"
+msgstr ""
+
+#: src/time.md:54
+msgid "// We can compute the length of the duration in\n"
+"\t// various units.\n"
+msgstr ""
+
+#: src/time.md:61
+msgid "// You can use `Add` to advance a time by a given\n"
+"\t// duration, or with a `-` to move backwards by a\n"
+"\t// duration.\n"
+msgstr ""
+
+#: src/time.md:92
+msgid "# Next we'll look at the related idea of time relative to\n"
+"# the Unix epoch.\n"
+msgstr ""
+
+#: src/epoch.md:4
+msgid "// A common requirement in programs is getting the number\n"
+"// of seconds, milliseconds, or nanoseconds since the\n"
+"// [Unix epoch](https://en.wikipedia.org/wiki/Unix_time).\n"
+"// Here's how to do it in Go.\n"
+msgstr ""
+
+#: src/epoch.md:18
+msgid "// Use `time.Now` with `Unix`, `UnixMilli` or `UnixNano`\n"
+"\t// to get elapsed time since the Unix epoch in seconds,\n"
+"\t// milliseconds or nanoseconds, respectively.\n"
+msgstr ""
+
+#: src/epoch.md:28
+msgid "// You can also convert integer seconds or nanoseconds\n"
+"\t// since the epoch into the corresponding `time`.\n"
+msgstr ""
+
+#: src/epoch.md:43
+msgid "# Next we'll look at another time-related task: time\n"
+"# parsing and formatting.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:4
+msgid "// Go supports time formatting and parsing via\n"
+"// pattern-based layouts.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:17
+msgid "// Here's a basic example of formatting a time\n"
+"\t// according to RFC3339, using the corresponding layout\n"
+"\t// constant.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:23
+msgid "// Time parsing uses the same layout values as `Format`.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:26
+msgid "\"2012-11-01T22:08:41+00:00\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:29
+msgid "// `Format` and `Parse` use example-based layouts. Usually\n"
+"\t// you'll use a constant from `time` for these layouts, but\n"
+"\t// you can also supply custom layouts. Layouts must use the\n"
+"\t// reference time `Mon Jan 2 15:04:05 MST 2006` to show the\n"
+"\t// pattern with which to format/parse a given time/string.\n"
+"\t// The example time must be exactly as shown: the year 2006,\n"
+"\t// 15 for the hour, Monday for the day of the week, etc.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:36
+msgid "\"3:04PM\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:37 src/time-formatting-parsing.md:52
+#: src/time-formatting-parsing.md:67
+msgid "\"Mon Jan _2 15:04:05 2006\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:38
+msgid "\"2006-01-02T15:04:05.999999-07:00\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:39
+msgid "\"3 04 PM\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:40
+msgid "\"8 41 PM\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:43
+msgid "// For purely numeric representations you can also\n"
+"\t// use standard string formatting with the extracted\n"
+"\t// components of the time value.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:46
+msgid "\"%d-%02d-%02dT%02d:%02d:%02d-00:00\\n\""
+msgstr ""
+
+#: src/time-formatting-parsing.md:50
+msgid "// `Parse` will return an error on malformed input\n"
+"\t// explaining the parsing problem.\n"
+msgstr ""
+
+#: src/time-formatting-parsing.md:53 src/time-formatting-parsing.md:67
+msgid "\"8:41PM\""
+msgstr ""
+
+#: src/random-numbers.md:4
+msgid "// Go's `math/rand/v2` package provides\n"
+"// [pseudorandom number](https://en.wikipedia.org/wiki/Pseudorandom_number_generator)\n"
+"// generation.\n"
+msgstr ""
+
+#: src/random-numbers.md:12
+msgid "\"math/rand/v2\""
+msgstr ""
+
+#: src/random-numbers.md:17
+msgid "// For example, `rand.IntN` returns a random `int` n,\n"
+"\t// `0 <= n < 100`.\n"
+msgstr ""
+
+#: src/random-numbers.md:19 src/random-numbers.md:29 src/random-numbers.md:41
+#: src/random-numbers.md:47
+msgid "\",\""
+msgstr ""
+
+#: src/random-numbers.md:23
+msgid "// `rand.Float64` returns a `float64` `f`,\n"
+"\t// `0.0 <= f < 1.0`.\n"
+msgstr ""
+
+#: src/random-numbers.md:27
+msgid "// This can be used to generate random floats in\n"
+"\t// other ranges, for example `5.0 <= f' < 10.0`.\n"
+msgstr ""
+
+#: src/random-numbers.md:33
+msgid "// If you want a known seed, create a new\n"
+"\t// `rand.Source` and pass it into the `New`\n"
+"\t// constructor. `NewPCG` creates a new\n"
+"\t// [PCG](https://en.wikipedia.org/wiki/Permuted_congruential_generator)\n"
+"\t// source that requires a seed of two `uint64`\n"
+"\t// numbers.\n"
+msgstr ""
+
+#: src/random-numbers.md:54
+msgid "# Some of the generated numbers may be\n"
+"# different when you run the sample.\n"
+msgstr ""
+
+#: src/random-numbers.md:62
+msgid "# See the [`math/rand/v2`](https://pkg.go.dev/math/rand/v2)\n"
+"# package docs for references on other random quantities\n"
+"# that Go can provide.\n"
+msgstr ""
+
+#: src/number-parsing.md:4
+msgid "// Parsing numbers from strings is a basic but common task\n"
+"// in many programs; here's how to do it in Go.\n"
+msgstr ""
+
+#: src/number-parsing.md:8
+msgid "// The built-in package `strconv` provides the number\n"
+"// parsing.\n"
+msgstr ""
+
+#: src/number-parsing.md:13
+msgid "\"strconv\""
+msgstr ""
+
+#: src/number-parsing.md:18
+msgid "// With `ParseFloat`, this `64` tells how many bits of\n"
+"\t// precision to parse.\n"
+msgstr ""
+
+#: src/number-parsing.md:20
+msgid "\"1.234\""
+msgstr ""
+
+#: src/number-parsing.md:23
+msgid "// For `ParseInt`, the `0` means infer the base from\n"
+"\t// the string. `64` requires that the result fit in 64\n"
+"\t// bits.\n"
+msgstr ""
+
+#: src/number-parsing.md:26 src/embed-directive.md:58
+msgid "\"123\""
+msgstr ""
+
+#: src/number-parsing.md:29
+msgid "// `ParseInt` will recognize hex-formatted numbers.\n"
+msgstr ""
+
+#: src/number-parsing.md:30
+msgid "\"0x1c8\""
+msgstr ""
+
+#: src/number-parsing.md:33
+msgid "// A `ParseUint` is also available.\n"
+msgstr ""
+
+#: src/number-parsing.md:34
+msgid "\"789\""
+msgstr ""
+
+#: src/number-parsing.md:37
+msgid "// `Atoi` is a convenience function for basic base-10\n"
+"\t// `int` parsing.\n"
+msgstr ""
+
+#: src/number-parsing.md:39
+msgid "\"135\""
+msgstr ""
+
+#: src/number-parsing.md:42
+msgid "// Parse functions return an error on bad input.\n"
+msgstr ""
+
+#: src/number-parsing.md:43 src/number-parsing.md:55
+msgid "\"wat\""
+msgstr ""
+
+#: src/number-parsing.md:56
+msgid "# Next we'll look at another common parsing task: URLs.\n"
+msgstr ""
+
+#: src/url-parsing.md:4
+msgid "// URLs provide a [uniform way to locate resources](https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/).\n"
+"// Here's how to parse URLs in Go.\n"
+msgstr ""
+
+#: src/url-parsing.md:11
+msgid "\"net\""
+msgstr ""
+
+#: src/url-parsing.md:12
+msgid "\"net/url\""
+msgstr ""
+
+#: src/url-parsing.md:17
+msgid "// We'll parse this example URL, which includes a\n"
+"\t// scheme, authentication info, host, port, path,\n"
+"\t// query params, and query fragment.\n"
+msgstr ""
+
+#: src/url-parsing.md:20
+msgid "\"postgres://user:pass@host.com:5432/path?k=v#f\""
+msgstr ""
+
+#: src/url-parsing.md:22
+msgid "// Parse the URL and ensure there are no errors.\n"
+msgstr ""
+
+#: src/url-parsing.md:28
+msgid "// Accessing the scheme is straightforward.\n"
+msgstr ""
+
+#: src/url-parsing.md:31
+msgid "// `User` contains all authentication info; call\n"
+"\t// `Username` and `Password` on this for individual\n"
+"\t// values.\n"
+msgstr ""
+
+#: src/url-parsing.md:39
+msgid "// The `Host` contains both the hostname and the port,\n"
+"\t// if present. Use `SplitHostPort` to extract them.\n"
+msgstr ""
+
+#: src/url-parsing.md:46
+msgid "// Here we extract the `path` and the fragment after\n"
+"\t// the `#`.\n"
+msgstr ""
+
+#: src/url-parsing.md:51
+msgid "// To get query params in a string of `k=v` format,\n"
+"\t// use `RawQuery`. You can also parse query params\n"
+"\t// into a map. The parsed query param maps are from\n"
+"\t// strings to slices of strings, so index into `[0]`\n"
+"\t// if you only want the first value.\n"
+msgstr ""
+
+#: src/url-parsing.md:59
+msgid "\"k\""
+msgstr ""
+
+#: src/url-parsing.md:64
+msgid "# Running our URL parsing program shows all the different\n"
+"# pieces that we extracted.\n"
+msgstr ""
+
+#: src/url-parsing.md:76
+msgid "v"
+msgstr ""
+
+#: src/sha256-hashes.md:4
+msgid "// [_SHA256 hashes_](https://en.wikipedia.org/wiki/SHA-2) are\n"
+"// frequently used to compute short identities for binary\n"
+"// or text blobs. For example, TLS/SSL certificates use SHA256\n"
+"// to compute a certificate's signature. Here's how to compute\n"
+"// SHA256 hashes in Go.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:11
+msgid "// Go implements several hash functions in various\n"
+"// `crypto/*` packages.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:15
+msgid "\"crypto/sha256\""
+msgstr ""
+
+#: src/sha256-hashes.md:20
+msgid "\"sha256 this string\""
+msgstr ""
+
+#: src/sha256-hashes.md:22
+msgid "// Here we start with a new hash.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:25
+msgid "// `Write` expects bytes. If you have a string `s`,\n"
+"\t// use `[]byte(s)` to coerce it to bytes.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:29
+msgid "// This gets the finalized hash result as a byte\n"
+"\t// slice. The argument to `Sum` can be used to append\n"
+"\t// to an existing byte slice: it usually isn't needed.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:35
+msgid "\"%x\\n\""
+msgstr ""
+
+#: src/sha256-hashes.md:40
+msgid "# Running the program computes the hash and prints it in\n"
+"# a human-readable hex format.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:46
+msgid "# You can compute other hashes using a similar pattern to\n"
+"# the one shown above. For example, to compute\n"
+"# SHA512 hashes import `crypto/sha512` and use\n"
+"# `sha512.New()`.\n"
+msgstr ""
+
+#: src/sha256-hashes.md:51
+msgid "# Note that if you need cryptographically secure hashes,\n"
+"# you should carefully research\n"
+"# [hash strength](https://en.wikipedia.org/wiki/Cryptographic_hash_function)!\n"
+msgstr ""
+
+#: src/base64-encoding.md:4
+msgid "// Go provides built-in support for [base64\n"
+"// encoding/decoding](https://en.wikipedia.org/wiki/Base64).\n"
+msgstr ""
+
+#: src/base64-encoding.md:8
+msgid "// This syntax imports the `encoding/base64` package with\n"
+"// the `b64` name instead of the default `base64`. It'll\n"
+"// save us some space below.\n"
+msgstr ""
+
+#: src/base64-encoding.md:13
+msgid "\"encoding/base64\""
+msgstr ""
+
+#: src/base64-encoding.md:19
+msgid "// Here's the `string` we'll encode/decode.\n"
+msgstr ""
+
+#: src/base64-encoding.md:20
+msgid "\"abc123!?$*&()'-=@~\""
+msgstr ""
+
+#: src/base64-encoding.md:22
+msgid "// Go supports both standard and URL-compatible\n"
+"\t// base64. Here's how to encode using the standard\n"
+"\t// encoder. The encoder requires a `[]byte` so we\n"
+"\t// convert our `string` to that type.\n"
+msgstr ""
+
+#: src/base64-encoding.md:29
+msgid "// Decoding may return an error, which you can check\n"
+"\t// if you don't already know the input to be\n"
+"\t// well-formed.\n"
+msgstr ""
+
+#: src/base64-encoding.md:36
+msgid "// This encodes/decodes using a URL-compatible base64\n"
+"\t// format.\n"
+msgstr ""
+
+#: src/base64-encoding.md:46
+msgid "# The string encodes to slightly different values with the\n"
+"# standard and URL base64 encoders (trailing `+` vs `-`)\n"
+"# but they both decode to the original string as desired.\n"
+msgstr ""
+
+#: src/base64-encoding.md:51
+msgid "&()'-=@~\n\n"
+"YWJjMTIzIT8kKiYoKSctPUB-\n"
+"abc123!?$*&()'-=@~"
+msgstr ""
+
+#: src/reading-files.md:4
+msgid "// Reading and writing files are basic tasks needed for\n"
+"// many Go programs. First we'll look at some examples of\n"
+"// reading files.\n"
+msgstr ""
+
+#: src/reading-files.md:11 src/writing-files.md:10 src/line-filters.md:15
+#: src/http-client.md:11
+msgid "\"bufio\""
+msgstr ""
+
+#: src/reading-files.md:13 src/spawning-processes.md:11
+msgid "\"io\""
+msgstr ""
+
+#: src/reading-files.md:16
+msgid "// Reading files requires checking most calls for errors.\n"
+"// This helper will streamline our error checks below.\n"
+msgstr ""
+
+#: src/reading-files.md:27
+msgid "// Perhaps the most basic file reading task is\n"
+"\t// slurping a file's entire contents into memory.\n"
+msgstr ""
+
+#: src/reading-files.md:29 src/reading-files.md:36
+msgid "\"/tmp/dat\""
+msgstr ""
+
+#: src/reading-files.md:33
+msgid "// You'll often want more control over how and what\n"
+"\t// parts of a file are read. For these tasks, start\n"
+"\t// by `Open`ing a file to obtain an `os.File` value.\n"
+msgstr ""
+
+#: src/reading-files.md:39
+msgid "// Read some bytes from the beginning of the file.\n"
+"\t// Allow up to 5 to be read but also note how many\n"
+"\t// actually were read.\n"
+msgstr ""
+
+#: src/reading-files.md:45
+msgid "\"%d bytes: %s\\n\""
+msgstr ""
+
+#: src/reading-files.md:47
+msgid "// You can also `Seek` to a known location in the file\n"
+"\t// and `Read` from there.\n"
+msgstr ""
+
+#: src/reading-files.md:54
+msgid "\"%d bytes @ %d: \""
+msgstr ""
+
+#: src/reading-files.md:55
+msgid "\"%v\\n\""
+msgstr ""
+
+#: src/reading-files.md:57
+msgid "// Other methods of seeking are relative to the\n"
+"\t// current cursor position,\n"
+msgstr ""
+
+#: src/reading-files.md:62
+msgid "// and relative to the end of the file.\n"
+msgstr ""
+
+#: src/reading-files.md:66
+msgid "// The `io` package provides some functions that may\n"
+"\t// be helpful for file reading. For example, reads\n"
+"\t// like the ones above can be more robustly\n"
+"\t// implemented with `ReadAtLeast`.\n"
+msgstr ""
+
+#: src/reading-files.md:75
+msgid "\"%d bytes @ %d: %s\\n\""
+msgstr ""
+
+#: src/reading-files.md:77
+msgid "// There is no built-in rewind, but\n"
+"\t// `Seek(0, io.SeekStart)` accomplishes this.\n"
+msgstr ""
+
+#: src/reading-files.md:82
+msgid "// The `bufio` package implements a buffered\n"
+"\t// reader that may be useful both for its efficiency\n"
+"\t// with many small reads and because of the additional\n"
+"\t// reading methods it provides.\n"
+msgstr ""
+
+#: src/reading-files.md:89
+msgid "\"5 bytes: %s\\n\""
+msgstr ""
+
+#: src/reading-files.md:91
+msgid "// Close the file when you're done (usually this would\n"
+"\t// be scheduled immediately after `Open`ing with\n"
+"\t// `defer`).\n"
+msgstr ""
+
+#: src/reading-files.md:99 src/logging.md:64 src/spawning-processes.md:54
+msgid "\"hello\""
+msgstr ""
+
+#: src/reading-files.md:108
+msgid "# Next we'll look at writing files.\n"
+msgstr ""
+
+#: src/writing-files.md:4
+msgid "// Writing files in Go follows similar patterns to the\n"
+"// ones we saw earlier for reading.\n"
+msgstr ""
+
+#: src/writing-files.md:23
+msgid "// To start, here's how to dump a string (or just\n"
+"\t// bytes) into a file.\n"
+msgstr ""
+
+#: src/writing-files.md:25
+msgid "\"hello\\ngo\\n\""
+msgstr ""
+
+#: src/writing-files.md:26
+msgid "\"/tmp/dat1\""
+msgstr ""
+
+#: src/writing-files.md:29
+msgid "// For more granular writes, open a file for writing.\n"
+msgstr ""
+
+#: src/writing-files.md:30
+msgid "\"/tmp/dat2\""
+msgstr ""
+
+#: src/writing-files.md:33
+msgid "// It's idiomatic to defer a `Close` immediately\n"
+"\t// after opening a file.\n"
+msgstr ""
+
+#: src/writing-files.md:37
+msgid "// You can `Write` byte slices as you'd expect.\n"
+msgstr ""
+
+#: src/writing-files.md:41 src/writing-files.md:46 src/writing-files.md:56
+msgid "\"wrote %d bytes\\n\""
+msgstr ""
+
+#: src/writing-files.md:43
+msgid "// A `WriteString` is also available.\n"
+msgstr ""
+
+#: src/writing-files.md:44
+msgid "\"writes\\n\""
+msgstr ""
+
+#: src/writing-files.md:48
+msgid "// Issue a `Sync` to flush writes to stable storage.\n"
+msgstr ""
+
+#: src/writing-files.md:51
+msgid "// `bufio` provides buffered writers in addition\n"
+"\t// to the buffered readers we saw earlier.\n"
+msgstr ""
+
+#: src/writing-files.md:54
+msgid "\"buffered\\n\""
+msgstr ""
+
+#: src/writing-files.md:58
+msgid "// Use `Flush` to ensure all buffered operations have\n"
+"\t// been applied to the underlying writer.\n"
+msgstr ""
+
+#: src/writing-files.md:66
+msgid "# Try running the file-writing code.\n"
+msgstr ""
+
+#: src/writing-files.md:71
+msgid "# Then check the contents of the written files.\n"
+msgstr ""
+
+#: src/writing-files.md:80
+msgid "# Next we'll look at applying some of the file I/O ideas\n"
+"# we've just seen to the `stdin` and `stdout` streams.\n"
+msgstr ""
+
+#: src/line-filters.md:4
+msgid "// A _line filter_ is a common type of program that reads\n"
+"// input on stdin, processes it, and then prints some\n"
+"// derived result to stdout. `grep` and `sed` are common\n"
+"// line filters.\n"
+msgstr ""
+
+#: src/line-filters.md:8
+msgid "// Here's an example line filter in Go that writes a\n"
+"// capitalized version of all input text. You can use this\n"
+"// pattern to write your own Go line filters.\n"
+msgstr ""
+
+#: src/line-filters.md:23
+msgid "// Wrapping the unbuffered `os.Stdin` with a buffered\n"
+"\t// scanner gives us a convenient `Scan` method that\n"
+"\t// advances the scanner to the next token; which is\n"
+"\t// the next line in the default scanner.\n"
+msgstr ""
+
+#: src/line-filters.md:30
+msgid "// `Text` returns the current token, here the next line,\n"
+"\t\t// from the input.\n"
+msgstr ""
+
+#: src/line-filters.md:34
+msgid "// Write out the uppercased line.\n"
+msgstr ""
+
+#: src/line-filters.md:38
+msgid "// Check for errors during `Scan`. End of file is\n"
+"\t// expected and not reported by `Scan` as an error.\n"
+msgstr ""
+
+#: src/line-filters.md:41
+msgid "\"error:\""
+msgstr ""
+
+#: src/line-filters.md:48
+msgid "# To try out our line filter, first make a file with a few\n"
+"# lowercase lines.\n"
+msgstr ""
+
+#: src/line-filters.md:50
+msgid "'hello'"
+msgstr ""
+
+#: src/line-filters.md:51
+msgid "'filter'"
+msgstr ""
+
+#: src/line-filters.md:52
+msgid "# Then use the line filter to get uppercase lines.\n"
+msgstr ""
+
+#: src/file-paths.md:4
+msgid "// The `filepath` package provides functions to parse\n"
+"// and construct *file paths* in a way that is portable\n"
+"// between operating systems; `dir/file` on Linux vs.\n"
+"// `dir\\file` on Windows, for example.\n"
+msgstr ""
+
+#: src/file-paths.md:12 src/directories.md:13
+#: src/temporary-files-and-directories.md:15
+msgid "\"path/filepath\""
+msgstr ""
+
+#: src/file-paths.md:18
+msgid "// `Join` should be used to construct paths in a\n"
+"\t// portable way. It takes any number of arguments\n"
+"\t// and constructs a hierarchical path from them.\n"
+msgstr ""
+
+#: src/file-paths.md:21
+msgid "\"dir1\""
+msgstr ""
+
+#: src/file-paths.md:21
+msgid "\"dir2\""
+msgstr ""
+
+#: src/file-paths.md:21 src/file-paths.md:29 src/file-paths.md:30
+msgid "\"filename\""
+msgstr ""
+
+#: src/file-paths.md:22
+msgid "\"p:\""
+msgstr ""
+
+#: src/file-paths.md:24
+msgid "// You should always use `Join` instead of\n"
+"\t// concatenating `/`s or `\\`s manually. In addition\n"
+"\t// to providing portability, `Join` will also\n"
+"\t// normalize paths by removing superfluous separators\n"
+"\t// and directory changes.\n"
+msgstr ""
+
+#: src/file-paths.md:29
+msgid "\"dir1//\""
+msgstr ""
+
+#: src/file-paths.md:30
+msgid "\"dir1/../dir1\""
+msgstr ""
+
+#: src/file-paths.md:32
+msgid "// `Dir` and `Base` can be used to split a path to the\n"
+"\t// directory and the file. Alternatively, `Split` will\n"
+"\t// return both in the same call.\n"
+msgstr ""
+
+#: src/file-paths.md:35
+msgid "\"Dir(p):\""
+msgstr ""
+
+#: src/file-paths.md:36
+msgid "\"Base(p):\""
+msgstr ""
+
+#: src/file-paths.md:38
+msgid "// We can check whether a path is absolute.\n"
+msgstr ""
+
+#: src/file-paths.md:39
+msgid "\"dir/file\""
+msgstr ""
+
+#: src/file-paths.md:40
+msgid "\"/dir/file\""
+msgstr ""
+
+#: src/file-paths.md:42
+msgid "\"config.json\""
+msgstr ""
+
+#: src/file-paths.md:44
+msgid "// Some file names have extensions following a dot. We\n"
+"\t// can split the extension out of such names with `Ext`.\n"
+msgstr ""
+
+#: src/file-paths.md:49
+msgid "// To find the file's name with the extension removed,\n"
+"\t// use `strings.TrimSuffix`.\n"
+msgstr ""
+
+#: src/file-paths.md:53
+msgid "// `Rel` finds a relative path between a *base* and a\n"
+"\t// *target*. It returns an error if the target cannot\n"
+"\t// be made relative to base.\n"
+msgstr ""
+
+#: src/file-paths.md:56 src/file-paths.md:62
+msgid "\"a/b\""
+msgstr ""
+
+#: src/file-paths.md:56
+msgid "\"a/b/t/file\""
+msgstr ""
+
+#: src/file-paths.md:62
+msgid "\"a/c/t/file\""
+msgstr ""
+
+#: src/directories.md:4
+msgid "// Go has several useful functions for working with\n"
+"// *directories* in the file system.\n"
+msgstr ""
+
+#: src/directories.md:11
+msgid "\"io/fs\""
+msgstr ""
+
+#: src/directories.md:24
+msgid "// Create a new sub-directory in the current working\n"
+"\t// directory.\n"
+msgstr ""
+
+#: src/directories.md:26 src/directories.md:33 src/directories.md:87
+msgid "\"subdir\""
+msgstr ""
+
+#: src/directories.md:29
+msgid "// When creating temporary directories, it's good\n"
+"\t// practice to `defer` their removal. `os.RemoveAll`\n"
+"\t// will delete a whole directory tree (similarly to\n"
+"\t// `rm -rf`).\n"
+msgstr ""
+
+#: src/directories.md:35
+msgid "// Helper function to create a new empty file.\n"
+msgstr ""
+
+#: src/directories.md:41
+msgid "\"subdir/file1\""
+msgstr ""
+
+#: src/directories.md:43
+msgid "// We can create a hierarchy of directories, including\n"
+"\t// parents with `MkdirAll`. This is similar to the\n"
+"\t// command-line `mkdir -p`.\n"
+msgstr ""
+
+#: src/directories.md:46 src/directories.md:65
+msgid "\"subdir/parent/child\""
+msgstr ""
+
+#: src/directories.md:49
+msgid "\"subdir/parent/file2\""
+msgstr ""
+
+#: src/directories.md:50
+msgid "\"subdir/parent/file3\""
+msgstr ""
+
+#: src/directories.md:51
+msgid "\"subdir/parent/child/file4\""
+msgstr ""
+
+#: src/directories.md:53
+msgid "// `ReadDir` lists directory contents, returning a\n"
+"\t// slice of `os.DirEntry` objects.\n"
+msgstr ""
+
+#: src/directories.md:55
+msgid "\"subdir/parent\""
+msgstr ""
+
+#: src/directories.md:58
+msgid "\"Listing subdir/parent\""
+msgstr ""
+
+#: src/directories.md:63
+msgid "// `Chdir` lets us change the current working directory,\n"
+"\t// similarly to `cd`.\n"
+msgstr ""
+
+#: src/directories.md:68
+msgid "// Now we'll see the contents of `subdir/parent/child`\n"
+"\t// when listing the *current* directory.\n"
+msgstr ""
+
+#: src/directories.md:70
+msgid "\".\""
+msgstr ""
+
+#: src/directories.md:73
+msgid "\"Listing subdir/parent/child\""
+msgstr ""
+
+#: src/directories.md:78
+msgid "// `cd` back to where we started.\n"
+msgstr ""
+
+#: src/directories.md:79
+msgid "\"../../..\""
+msgstr ""
+
+#: src/directories.md:82
+msgid "// We can also visit a directory *recursively*,\n"
+"\t// including all its sub-directories. `WalkDir` accepts\n"
+"\t// a callback function to handle every file or\n"
+"\t// directory visited.\n"
+msgstr ""
+
+#: src/directories.md:86
+msgid "\"Visiting subdir\""
+msgstr ""
+
+#: src/directories.md:89
+msgid "// `visit` is called for every file or directory found\n"
+"// recursively by `filepath.WalkDir`.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:4
+msgid "// Throughout program execution, we often want to create\n"
+"// data that isn't needed after the program exits.\n"
+"// *Temporary files and directories* are useful for this\n"
+"// purpose since they don't pollute the file system over\n"
+"// time.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:26
+msgid "// The easiest way to create a temporary file is by\n"
+"\t// calling `os.CreateTemp`. It creates a file *and*\n"
+"\t// opens it for reading and writing. We provide `\"\"`\n"
+"\t// as the first argument, so `os.CreateTemp` will\n"
+"\t// create the file in the default location for our OS.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:31
+msgid "\"sample\""
+msgstr ""
+
+#: src/temporary-files-and-directories.md:34
+msgid "// Display the name of the temporary file. On\n"
+"\t// Unix-based OSes the directory will likely be `/tmp`.\n"
+"\t// The file name starts with the prefix given as the\n"
+"\t// second argument to `os.CreateTemp` and the rest\n"
+"\t// is chosen automatically to ensure that concurrent\n"
+"\t// calls will always create different file names.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:40
+msgid "\"Temp file name:\""
+msgstr ""
+
+#: src/temporary-files-and-directories.md:42
+msgid "// Clean up the file after we're done. The OS is\n"
+"\t// likely to clean up temporary files by itself after\n"
+"\t// some time, but it's good practice to do this\n"
+"\t// explicitly.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:48
+msgid "// We can write some data to the file.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:52
+msgid "// If we intend to write many temporary files, we may\n"
+"\t// prefer to create a temporary *directory*.\n"
+"\t// `os.MkdirTemp`'s arguments are the same as\n"
+"\t// `CreateTemp`'s, but it returns a directory *name*\n"
+"\t// rather than an open file.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:57
+msgid "\"sampledir\""
+msgstr ""
+
+#: src/temporary-files-and-directories.md:59
+msgid "\"Temp dir name:\""
+msgstr ""
+
+#: src/temporary-files-and-directories.md:63
+msgid "// Now we can synthesize temporary file names by\n"
+"\t// prefixing them with our temporary directory.\n"
+msgstr ""
+
+#: src/temporary-files-and-directories.md:65
+msgid "\"file1\""
+msgstr ""
+
+#: src/embed-directive.md:1
+msgid "Embed directive"
+msgstr ""
+
+#: src/embed-directive.md:4
+msgid "// `//go:embed` is a [compiler\n"
+"// directive](https://pkg.go.dev/cmd/compile#hdr-Compiler_Directives) that\n"
+"// allows programs to include arbitrary files and folders in the Go binary at\n"
+"// build time. Read more about the embed directive\n"
+"// [here](https://pkg.go.dev/embed).\n"
+msgstr ""
+
+#: src/embed-directive.md:10
+msgid "// Import the `embed` package; if you don't use any exported\n"
+"// identifiers from this package, you can do a blank import with `_ \"embed\"`.\n"
+msgstr ""
+
+#: src/embed-directive.md:14
+msgid "\"embed\""
+msgstr ""
+
+#: src/embed-directive.md:16
+msgid "// `embed` directives accept paths relative to the directory containing the\n"
+"// Go source file. This directive embeds the contents of the file into the\n"
+"// `string` variable immediately following it.\n"
+"//\n"
+"//go:embed folder/single_file.txt\n"
+msgstr ""
+
+#: src/embed-directive.md:23
+msgid "// Or embed the contents of the file into a `[]byte`.\n"
+"//\n"
+"//go:embed folder/single_file.txt\n"
+msgstr ""
+
+#: src/embed-directive.md:28
+msgid "// We can also embed multiple files or even folders with wildcards. This uses\n"
+"// a variable of the [embed.FS type](https://pkg.go.dev/embed#FS), which\n"
+"// implements a simple virtual file system.\n"
+"//\n"
+"//go:embed folder/single_file.txt\n"
+"//go:embed folder/*.hash\n"
+msgstr ""
+
+#: src/embed-directive.md:39
+msgid "// Print out the contents of `single_file.txt`.\n"
+msgstr ""
+
+#: src/embed-directive.md:43
+msgid "// Retrieve some files from the embedded folder.\n"
+msgstr ""
+
+#: src/embed-directive.md:44
+msgid "\"folder/file1.hash\""
+msgstr ""
+
+#: src/embed-directive.md:47
+msgid "\"folder/file2.hash\""
+msgstr ""
+
+#: src/embed-directive.md:53
+msgid "# Use these commands to run the example.\n"
+"# (Note: due to limitation on go playground,\n"
+"# this example can only be run on your local machine.)\n"
+msgstr ""
+
+#: src/embed-directive.md:57
+msgid "\"hello go\""
+msgstr ""
+
+#: src/embed-directive.md:59
+msgid "\"456\""
+msgstr ""
+
+#: src/testing-and-benchmarking.md:4
+msgid "// Unit testing is an important part of writing\n"
+"// principled Go programs. The `testing` package\n"
+"// provides the tools we need to write unit tests\n"
+"// and the `go test` command runs tests.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:8
+msgid "// For the sake of demonstration, this code is in package\n"
+"// `main`, but it could be any package. Testing code\n"
+"// typically lives in the same package as the code it tests.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:16
+msgid "\"testing\""
+msgstr ""
+
+#: src/testing-and-benchmarking.md:18
+msgid "// We'll be testing this simple implementation of an\n"
+"// integer minimum. Typically, the code we're testing\n"
+"// would be in a source file named something like\n"
+"// `intutils.go`, and the test file for it would then\n"
+"// be named `intutils_test.go`.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:30
+msgid "// A test is created by writing a function with a name\n"
+"// beginning with `Test`.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:36
+msgid "// `t.Error*` will report test failures but continue\n"
+"\t\t// executing the test. `t.Fatal*` will report test\n"
+"\t\t// failures and stop the test immediately.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:39
+msgid "\"IntMin(2, -2) = %d; want -2\""
+msgstr ""
+
+#: src/testing-and-benchmarking.md:42
+msgid "// Writing tests can be repetitive, so it's idiomatic to\n"
+"// use a *table-driven style*, where test inputs and\n"
+"// expected outputs are listed in a table and a single loop\n"
+"// walks over them and performs the test logic.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:60
+msgid "// t.Run enables running \"subtests\", one for each\n"
+"\t\t// table entry. These are shown separately\n"
+"\t\t// when executing `go test -v`.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:63
+msgid "\"%d,%d\""
+msgstr ""
+
+#: src/testing-and-benchmarking.md:67
+msgid "\"got %d, want %d\""
+msgstr ""
+
+#: src/testing-and-benchmarking.md:72
+msgid "// Benchmark tests typically go in `_test.go` files and are\n"
+"// named beginning with `Benchmark`. The `testing` runner\n"
+"// executes each benchmark function several times, increasing\n"
+"// `b.N` on each run until it collects a precise measurement.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:78
+msgid "// Typically the benchmark runs a function we're\n"
+"\t// benchmarking in a loop `b.N` times.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:87
+msgid "# Run all tests in the current project in verbose mode.\n"
+msgstr ""
+
+#: src/testing-and-benchmarking.md:89
+msgid "="
+msgstr ""
+
+#: src/testing-and-benchmarking.md:91 src/testing-and-benchmarking.md:92
+#: src/testing-and-benchmarking.md:93 src/testing-and-benchmarking.md:94
+#: src/testing-and-benchmarking.md:95 src/testing-and-benchmarking.md:96
+msgid "=="
+msgstr ""
+
+#: src/testing-and-benchmarking.md:105
+msgid "# Run all benchmarks in the current project. All tests\n"
+"# are run prior to benchmarks. The `bench` flag filters\n"
+"# benchmark function names with a regexp.\n"
+msgstr ""
+
+#: src/command-line-arguments.md:4
+msgid "// [_Command-line arguments_](https://en.wikipedia.org/wiki/Command-line_interface#Arguments)\n"
+"// are a common way to parameterize execution of programs.\n"
+"// For example, `go run hello.go` uses `run` and\n"
+"// `hello.go` arguments to the `go` program.\n"
+msgstr ""
+
+#: src/command-line-arguments.md:18
+msgid "// `os.Args` provides access to raw command-line\n"
+"\t// arguments. Note that the first value in this slice\n"
+"\t// is the path to the program, and `os.Args[1:]`\n"
+"\t// holds the arguments to the program.\n"
+msgstr ""
+
+#: src/command-line-arguments.md:25
+msgid "// You can get individual args with normal indexing.\n"
+msgstr ""
+
+#: src/command-line-arguments.md:35
+msgid "# To experiment with command-line arguments it's best to\n"
+"# build a binary with `go build` first.\n"
+msgstr ""
+
+#: src/command-line-arguments.md:42
+msgid "# Next we'll look at more advanced command-line processing\n"
+"# with flags.\n"
+msgstr ""
+
+#: src/command-line-flags.md:4
+msgid "// [_Command-line flags_](https://en.wikipedia.org/wiki/Command-line_interface#Command-line_option)\n"
+"// are a common way to specify options for command-line\n"
+"// programs. For example, in `wc -l` the `-l` is a\n"
+"// command-line flag.\n"
+msgstr ""
+
+#: src/command-line-flags.md:10
+msgid "// Go provides a `flag` package supporting basic\n"
+"// command-line flag parsing. We'll use this package to\n"
+"// implement our example command-line program.\n"
+msgstr ""
+
+#: src/command-line-flags.md:15 src/command-line-subcommands.md:14
+msgid "\"flag\""
+msgstr ""
+
+#: src/command-line-flags.md:21
+msgid "// Basic flag declarations are available for string,\n"
+"\t// integer, and boolean options. Here we declare a\n"
+"\t// string flag `word` with a default value `\"foo\"`\n"
+"\t// and a short description. This `flag.String` function\n"
+"\t// returns a string pointer (not a string value);\n"
+"\t// we'll see how to use this pointer below.\n"
+msgstr ""
+
+#: src/command-line-flags.md:27
+msgid "\"word\""
+msgstr ""
+
+#: src/command-line-flags.md:27
+msgid "\"a string\""
+msgstr ""
+
+#: src/command-line-flags.md:29
+msgid "// This declares `numb` and `fork` flags, using a\n"
+"\t// similar approach to the `word` flag.\n"
+msgstr ""
+
+#: src/command-line-flags.md:31
+msgid "\"numb\""
+msgstr ""
+
+#: src/command-line-flags.md:31
+msgid "\"an int\""
+msgstr ""
+
+#: src/command-line-flags.md:32
+msgid "\"fork\""
+msgstr ""
+
+#: src/command-line-flags.md:32
+msgid "\"a bool\""
+msgstr ""
+
+#: src/command-line-flags.md:34
+msgid "// It's also possible to declare an option that uses an\n"
+"\t// existing var declared elsewhere in the program.\n"
+"\t// Note that we need to pass in a pointer to the flag\n"
+"\t// declaration function.\n"
+msgstr ""
+
+#: src/command-line-flags.md:39
+msgid "\"svar\""
+msgstr ""
+
+#: src/command-line-flags.md:39
+msgid "\"a string var\""
+msgstr ""
+
+#: src/command-line-flags.md:41
+msgid "// Once all flags are declared, call `flag.Parse()`\n"
+"\t// to execute the command-line parsing.\n"
+msgstr ""
+
+#: src/command-line-flags.md:45
+msgid "// Here we'll just dump out the parsed options and\n"
+"\t// any trailing positional arguments. Note that we\n"
+"\t// need to dereference the pointers with e.g. `*wordPtr`\n"
+"\t// to get the actual option values.\n"
+msgstr ""
+
+#: src/command-line-flags.md:49
+msgid "\"word:\""
+msgstr ""
+
+#: src/command-line-flags.md:50
+msgid "\"numb:\""
+msgstr ""
+
+#: src/command-line-flags.md:51
+msgid "\"fork:\""
+msgstr ""
+
+#: src/command-line-flags.md:52
+msgid "\"svar:\""
+msgstr ""
+
+#: src/command-line-flags.md:53
+msgid "\"tail:\""
+msgstr ""
+
+#: src/command-line-flags.md:58
+msgid "# To experiment with the command-line flags program it's\n"
+"# best to first compile it and then run the resulting\n"
+"# binary directly.\n"
+msgstr ""
+
+#: src/command-line-flags.md:62
+msgid "# Try out the built program by first giving it values for\n"
+"# all flags.\n"
+msgstr ""
+
+#: src/command-line-flags.md:71
+msgid "# Note that if you omit flags they automatically take\n"
+"# their default values.\n"
+msgstr ""
+
+#: src/command-line-flags.md:80
+msgid "# Trailing positional arguments can be provided after\n"
+"# any flags.\n"
+msgstr ""
+
+#: src/command-line-flags.md:87
+msgid "# Note that the `flag` package requires all flags to\n"
+"# appear before positional arguments (otherwise the flags\n"
+"# will be interpreted as positional arguments).\n"
+msgstr ""
+
+#: src/command-line-flags.md:97
+msgid "# Use `-h` or `--help` flags to get automatically\n"
+"# generated help text for the command-line program.\n"
+msgstr ""
+
+#: src/command-line-flags.md:106
+msgid "# If you provide a flag that wasn't specified to the\n"
+"# `flag` package, the program will print an error message\n"
+"# and show the help text again.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:4
+msgid "// Some command-line tools, like the `go` tool or `git`\n"
+"// have many *subcommands*, each with its own set of\n"
+"// flags. For example, `go build` and `go get` are two\n"
+"// different subcommands of the `go` tool.\n"
+"// The `flag` package lets us easily define simple\n"
+"// subcommands that have their own flags.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:21
+msgid "// We declare a subcommand using the `NewFlagSet`\n"
+"\t// function, and proceed to define new flags specific\n"
+"\t// for this subcommand.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:25
+msgid "\"enable\""
+msgstr ""
+
+#: src/command-line-subcommands.md:26
+msgid "\"name\""
+msgstr ""
+
+#: src/command-line-subcommands.md:28
+msgid "// For a different subcommand we can define different\n"
+"\t// supported flags.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:31 src/logging.md:98 src/logging.md:100
+msgid "\"level\""
+msgstr ""
+
+#: src/command-line-subcommands.md:33
+msgid "// The subcommand is expected as the first argument\n"
+"\t// to the program.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:36 src/command-line-subcommands.md:57
+msgid "\"expected 'foo' or 'bar' subcommands\""
+msgstr ""
+
+#: src/command-line-subcommands.md:40
+msgid "// Check which subcommand is invoked.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:43
+msgid "// For every subcommand, we parse its own flags and\n"
+"\t// have access to trailing positional arguments.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:47
+msgid "\"subcommand 'foo'\""
+msgstr ""
+
+#: src/command-line-subcommands.md:48
+msgid "\"  enable:\""
+msgstr ""
+
+#: src/command-line-subcommands.md:49
+msgid "\"  name:\""
+msgstr ""
+
+#: src/command-line-subcommands.md:50 src/command-line-subcommands.md:55
+msgid "\"  tail:\""
+msgstr ""
+
+#: src/command-line-subcommands.md:53
+msgid "\"subcommand 'bar'\""
+msgstr ""
+
+#: src/command-line-subcommands.md:54
+msgid "\"  level:\""
+msgstr ""
+
+#: src/command-line-subcommands.md:65
+msgid "# First invoke the foo subcommand.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:68
+msgid "'foo'"
+msgstr ""
+
+#: src/command-line-subcommands.md:72
+msgid "# Now try bar.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:75
+msgid "'bar'"
+msgstr ""
+
+#: src/command-line-subcommands.md:78
+msgid "# But bar won't accept foo's flags.\n"
+msgstr ""
+
+#: src/command-line-subcommands.md:85
+msgid "# Next we'll look at environment variables, another common\n"
+"# way to parameterize programs.\n"
+msgstr ""
+
+#: src/environment-variables.md:4
+msgid "// [Environment variables](https://en.wikipedia.org/wiki/Environment_variable)\n"
+"// are a universal mechanism for [conveying configuration\n"
+"// information to Unix programs](https://www.12factor.net/config).\n"
+"// Let's look at how to set, get, and list environment variables.\n"
+msgstr ""
+
+#: src/environment-variables.md:19
+msgid "// To set a key/value pair, use `os.Setenv`. To get a\n"
+"\t// value for a key, use `os.Getenv`. This will return\n"
+"\t// an empty string if the key isn't present in the\n"
+"\t// environment.\n"
+msgstr ""
+
+#: src/environment-variables.md:23 src/environment-variables.md:24
+msgid "\"FOO\""
+msgstr ""
+
+#: src/environment-variables.md:23
+msgid "\"1\""
+msgstr ""
+
+#: src/environment-variables.md:24
+msgid "\"FOO:\""
+msgstr ""
+
+#: src/environment-variables.md:25
+msgid "\"BAR:\""
+msgstr ""
+
+#: src/environment-variables.md:25
+msgid "\"BAR\""
+msgstr ""
+
+#: src/environment-variables.md:27
+msgid "// Use `os.Environ` to list all key/value pairs in the\n"
+"\t// environment. This returns a slice of strings in the\n"
+"\t// form `KEY=value`. You can `strings.SplitN` them to\n"
+"\t// get the key and value. Here we print all the keys.\n"
+msgstr ""
+
+#: src/environment-variables.md:33
+msgid "\"=\""
+msgstr ""
+
+#: src/environment-variables.md:40
+msgid "# Running the program shows that we pick up the value\n"
+"# for `FOO` that we set in the program, but that\n"
+"# `BAR` is empty.\n"
+msgstr ""
+
+#: src/environment-variables.md:46
+msgid "# The list of keys in the environment will depend on your\n"
+"# particular machine.\n"
+msgstr ""
+
+#: src/environment-variables.md:54
+msgid "# If we set `BAR` in the environment first, the running\n"
+"# program picks that value up.\n"
+msgstr ""
+
+#: src/logging.md:4
+msgid "// The Go standard library provides straightforward\n"
+"// tools for outputting logs from Go programs, with\n"
+"// the [log](https://pkg.go.dev/log) package for\n"
+"// free-form output and the\n"
+"// [log/slog](https://pkg.go.dev/log/slog) package for\n"
+"// structured output.\n"
+msgstr ""
+
+#: src/logging.md:15
+msgid "\"log\""
+msgstr ""
+
+#: src/logging.md:18
+msgid "\"log/slog\""
+msgstr ""
+
+#: src/logging.md:23
+msgid "// Simply invoking functions like `Println` from the\n"
+"\t// `log` package uses the _standard_ logger, which\n"
+"\t// is already pre-configured for reasonable logging\n"
+"\t// output to `os.Stderr`. Additional methods like\n"
+"\t// `Fatal*` or `Panic*` will exit the program after\n"
+"\t// logging.\n"
+msgstr ""
+
+#: src/logging.md:29
+msgid "\"standard logger\""
+msgstr ""
+
+#: src/logging.md:31
+msgid "// Loggers can be configured with _flags_ to set\n"
+"\t// their output format. By default, the standard\n"
+"\t// logger has the `log.Ldate` and `log.Ltime` flags\n"
+"\t// set, and these are collected in `log.LstdFlags`.\n"
+"\t// We can change its flags to emit time with\n"
+"\t// microsecond accuracy, for example.\n"
+msgstr ""
+
+#: src/logging.md:38
+msgid "\"with micro\""
+msgstr ""
+
+#: src/logging.md:40
+msgid "// It also supports emitting the file name and\n"
+"\t// line from which the `log` function is called.\n"
+msgstr ""
+
+#: src/logging.md:43
+msgid "\"with file/line\""
+msgstr ""
+
+#: src/logging.md:45
+msgid "// It may be useful to create a custom logger and\n"
+"\t// pass it around. When creating a new logger, we\n"
+"\t// can set a _prefix_ to distinguish its output\n"
+"\t// from other loggers.\n"
+msgstr ""
+
+#: src/logging.md:49
+msgid "\"my:\""
+msgstr ""
+
+#: src/logging.md:50 src/logging.md:56
+msgid "\"from mylog\""
+msgstr ""
+
+#: src/logging.md:52
+msgid "// We can set the prefix\n"
+"\t// on existing loggers (including the standard one)\n"
+"\t// with the `SetPrefix` method.\n"
+msgstr ""
+
+#: src/logging.md:55
+msgid "\"ohmy:\""
+msgstr ""
+
+#: src/logging.md:58
+msgid "// Loggers can have custom output targets;\n"
+"\t// any `io.Writer` works.\n"
+msgstr ""
+
+#: src/logging.md:61
+msgid "\"buf:\""
+msgstr ""
+
+#: src/logging.md:63
+msgid "// This call writes the log output into `buf`.\n"
+msgstr ""
+
+#: src/logging.md:66
+msgid "// This will actually show it on standard output.\n"
+msgstr ""
+
+#: src/logging.md:67
+msgid "\"from buflog:\""
+msgstr ""
+
+#: src/logging.md:69
+msgid "// The `slog` package provides\n"
+"\t// _structured_ log output. For example, logging\n"
+"\t// in JSON format is straightforward.\n"
+msgstr ""
+
+#: src/logging.md:74 src/logging.md:98
+msgid "\"hi there\""
+msgstr ""
+
+#: src/logging.md:76
+msgid "// In addition to the message, `slog` output can\n"
+"\t// contain an arbitrary number of key=value\n"
+"\t// pairs.\n"
+msgstr ""
+
+#: src/logging.md:79 src/logging.md:100
+msgid "\"hello again\""
+msgstr ""
+
+#: src/logging.md:79 src/logging.md:101
+msgid "\"key\""
+msgstr ""
+
+#: src/logging.md:79 src/logging.md:101
+msgid "\"val\""
+msgstr ""
+
+#: src/logging.md:79 src/logging.md:101
+msgid "\"age\""
+msgstr ""
+
+#: src/logging.md:84
+msgid "# Sample output; the date and time\n"
+"# emitted will depend on when the example ran.\n"
+msgstr ""
+
+#: src/logging.md:93
+msgid "# These are wrapped for clarity of presentation\n"
+"# on the website; in reality they are emitted\n"
+"# on a single line.\n"
+msgstr ""
+
+#: src/logging.md:97
+msgid "\"2023-08-22T10:45:16.904166391-07:00\""
+msgstr ""
+
+#: src/logging.md:98 src/logging.md:100
+msgid "\"INFO\""
+msgstr ""
+
+#: src/logging.md:98 src/logging.md:100
+msgid "\"msg\""
+msgstr ""
+
+#: src/logging.md:99
+msgid "\"2023-08-22T10:45:16.904178985-07:00\""
+msgstr ""
+
+#: src/http-client.md:4
+msgid "// The Go standard library comes with excellent support\n"
+"// for HTTP clients and servers in the `net/http`\n"
+"// package. In this example we'll use it to issue simple\n"
+"// HTTP requests.\n"
+msgstr ""
+
+#: src/http-client.md:13 src/http-server.md:10 src/context.md:14
+msgid "\"net/http\""
+msgstr ""
+
+#: src/http-client.md:18
+msgid "// Issue an HTTP GET request to a server. `http.Get` is a\n"
+"\t// convenient shortcut around creating an `http.Client`\n"
+"\t// object and calling its `Get` method; it uses the\n"
+"\t// `http.DefaultClient` object which has useful default\n"
+"\t// settings.\n"
+msgstr ""
+
+#: src/http-client.md:23
+msgid "\"https://gobyexample.com\""
+msgstr ""
+
+#: src/http-client.md:29
+msgid "// Print the HTTP response status.\n"
+msgstr ""
+
+#: src/http-client.md:30
+msgid "\"Response status:\""
+msgstr ""
+
+#: src/http-client.md:32
+msgid "// Print the first 5 lines of the response body.\n"
+msgstr ""
+
+#: src/http-client.md:50
+msgid "\"utf-8\""
+msgstr ""
+
+#: src/http-server.md:4
+msgid "// Writing a basic HTTP server is easy using the\n"
+"// `net/http` package.\n"
+msgstr ""
+
+#: src/http-server.md:12
+msgid "// A fundamental concept in `net/http` servers is\n"
+"// *handlers*. A handler is an object implementing the\n"
+"// `http.Handler` interface. A common way to write\n"
+"// a handler is by using the `http.HandlerFunc` adapter\n"
+"// on functions with the appropriate signature.\n"
+msgstr ""
+
+#: src/http-server.md:20
+msgid "// Functions serving as handlers take a\n"
+"\t// `http.ResponseWriter` and a `http.Request` as\n"
+"\t// arguments. The response writer is used to fill in the\n"
+"\t// HTTP response. Here our simple response is just\n"
+"\t// \"hello\\n\".\n"
+msgstr ""
+
+#: src/http-server.md:25 src/context.md:34
+msgid "\"hello\\n\""
+msgstr ""
+
+#: src/http-server.md:30
+msgid "// This handler does something a little more\n"
+"\t// sophisticated by reading all the HTTP request\n"
+"\t// headers and echoing them into the response body.\n"
+msgstr ""
+
+#: src/http-server.md:35
+msgid "\"%v: %v\\n\""
+msgstr ""
+
+#: src/http-server.md:42
+msgid "// We register our handlers on server routes using the\n"
+"\t// `http.HandleFunc` convenience function. It sets up\n"
+"\t// the *default router* in the `net/http` package and\n"
+"\t// takes a function as an argument.\n"
+msgstr ""
+
+#: src/http-server.md:46 src/context.md:50
+msgid "\"/hello\""
+msgstr ""
+
+#: src/http-server.md:47
+msgid "\"/headers\""
+msgstr ""
+
+#: src/http-server.md:49
+msgid "// Finally, we call the `ListenAndServe` with the port\n"
+"\t// and a handler. `nil` tells it to use the default\n"
+"\t// router we've just set up.\n"
+msgstr ""
+
+#: src/http-server.md:52 src/context.md:51
+msgid "\":8090\""
+msgstr ""
+
+#: src/http-server.md:57 src/context.md:56
+msgid "# Run the server in the background.\n"
+msgstr ""
+
+#: src/http-server.md:59
+msgid "# Access the `/hello` route.\n"
+msgstr ""
+
+#: src/context.md:4
+msgid "// In the previous example we looked at setting up a simple\n"
+"// [HTTP server](http-servers). HTTP servers are useful for\n"
+"// demonstrating the usage of `context.Context` for\n"
+"// controlling cancellation. A `Context` carries deadlines,\n"
+"// cancellation signals, and other request-scoped values\n"
+"// across API boundaries and goroutines.\n"
+msgstr ""
+
+#: src/context.md:20
+msgid "// A `context.Context` is created for each request by\n"
+"\t// the `net/http` machinery, and is available with\n"
+"\t// the `Context()` method.\n"
+msgstr ""
+
+#: src/context.md:24
+msgid "\"server: hello handler started\""
+msgstr ""
+
+#: src/context.md:25
+msgid "\"server: hello handler ended\""
+msgstr ""
+
+#: src/context.md:27
+msgid "// Wait for a few seconds before sending a reply to the\n"
+"\t// client. This could simulate some work the server is\n"
+"\t// doing. While working, keep an eye on the context's\n"
+"\t// `Done()` channel for a signal that we should cancel\n"
+"\t// the work and return as soon as possible.\n"
+msgstr ""
+
+#: src/context.md:36
+msgid "// The context's `Err()` method returns an error\n"
+"\t\t// that explains why the `Done()` channel was\n"
+"\t\t// closed.\n"
+msgstr ""
+
+#: src/context.md:40
+msgid "\"server:\""
+msgstr ""
+
+#: src/context.md:48
+msgid "// As before, we register our handler on the \"/hello\"\n"
+"\t// route, and start serving.\n"
+msgstr ""
+
+#: src/context.md:58
+msgid "# Simulate a client request to `/hello`, hitting\n"
+"# Ctrl+C shortly after starting to signal\n"
+"# cancellation.\n"
+msgstr ""
+
+#: src/spawning-processes.md:4
+msgid "// Sometimes our Go programs need to spawn other, non-Go\n"
+"// processes.\n"
+msgstr ""
+
+#: src/spawning-processes.md:12 src/execing-processes.md:18
+msgid "\"os/exec\""
+msgstr ""
+
+#: src/spawning-processes.md:17
+msgid "// We'll start with a simple command that takes no\n"
+"\t// arguments or input and just prints something to\n"
+"\t// stdout. The `exec.Command` helper creates an object\n"
+"\t// to represent this external process.\n"
+msgstr ""
+
+#: src/spawning-processes.md:21 src/spawning-processes.md:39
+msgid "\"date\""
+msgstr ""
+
+#: src/spawning-processes.md:23
+msgid "// The `Output` method runs the command, waits for it\n"
+"\t// to finish and collects its standard output.\n"
+"\t//  If there were no errors, `dateOut` will hold bytes\n"
+"\t// with the date info.\n"
+msgstr ""
+
+#: src/spawning-processes.md:31
+msgid "\"> date\""
+msgstr ""
+
+#: src/spawning-processes.md:34
+msgid "// `Output` and other methods of `Command` will return\n"
+"\t// `*exec.Error` if there was a problem executing the\n"
+"\t// command (e.g. wrong path), and `*exec.ExitError`\n"
+"\t// if the command ran but exited with a non-zero return\n"
+"\t// code.\n"
+msgstr ""
+
+#: src/spawning-processes.md:39
+msgid "\"-x\""
+msgstr ""
+
+#: src/spawning-processes.md:43
+msgid "\"failed executing:\""
+msgstr ""
+
+#: src/spawning-processes.md:45
+msgid "\"command exit rc =\""
+msgstr ""
+
+#: src/spawning-processes.md:51
+msgid "// Next we'll look at a slightly more involved case\n"
+"\t// where we pipe data to the external process on its\n"
+"\t// `stdin` and collect the results from its `stdout`.\n"
+msgstr ""
+
+#: src/spawning-processes.md:54
+msgid "\"grep\""
+msgstr ""
+
+#: src/spawning-processes.md:56
+msgid "// Here we explicitly grab input/output pipes, start\n"
+"\t// the process, write some input to it, read the\n"
+"\t// resulting output, and finally wait for the process\n"
+"\t// to exit.\n"
+msgstr ""
+
+#: src/spawning-processes.md:63
+msgid "\"hello grep\\ngoodbye grep\""
+msgstr ""
+
+#: src/spawning-processes.md:68
+msgid "// We omitted error checks in the above example, but\n"
+"\t// you could use the usual `if err != nil` pattern for\n"
+"\t// all of them. We also only collect the `StdoutPipe`\n"
+"\t// results, but you could collect the `StderrPipe` in\n"
+"\t// exactly the same way.\n"
+msgstr ""
+
+#: src/spawning-processes.md:73
+msgid "\"> grep hello\""
+msgstr ""
+
+#: src/spawning-processes.md:76
+msgid "// Note that when spawning commands we need to\n"
+"\t// provide an explicitly delineated command and\n"
+"\t// argument array, vs. being able to just pass in one\n"
+"\t// command-line string. If you want to spawn a full\n"
+"\t// command with a string, you can use `bash`'s `-c`\n"
+"\t// option:\n"
+msgstr ""
+
+#: src/spawning-processes.md:82
+msgid "\"bash\""
+msgstr ""
+
+#: src/spawning-processes.md:82
+msgid "\"-c\""
+msgstr ""
+
+#: src/spawning-processes.md:82
+msgid "\"ls -a -l -h\""
+msgstr ""
+
+#: src/spawning-processes.md:87
+msgid "\"> ls -a -l -h\""
+msgstr ""
+
+#: src/spawning-processes.md:93
+msgid "# The spawned programs return output that is the same\n"
+"# as if we had run them directly from the command-line.\n"
+msgstr ""
+
+#: src/spawning-processes.md:98
+msgid "# date doesn't have a `-x` flag so it will exit with\n"
+"# an error message and non-zero return code.\n"
+msgstr ""
+
+#: src/execing-processes.md:4
+msgid "// In the previous example we looked at\n"
+"// [spawning external processes](spawning-processes). We\n"
+"// do this when we need an external process accessible to\n"
+"// a running Go process. Sometimes we just want to\n"
+"// completely replace the current Go process with another\n"
+"// (perhaps non-Go) one. To do this we'll use Go's\n"
+"// implementation of the classic\n"
+"// <a href=\"https://en.wikipedia.org/wiki/Exec_(operating_system)\"><code>exec</code></a>\n"
+"// function.\n"
+msgstr ""
+
+#: src/execing-processes.md:19 src/signals.md:17
+msgid "\"syscall\""
+msgstr ""
+
+#: src/execing-processes.md:24
+msgid "// For our example we'll exec `ls`. Go requires an\n"
+"\t// absolute path to the binary we want to execute, so\n"
+"\t// we'll use `exec.LookPath` to find it (probably\n"
+"\t// `/bin/ls`).\n"
+msgstr ""
+
+#: src/execing-processes.md:28 src/execing-processes.md:37
+msgid "\"ls\""
+msgstr ""
+
+#: src/execing-processes.md:33
+msgid "// `Exec` requires arguments in slice form (as\n"
+"\t// opposed to one big string). We'll give `ls` a few\n"
+"\t// common arguments. Note that the first argument should\n"
+"\t// be the program name.\n"
+msgstr ""
+
+#: src/execing-processes.md:37
+msgid "\"-a\""
+msgstr ""
+
+#: src/execing-processes.md:37
+msgid "\"-l\""
+msgstr ""
+
+#: src/execing-processes.md:37
+msgid "\"-h\""
+msgstr ""
+
+#: src/execing-processes.md:39
+msgid "// `Exec` also needs a set of [environment variables](environment-variables)\n"
+"\t// to use. Here we just provide our current\n"
+"\t// environment.\n"
+msgstr ""
+
+#: src/execing-processes.md:44
+msgid "// Here's the actual `syscall.Exec` call. If this call is\n"
+"\t// successful, the execution of our process will end\n"
+"\t// here and be replaced by the `/bin/ls -a -l -h`\n"
+"\t// process. If there is an error we'll get a return\n"
+"\t// value.\n"
+msgstr ""
+
+#: src/execing-processes.md:57
+msgid "# When we run our program it is replaced by `ls`.\n"
+msgstr ""
+
+#: src/execing-processes.md:63
+msgid "# Note that Go does not offer a classic Unix `fork`\n"
+"# function. Usually this isn't an issue though, since\n"
+"# starting goroutines, spawning processes, and exec'ing\n"
+"# processes covers most use cases for `fork`.\n"
+msgstr ""
+
+#: src/signals.md:4
+msgid "// Sometimes we'd like our Go programs to intelligently\n"
+"// handle [Unix signals](https://en.wikipedia.org/wiki/Unix_signal).\n"
+"// For example, we might want a server to gracefully\n"
+"// shutdown when it receives a `SIGTERM`, or a command-line\n"
+"// tool to stop processing input if it receives a `SIGINT`.\n"
+"// Here's how to handle signals in Go with channels.\n"
+msgstr ""
+
+#: src/signals.md:16
+msgid "\"os/signal\""
+msgstr ""
+
+#: src/signals.md:22
+msgid "// Go signal notification works by sending `os.Signal`\n"
+"\t// values on a channel. We'll create a channel to\n"
+"\t// receive these notifications. Note that this channel\n"
+"\t// should be buffered.\n"
+msgstr ""
+
+#: src/signals.md:28
+msgid "// `signal.Notify` registers the given channel to\n"
+"\t// receive notifications of the specified signals.\n"
+msgstr ""
+
+#: src/signals.md:32
+msgid "// We could receive from `sigs` here in the main\n"
+"\t// function, but let's see how this could also be\n"
+"\t// done in a separate goroutine, to demonstrate\n"
+"\t// a more realistic scenario of graceful shutdown.\n"
+msgstr ""
+
+#: src/signals.md:39
+msgid "// This goroutine executes a blocking receive for\n"
+"\t\t// signals. When it gets one it'll print it out\n"
+"\t\t// and then notify the program that it can finish.\n"
+msgstr ""
+
+#: src/signals.md:48
+msgid "// The program will wait here until it gets the\n"
+"\t// expected signal (as indicated by the goroutine\n"
+"\t// above sending a value on `done`) and then exit.\n"
+msgstr ""
+
+#: src/signals.md:51
+msgid "\"awaiting signal\""
+msgstr ""
+
+#: src/signals.md:53
+msgid "\"exiting\""
+msgstr ""
+
+#: src/signals.md:58
+msgid "# When we run this program it will block waiting for a\n"
+"# signal. By typing `ctrl-C` (which the\n"
+"# terminal shows as `^C`) we can send a `SIGINT` signal,\n"
+"# causing the program to print `interrupt` and then exit.\n"
+msgstr ""
+
+#: src/exit.md:4
+msgid "// Use `os.Exit` to immediately exit with a given\n"
+"// status.\n"
+msgstr ""
+
+#: src/exit.md:16
+msgid "// `defer`s will _not_ be run when using `os.Exit`, so\n"
+"\t// this `fmt.Println` will never be called.\n"
+msgstr ""
+
+#: src/exit.md:18
+msgid "\"!\""
+msgstr ""
+
+#: src/exit.md:20
+msgid "// Exit with status 3.\n"
+msgstr ""
+
+#: src/exit.md:23
+msgid "// Note that unlike e.g. C, Go does not use an integer\n"
+"// return value from `main` to indicate exit status. If\n"
+"// you'd like to exit with a non-zero status you should\n"
+"// use `os.Exit`.\n"
+msgstr ""
+
+#: src/exit.md:31
+msgid "#  If you run `exit.go` using `go run`, the exit\n"
+"# will be picked up by `go` and printed.\n"
+msgstr ""
+
+#: src/exit.md:35
+msgid "# By building and executing a binary you can see\n"
+"# the status in the terminal.\n"
+msgstr ""
+
+#: src/exit.md:42
+msgid "# Note that the `!` from our program never got printed.\n"
+msgstr ""
+
