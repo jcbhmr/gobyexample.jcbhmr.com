@@ -1,8 +1,9 @@
-# mdBook
+# https://rust-lang.github.io/mdBook/
 book
 
-# mdbook-i18n-helpers
-po/messages.pot
+# https://github.com/google/mdbook-i18n-helpers
+# Normally ignored, but needed for Crowdin translations.
+# po/messages.pot
 
 #region https://github.com/github/gitignore/blob/main/Go.gitignore
 # If you prefer the allow list template instead of the deny list, see community template:

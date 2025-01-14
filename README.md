@@ -56,10 +56,9 @@ msginit --input ./po/messages.pot --locale <lang> --output ./po/<lang>.po
 ```
 
 > [!TIP]
-> Use Google Translate to pre-fill a `po/<lang>.po` file:
+> Use Google Translate to pre-fill a `po/<lang>.po` file. You'll need [cloud-translate](https://github.com/mgeisler/cloud-translate) and [gcloud](https://cloud.google.com/sdk/docs/install).
 >
 > ```sh
-> cargo install cloud-translate
 > cloud-translate <google-cloud-project-id> po/<lang>.po 30000
 > ```
 
