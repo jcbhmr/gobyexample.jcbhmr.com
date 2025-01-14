@@ -1,0 +1,81 @@
+Привіт Світе|Hello World
+Значення|Values
+Змінні|Variables
+Константи|Constants
+Цикли|For
+Оператори Розгалуження (If/Else)|If/Else
+Оператори Розгалуження (Switch)|Switch
+Масиви|Arrays
+Зрізи|Slices
+Мапи|Maps
+Діапазон|Range
+Функції|Functions
+Поверненння Кількох Значень|Multiple Return Values
+Варіативні Функції|Variadic Functions
+Замикання|Closures
+Рекурсія|Recursion
+Вказівники|Pointers
+Рядки та руни|Strings and Runes
+Структури|Structs
+Методи|Methods
+Інтерфейси (Interfaces)|Interfaces
+Вбудовування структур|Struct Embedding
+Дженерики|Generics
+Помилки (Errors)|Errors
+Горутини (Goroutines)|Goroutines
+Канали|Channels
+Буферизація каналiв|Channel Buffering
+Синхронізація каналу|Channel Synchronization
+Напрямки каналу|Channel Directions
+Select
+Тайм-аути (Timeouts)|Timeouts
+Не Блокуючі Операції на Каналах|Non-Blocking Channel Operations
+Закриття каналів|Closing Channels
+Діапазон (Range) з Каналами|Range over Channels
+Хронометри (Timers)|Timers
+Маятники (Tickers)|Tickers
+Worker Pools
+Групи Очікування (WaitGroups)|WaitGroups
+Обмеження Частоти Запитів|Rate Limiting
+Атомарні Лічильники|Atomic Counters
+Взаємні Виключення (Mutexes)|Mutexes
+Stateful Goroutines
+Сортування|Sorting
+Сортування функціями|Sorting by Functions
+Паніка|Panic
+Відкладення|Defer
+Відновлення|Recover
+Рядкові Функції|String Functions
+Форматування Рядків|String Formatting
+Текстові Шаблони|Text Templates
+Регулярні Вирази|Regular Expressions
+JSON
+XML
+Час|Time
+Epoch
+Форматування та Розбір Часу|Time Formatting / Parsing
+Генерація випадкових чисел|Random Numbers
+Конвертація Тексту в Числа|Number Parsing
+Розбір URL|URL Parsing
+SHA256 Хеші|SHA256 Hashes
+Кодування Base64|Base64 Encoding
+Читання файлів|Reading Files
+Запис файлів|Writing Files
+Рядкові Фільтри|Line Filters
+Файлові Шляхи|File Paths
+Директорії|Directories
+Тимчасові Файли та Директорії|Temporary Files and Directories
+Embed Directive
+Тестування та Вимірювання|Testing and Benchmarking
+Командний Рядок - Аргументи|Command-Line Arguments
+Командний Рядок - Перемикачі|Command-Line Flags
+Командний Рядок - Під Команди|Command-Line Subcommands
+Змінні середовища|Environment Variables
+Logging|Logging
+HTTP Клієнт|HTTP Client
+HTTP Сервер|HTTP Server
+Контекст|Context
+Запуск сторонніх процесів|Spawning Processes
+Заміна поточного процесу новим|Exec'ing Processes
+Сигнали|Signals
+Exit
