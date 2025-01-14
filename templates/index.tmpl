@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go Em Exemplos</title>
+    <link rel=stylesheet href="site.css">
+  </head>
+  <body>
+    <div id="intro">
+      <h2><a href="./">Go Em Exemplos</a></h2>
+      <p>
+        <a href="https://go.dev">Go</a> é uma
+        linguagem de programação de código aberto construída para
+        gerar softwares simples, rápidos e confiáveis.
+        Leia a
+        <a href="https://go.dev/doc/tutorial/getting-started">documentação oficial</a>
+        para aprender mais sobre Go, suas ferramentas, pacotes
+        e módulos.
+      </p>
+
+      <p>
+        <em>Go Em Exemplos</em> é uma intrudução prática
+        ao Go que utiliza exemplos de códigos comentados. 
+        Confira o <a href="/hello-world">primeiro exemplo</a> ou
+        visualize a lista completa a seguir.
+      </p>
+
+      <p>
+        Disclaimer: Go Em Exemplos é uma tradução livre de <a href="https://gobyexample.com">GoByExamples</a>. 
+        Alguns termos foram propositalmente deixados em inglês. 
+      </p>
+
+      <ul>
+      {{range .}}
+        <li><a href="{{.ID}}">{{.Name}}</a></li>
+      {{end}}
+      </ul>
+{{ template "footer" }}
+    </div>
+  </body>
+</html>
