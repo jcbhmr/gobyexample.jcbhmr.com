@@ -103,4 +103,4 @@ Contributor translations of the Go by Example site are available in:
 
 Copyright (c) 2012 Mark McGranaghan \
 Copyright (c) 2025 Jacob Hummer \
-[Creative Commons Attribution 3.0 Unported License](https://github.com/jcbhmr/gobyexample.jcbhmr.com/blob/main/LICENSE).
+[Creative Commons Attribution 3.0 Unported License](https://github.com/jcbhmr/gobyexample.jcbhmr.com/blob/main/LICENSE)
