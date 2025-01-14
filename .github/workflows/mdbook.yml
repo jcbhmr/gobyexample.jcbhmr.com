@@ -40,7 +40,7 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - run: ./scripts/mdbook-build-i18n.go
+      - run: ./scripts/build.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

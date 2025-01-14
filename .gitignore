@@ -2,7 +2,7 @@
 book
 
 # https://github.com/google/mdbook-i18n-helpers
-# Normally ignored, but needed for Crowdin translations.
+# Normally ignored, but needed for external translation services.
 # po/messages.pot
 
 #region https://github.com/github/gitignore/blob/main/Go.gitignore

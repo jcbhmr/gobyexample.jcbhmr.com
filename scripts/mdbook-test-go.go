@@ -4,7 +4,6 @@
 package main
 
 import (
-	"errors"
 	"flag"
 	"fmt"
 	"log"
@@ -15,6 +14,8 @@ import (
 	"runtime"
 	"slices"
 	"strings"
+
+	"github.com/BurntSushi/toml"
 )
 
 type args struct {
@@ -84,7 +85,7 @@ type bookBook struct {
 	src string
 }
 type bookBuild struct {
-	buildDir string
+	buildDir string `toml:"build-dir"`
 }
 
 func bookLoadDir(dir string) (*book, error) {
@@ -92,43 +93,12 @@ func bookLoadDir(dir string) (*book, error) {
 	if err != nil {
 		return nil, err
 	}
-	bookTOMLString := string(bookTOMLBytes)
 
 	b := &book{}
-
-	var src string
-	srcRe := regexp.MustCompile(`\[book\]\n[\s\S]*?src\s*=\s*(".*?"|'.*?')`)
-	srcMatch := srcRe.FindStringSubmatch(bookTOMLString)
-	if srcMatch != nil {
-		srcString := srcMatch[1]
-		if strings.Contains(srcString, "\\") {
-			return nil, errors.New("src contains backslashes")
-		}
-		src = srcString[1 : len(srcString)-1]
-	} else {
-		src = "src"
-	}
-	src2, err := filepath.Abs(filepath.Join(dir, src))
+	err = toml.Unmarshal(bookTOMLBytes, b)
 	if err != nil {
 		return nil, err
 	}
-	b.book.src = src2
-
-	var buildDir string
-	buildRe := regexp.MustCompile(`\[build\]\n[\s\S]*?build-dir\s*=\s*(".*?"|'.*?')`)
-	buildMatch := buildRe.FindStringSubmatch(bookTOMLString)
-	if buildMatch != nil {
-		buildString := buildMatch[1]
-		if strings.Contains(buildString, "\\") {
-			return nil, errors.New("build-dir contains backslashes")
-		}
-		buildDir = buildString[1 : len(buildString)-1]
-	} else {
-		buildDir = "book"
-	}
-	buildDir2 := filepath.Clean(filepath.Join(dir, buildDir))
-	b.build.buildDir = buildDir2
-
 	return b, nil
 }
 
@@ -149,6 +119,7 @@ func summaryLoadDir(dir string) (*summary, error) {
 
 	s := &summary{}
 
+	// TODO: Use a Markdown parser instead.
 	chapterRe := regexp.MustCompile(`\[(.*?)\]\((.*?)\)`)
 	chapterMatches := chapterRe.FindAllStringSubmatch(summaryMDString, -1)
 	s.chapters = []summaryChapter{}
@@ -174,6 +145,7 @@ type goCodeBlock struct {
 }
 
 func goCodeBlockFindAllStringSubmatch(s string) ([]goCodeBlock, error) {
+	// TODO: Use a Markdown parser instead.
 	goCodeBlockRe := regexp.MustCompile("```" + `(go.*?)\n([\s\S]*?)\n` + "```")
 	goCodeBlockMatches := goCodeBlockRe.FindAllStringSubmatch(s, -1)
 	goCodeBlocks := []goCodeBlock{}
