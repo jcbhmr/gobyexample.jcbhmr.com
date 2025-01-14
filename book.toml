@@ -1,7 +1,7 @@
 [book]
 authors = ["Mark McGranaghan", "Jacob Hummer"]
 language = "en"
-multilingual = false
+multilingual = true # Currently does nothing. https://github.com/search?q=repo%3Arust-lang%2FmdBook%20multilingual&type=code
 src = "src"
 title = "Go by Example"
 
@@ -13,7 +13,7 @@ after = ["links"]
 
 [output.html]
 git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
-additional-css = ["theme/custom.css"]
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/{{path}}"
 
 [output.html.playground]
 editable = true

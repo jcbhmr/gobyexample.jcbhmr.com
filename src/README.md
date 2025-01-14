@@ -6,6 +6,16 @@ Unless stated otherwise, the examples here assume the [latest major release Go](
 
 <br>
 
+<style>
+/* Make draft links from included SUMMARY.md on README.md non-clickable. */
+#content a[href=""] {
+    color: var(--sidebar-non-existant);;
+    text-decoration: none;
+    cursor: default;
+    pointer-events: none;
+}
+</style>
+
 {{#include SUMMARY.md:7:}}
 
 ### FAQ

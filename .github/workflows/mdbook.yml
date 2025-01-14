@@ -35,12 +35,11 @@ jobs:
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install mdbook
-      - run: cargo install mdbook-i18n-helpers i18n-report
-      - run: sudo apt update && sudo apt install gettext
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - run: ./scripts/build.sh
+      - name: Build with mdBook
+        run: ./scripts/mdbook-build-all.sh
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

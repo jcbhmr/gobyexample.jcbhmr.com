@@ -4,8 +4,6 @@
 package main
 
 import (
-	"flag"
-	"fmt"
 	"log"
 	"os"
 	"os/exec"
@@ -16,203 +14,51 @@ import (
 	"strings"
 
 	"github.com/BurntSushi/toml"
+	flag "github.com/spf13/pflag"
 )
 
-type args struct {
-	dir     string
-	destDir *string
-	chapter *string
-}
-
-func argsParse() *args {
-	a := &args{}
-	f := flag.NewFlagSet("mdbook-test-go", flag.ExitOnError)
-	f.Usage = func() {
-		fmt.Fprintf(f.Output(), `Tests that a book's Go code samples compile
-
-Usage: mdbook-test-go [OPTIONS] [dir]
-
-Arguments:
-  [dir]  Root directory for the book
-         (Defaults to the current directory when omitted)
-
-Options:
-  -d, --dest-dir <dest-dir>  Output directory for the book
-                             Relative paths are interpreted relative to the book's root directory.
-                             If omitted, mdBook uses build.build-dir from book.toml or defaults to 'book'.
-  -c, --chapter <chapter>
-  -h, --help                 Print help
-  -v, --version              Print version
-`)
-	}
-	destDir := f.String("dest-dir", "", "")
-	f.StringVar(destDir, "d", "", "")
-	chapter := f.String("chapter", "", "")
-	f.StringVar(chapter, "c", "", "")
-	f.Parse(os.Args[1:])
-	dir := f.Arg(0)
-	if dir == "" {
-		wd, err := os.Getwd()
-		if err != nil {
-			fmt.Fprint(f.Output(), err)
-			os.Exit(1)
-		}
-		a.dir = wd
-	} else {
-		dir2, err := filepath.Abs(dir)
-		if err != nil {
-			fmt.Fprint(f.Output(), err)
-			os.Exit(1)
-		}
-		a.dir = dir2
-	}
-	if *destDir != "" {
-		destDir2 := filepath.Clean(filepath.Join(a.dir, *destDir))
-		a.destDir = &destDir2
-	}
-	if *chapter != "" {
-		chapter2 := *chapter
-		a.chapter = &chapter2
-	}
-	return a
-}
-
-type book struct {
-	book  bookBook
-	build bookBuild
-}
-type bookBook struct {
-	src string
-}
-type bookBuild struct {
-	buildDir string `toml:"build-dir"`
-}
-
-func bookLoadDir(dir string) (*book, error) {
-	bookTOMLBytes, err := os.ReadFile(filepath.Join(dir, "book.toml"))
-	if err != nil {
-		return nil, err
-	}
-
-	b := &book{}
-	err = toml.Unmarshal(bookTOMLBytes, b)
-	if err != nil {
-		return nil, err
-	}
-	return b, nil
-}
-
-type summary struct {
-	chapters []summaryChapter
-}
-type summaryChapter struct {
-	title string
-	path  string
-}
-
-func summaryLoadDir(dir string) (*summary, error) {
-	summaryMDBytes, err := os.ReadFile(filepath.Join(dir, "SUMMARY.md"))
-	if err != nil {
-		return nil, err
-	}
-	summaryMDString := string(summaryMDBytes)
-
-	s := &summary{}
-
-	// TODO: Use a Markdown parser instead.
-	chapterRe := regexp.MustCompile(`\[(.*?)\]\((.*?)\)`)
-	chapterMatches := chapterRe.FindAllStringSubmatch(summaryMDString, -1)
-	s.chapters = []summaryChapter{}
-	for _, chapterMatch := range chapterMatches {
-		title := chapterMatch[1]
-		relativePath := chapterMatch[2]
-		if relativePath == "" {
-			continue
-		}
-		path := filepath.Clean(filepath.Join(dir, relativePath))
-		s.chapters = append(s.chapters, summaryChapter{title, path})
-	}
-
-	return s, nil
-}
-
-type goCodeBlock struct {
-	code        string
-	ignore      bool
-	compileFail bool
-	noRun       bool
-	shouldPanic bool
-}
-
-func goCodeBlockFindAllStringSubmatch(s string) ([]goCodeBlock, error) {
-	// TODO: Use a Markdown parser instead.
-	goCodeBlockRe := regexp.MustCompile("```" + `(go.*?)\n([\s\S]*?)\n` + "```")
-	goCodeBlockMatches := goCodeBlockRe.FindAllStringSubmatch(s, -1)
-	goCodeBlocks := []goCodeBlock{}
-	for _, goCodeBlockMatch := range goCodeBlockMatches {
-		code := goCodeBlockMatch[2]
-		attributes := strings.Split(goCodeBlockMatch[1], ",")[1:]
-		ignore := slices.Contains(attributes, "ignore")
-		compileFail := slices.Contains(attributes, "compile_fail")
-		noRun := slices.Contains(attributes, "no_run")
-		shouldPanic := slices.Contains(attributes, "should_panic")
-		goCodeBlocks = append(goCodeBlocks, goCodeBlock{code, ignore, compileFail, noRun, shouldPanic})
-	}
-	return goCodeBlocks, nil
-}
+var dir string
+var destDir = flag.StringP("dest-dir", "d", "", "Output directory for the book\nRelative paths are interpreted relative to the book's root directory.\nIf omitted, mdBook uses build.build-dir from book.toml or defaults to 'book'")
+var chapter = flag.StringP("chapter", "c", "", "")
 
 func main() {
 	log.SetFlags(0)
 
-	args2 := argsParse()
+	flag.Parse()
+	dir, _ = filepath.Abs(flag.Arg(0))
+	*destDir = filepath.Clean(filepath.Join(dir, *destDir))
 
-	book, err := bookLoadDir(args2.dir)
+	book, err := bookLoadDir(dir)
 	if err != nil {
-		log.Fatalf("could not load book: %v", err)
+		log.Fatal(err)
 	}
-	var destDir string
-	if args2.destDir != nil {
-		destDir = *args2.destDir
-	} else {
-		destDir = book.build.buildDir
+	if *destDir == "" {
+		*destDir = filepath.Clean(filepath.Join(dir, book.build.buildDir))
 	}
-	_ = destDir
 
 	summary, err := summaryLoadDir(book.book.src)
 	if err != nil {
-		log.Fatalf("could not load summary: %v", err)
+		log.Fatal(err)
 	}
 
-	chapters := []summaryChapter{}
-	if args2.chapter != nil {
-		for _, chapter := range summary.chapters {
-			if chapter.title == *args2.chapter {
-				chapters = append(chapters, chapter)
-				break
-			}
-		}
-	} else {
-		chapters = summary.chapters
+	if *chapter != "" {
+		slices.DeleteFunc(summary.chapters, func(c summaryChapter) bool {
+			return c.title != *chapter
+		})
 	}
 
-	for _, chapter := range chapters {
-		relativeChapterPath, err := filepath.Rel(book.book.src, chapter.path)
-		if err != nil {
-			log.Fatalf("could not get relative chapter path: %v", err)
-		}
+	for _, chapter := range summary.chapters {
+		relativeChapterPath, _ := filepath.Rel(book.book.src, chapter.path)
 		log.Printf(`Testing chapter '%s': "%s"`, chapter.title, relativeChapterPath)
 
 		mdBytes, err := os.ReadFile(chapter.path)
 		if err != nil {
-			log.Fatalf("could not read md file: %v", err)
+			log.Fatal(err)
 		}
-		mdString := string(mdBytes)
-
-		goCodeBlocks, err := goCodeBlockFindAllStringSubmatch(mdString)
+		goCodeBlocks, err := goCodeBlockFindAllSubmatch(mdBytes)
 		if err != nil {
-			log.Fatalf("could not find go code blocks: %v", err)
+			log.Fatal(err)
 		}
-
 		for _, goCodeBlock := range goCodeBlocks {
 			if goCodeBlock.ignore {
 				continue
@@ -220,13 +66,13 @@ func main() {
 
 			tmpDir, err := os.MkdirTemp("", "mdbook-test-go")
 			if err != nil {
-				log.Fatalf("could not create temp dir: %v", err)
+				log.Fatal(err)
 			}
 			defer os.RemoveAll(tmpDir)
 
 			err = os.WriteFile(filepath.Join(tmpDir, "main.go"), []byte(goCodeBlock.code), 0644)
 			if err != nil {
-				log.Fatalf("could not write main.go: %v", err)
+				log.Fatal(err)
 			}
 
 			cmd := exec.Command("go", "build", "./main.go")
@@ -239,7 +85,7 @@ func main() {
 				continue
 			}
 			if err != nil {
-				log.Fatalf("could not compile go code: %v", err)
+				log.Fatalf("compiling go code failed: %v", err)
 			}
 
 			if goCodeBlock.noRun {
@@ -263,4 +109,81 @@ func main() {
 			}
 		}
 	}
+}
+
+type book struct {
+	book struct {
+		src string
+	}
+	build struct {
+		buildDir string `toml:"build-dir"`
+	}
+}
+
+func bookLoadDir(dir string) (*book, error) {
+	bookTOMLBytes, err := os.ReadFile(filepath.Join(dir, "book.toml"))
+	if err != nil {
+		return nil, err
+	}
+	b := &book{}
+	err = toml.Unmarshal(bookTOMLBytes, b)
+	if err != nil {
+		return nil, err
+	}
+	return b, nil
+}
+
+type summary struct {
+	chapters []summaryChapter
+}
+type summaryChapter struct {
+	title string
+	path  string
+}
+
+func summaryLoadDir(dir string) (*summary, error) {
+	summaryMDBytes, err := os.ReadFile(filepath.Join(dir, "SUMMARY.md"))
+	if err != nil {
+		return nil, err
+	}
+	s := &summary{}
+	// TODO: Use a Markdown parser instead.
+	chapterRe := regexp.MustCompile(`\[(.*?)\]\((.*?)\)`)
+	chapterMatches := chapterRe.FindAllSubmatch(summaryMDBytes, -1)
+	s.chapters = []summaryChapter{}
+	for _, chapterMatch := range chapterMatches {
+		title := string(chapterMatch[1])
+		relativePath := string(chapterMatch[2])
+		if relativePath == "" {
+			continue
+		}
+		path := filepath.Clean(filepath.Join(dir, relativePath))
+		s.chapters = append(s.chapters, summaryChapter{title, path})
+	}
+	return s, nil
+}
+
+type goCodeBlock struct {
+	code        string
+	ignore      bool
+	compileFail bool
+	noRun       bool
+	shouldPanic bool
+}
+
+func goCodeBlockFindAllSubmatch(b []byte) ([]goCodeBlock, error) {
+	// TODO: Use a Markdown parser instead.
+	goCodeBlockRe := regexp.MustCompile("```" + `(go.*?)\n([\s\S]*?)\n` + "```")
+	goCodeBlockMatches := goCodeBlockRe.FindAllSubmatch(b, -1)
+	goCodeBlocks := []goCodeBlock{}
+	for _, goCodeBlockMatch := range goCodeBlockMatches {
+		code := string(goCodeBlockMatch[2])
+		attributes := strings.Split(string(goCodeBlockMatch[1]), ",")[1:]
+		ignore := slices.Contains(attributes, "ignore")
+		compileFail := slices.Contains(attributes, "compile_fail")
+		noRun := slices.Contains(attributes, "no_run")
+		shouldPanic := slices.Contains(attributes, "should_panic")
+		goCodeBlocks = append(goCodeBlocks, goCodeBlock{code, ignore, compileFail, noRun, shouldPanic})
+	}
+	return goCodeBlocks, nil
 }
