@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example: 파일 쓰기</title>
+    <link rel=stylesheet href="../site.css">
+  </head>
+  <script type="text/javascript">
+    if (window.location.host == "gobyexample.com") {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34996217-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+  <body>
+    <div class="example" id="writing-files">
+      <h2><a href="./">Go by Example</a>: 파일 쓰기</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>Go에서 파일 쓰기는 이전에 본 읽기와 유사한 패턴을 갖습니다.</p>
+
+          </td>
+          <td class="code empty leading">
+	        
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&quot;bufio&quot;</span>
+	<span class="s">&quot;fmt&quot;</span>
+	<span class="s">&quot;io/ioutil&quot;</span>
+	<span class="s">&quot;os&quot;</span>
+<span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">check</span><span class="p">(</span><span class="nx">e</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="nx">e</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nb">panic</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>시작은, 문자열 (또는 바이트)을 파일로 덤프하는 방법입니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">d1</span> <span class="o">:=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&quot;hello\ngo\n&quot;</span><span class="p">)</span>
+	<span class="nx">err</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nx">WriteFile</span><span class="p">(</span><span class="s">&quot;/tmp/dat1&quot;</span><span class="p">,</span> <span class="nx">d1</span><span class="p">,</span> <span class="mo">0644</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>보다 세분화된 쓰기를 위해, 파일을 엽니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">f</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Create</span><span class="p">(</span><span class="s">&quot;/tmp/dat2&quot;</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>파일을 연 직후 <code>Close</code>를 지연시키는건 Go에서의 관행입니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="k">defer</span> <span class="nx">f</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>예상한대로 바이트 슬라이스를 <code>Write</code> 할 수 있습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">d2</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">byte</span><span class="p">{</span><span class="mi">115</span><span class="p">,</span> <span class="mi">111</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
+	<span class="nx">n2</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">Write</span><span class="p">(</span><span class="nx">d2</span><span class="p">)</span>
+	<span class="nx">check</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;wrote %d bytes\n&quot;</span><span class="p">,</span> <span class="nx">n2</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>WriteString</code>도 사용 가능합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">n3</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">f</span><span class="p">.</span><span class="nx">WriteString</span><span class="p">(</span><span class="s">&quot;writes\n&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;wrote %d bytes\n&quot;</span><span class="p">,</span> <span class="nx">n3</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>Sync</code>를 실행하여 안정적인 스토리지에 쓰기를 플러시합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">f</span><span class="p">.</span><span class="nx">Sync</span><span class="p">()</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>bufio</code>는 이전에 봤던 버퍼링된 리더에 추가로 버퍼링된 라이터(writers)를 제공합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">w</span> <span class="o">:=</span> <span class="nx">bufio</span><span class="p">.</span><span class="nx">NewWriter</span><span class="p">(</span><span class="nx">f</span><span class="p">)</span>
+	<span class="nx">n4</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">w</span><span class="p">.</span><span class="nx">WriteString</span><span class="p">(</span><span class="s">&quot;buffered\n&quot;</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;wrote %d bytes\n&quot;</span><span class="p">,</span> <span class="nx">n4</span><span class="p">)</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>Flush</code>를 사용하여 모든 버퍼링된 작업이 라이터에 적용되었는지 확인합니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">w</span><span class="p">.</span><span class="nx">Flush</span><span class="p">()</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code">
+	        
+            <div class="highlight"><pre><span></span><span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>파일 쓰기 코드를 실행해보세요.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> go run writing-files.go 
+<span class="go">wrote 5 bytes</span>
+<span class="go">wrote 7 bytes</span>
+<span class="go">wrote 9 bytes</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>그리고 작성된 파일의 내용을 확인하세요.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> cat /tmp/dat1
+<span class="go">hello</span>
+<span class="go">go</span>
+<span class="gp">$</span> cat /tmp/dat2
+<span class="go">some</span>
+<span class="go">writes</span>
+<span class="go">buffered</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음으로 우리가 방금 본 파일 I/O 아이디어를 <code>stdin</code>과 <code>stdout</code> 스트림에 적용해 보겠습니다.</p>
+
+          </td>
+          <td class="code empty">
+	        
+            
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        다음 예제: <a href="/gobyexample/line-filters">라인 필터</a>.
+      </p>
+      
+      <p class="footer">
+        원작자 <a href="https://twitter.com/mmcgrana">@mmcgrana</a> | 번역 <a href="https://github.com/mingrammer">@mingrammer</a> | <a href="https://github.com/mingrammer/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      </p>
+  </div>
+  </body>
+</html>

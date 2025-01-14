@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Go by Example: 커맨드라인 인자</title>
+    <link rel=stylesheet href="../site.css">
+  </head>
+  <script type="text/javascript">
+    if (window.location.host == "gobyexample.com") {
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34996217-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    }
+  </script>
+  <body>
+    <div class="example" id="command-line-arguments">
+      <h2><a href="./">Go by Example</a>: 커맨드라인 인자</h2>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p><a href="http://en.wikipedia.org/wiki/Command-line_interface#Arguments"><em>커맨드라인 인자 (Command-line arguments)</em></a>는 프로그램의 실행을 매개변수화하는 일반적인 방법입니다. 예를 들어, <code>go run hello.go</code>는 <code>go</code> 프로그램에 <code>run</code>과 <code>hello.go</code>를 인자로 사용합니다.</p>
+
+          </td>
+          <td class="code empty leading">
+	        
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nx">main</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="s">&quot;os&quot;</span>
+<span class="kn">import</span> <span class="s">&quot;fmt&quot;</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="kd">func</span> <span class="nx">main</span><span class="p">()</span> <span class="p">{</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p><code>os.Args</code>는 커맨드라인 인자를 그대로 접근하는 방법을 제공합니다. 참고로 이 슬라이스의 첫번째 값은 프로그램의 경로이며 <code>os.Args[1:]</code>가 프로그램의 인자를 가집니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">argsWithProg</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span>
+	<span class="nx">argsWithoutProg</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>일반적인 인덱싱을 사용해 개별 인수들을 얻을 수 있습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">arg</span> <span class="o">:=</span> <span class="nx">os</span><span class="p">.</span><span class="nx">Args</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            
+          </td>
+          <td class="code">
+	        
+            <div class="highlight"><pre><span></span>	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">argsWithProg</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">argsWithoutProg</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">arg</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+      </table>
+      
+      <table>
+        
+        <tr>
+          <td class="docs">
+            <p>커맨드라인 인자를 실험하려면 우선 <code>go build</code>로 바이너리를 빌드하는 것이 가장 좋습니다.</p>
+
+          </td>
+          <td class="code leading">
+	        
+            <div class="highlight"><pre><span></span><span class="gp">$</span> go build command-line-arguments.go
+<span class="gp">$</span> ./command-line-arguments a b c d
+<span class="go">[./command-line-arguments a b c d]       </span>
+<span class="go">[a b c d]</span>
+<span class="go">c</span>
+</pre></div>
+
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="docs">
+            <p>다음으론 플래그를 활용한 고급 커맨드라인 처리에 대해 살펴보겠습니다.</p>
+
+          </td>
+          <td class="code empty">
+	        
+            
+          </td>
+        </tr>
+        
+      </table>
+      
+      
+      <p class="next">
+        다음 예제: <a href="/gobyexample/command-line-flags">커맨드라인 플래그</a>.
+      </p>
+      
+      <p class="footer">
+        원작자 <a href="https://twitter.com/mmcgrana">@mmcgrana</a> | 번역 <a href="https://github.com/mingrammer">@mingrammer</a> | <a href="https://github.com/mingrammer/gobyexample">source</a> | <a href="https://github.com/mmcgrana/gobyexample#license">license</a>
+      </p>
+  </div>
+  </body>
+</html>
