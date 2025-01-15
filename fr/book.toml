@@ -1,0 +1,18 @@
+[book]
+authors = ["keirua"]
+language = "fr"
+multilingual = false
+src = "src"
+title = "Le Go pare l'exemple"
+
+[build]
+build-dir = "../book/fr/"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/fr/{{path}}"
+site-url = "/fr/"
+theme = "../theme/"
+
+[output.html.playground]
+editable = true
