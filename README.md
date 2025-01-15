@@ -58,7 +58,7 @@ python -m http.server -d ./book/
 - **The original is not mobile-friendly.** This is my #1 gripe. This website is mobile friendly. Thanks mdBook!
 - The original doesn't let you run code examples like [Rust by Example](https://doc.rust-lang.org/rust-by-example/hello.html). That's a feature that I want. This website has it.
 - The original doesn't have a side panel to quickly jump between pages; you have to go back to the index page. This website has that. There's also `<` and `>` buttons.
-- ~~The original doesn't have centralized community translations.~~ TODO
+- The original doesn't have centralized community translations. This website houses all translations in one place.
 - The original's build setup is custom & complicated. This website uses mdBook, mdbook-i18n-helpers, and GitHub Pages.
 
 ## License
