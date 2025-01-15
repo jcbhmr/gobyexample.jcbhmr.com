@@ -32,46 +32,19 @@ You'll need:
 
 - [Go](https://golang.org/dl/)
 - [mdBook](https://rust-lang.github.io/mdBook/guide/installation.html)
-- [mdbook-i18n-helpers](https://github.com/google/mdbook-i18n-helpers) (requires [Rust](https://rustup.rs/))
-- [gettext](https://gnu.org/software/gettext/) ([Debian](https://packages.debian.org/sid/gettext), [macOS](https://formulae.brew.sh/formula/gettext), [Windows](https://mlocati.github.io/articles/gettext-iconv-windows.html))
-- A `.po` editor such as [pofile.net](https://pofile.net/free-po-editor) or [Poedit](https://poedit.net/download)
 
-Launch the dev server:
+Each language is its own mdBook project. You can start the development server with `mdbook serve <dir>` where `<dir>` is the language directory.
 
 ```sh
-./scripts/dev.sh
+mdbook serve # English
+mdbook serve ./fr/ # French
 ```
 
 Every so often remember to run [`mdbook test`](https://rust-lang.github.io/mdBook/cli/test.html) but for `go` code blocks:
 
 ```sh
-./scripts/mdbook-test-go.go
-```
-
-### Translations
-
-Create new translation:
-
-```sh
-./scripts/create-i18n.sh <lang>
-```
-
-> [!TIP]
-> Use Google Translate to pre-fill a `po/<lang>.po` file. You'll need [cloud-translate](https://github.com/mgeisler/cloud-translate) and [gcloud](https://cloud.google.com/sdk/docs/install).
->
-> ```sh
-> cloud-translate <google-cloud-project-id> ./po/<lang>.po 30000
-> ```
-
-> [!WARNING]
-> `mdbook-gettext` will use the original untranslated text for all entries marked as "fuzzy" (visible as "Needs work" in Poedit). This is especially important when using cloud-translate for initial translation as all entries will be marked as "fuzzy".
->
-> If your text isn't translated, double-check that you have removed all "fuzzy" flags from your xx.po file.
-
-Update all translations with content from `src/`:
-
-```sh
-./scripts/update-i18n.sh
+./scripts/mdbook-test-go.go # English
+./scripts/mdbook-test-go.go ./fr/ # French
 ```
 
 ### Why fork?
