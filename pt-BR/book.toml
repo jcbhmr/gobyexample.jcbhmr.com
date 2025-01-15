@@ -1,0 +1,18 @@
+[book]
+authors = ["lcslitx"]
+language = "pt-BR"
+multilingual = false
+src = "src"
+title = "Go by Example"
+
+[build]
+build-dir = "../book/pt-BR/"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/pt-BR/{{path}}"
+site-url = "/pt-BR/"
+theme = "../theme/"
+
+[output.html.playground]
+editable = true
