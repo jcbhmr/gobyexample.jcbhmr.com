@@ -6,6 +6,8 @@
 
 Quella che vedi è la traduzione italiana del progetto *Go by Example* ([gobyexample.com](http://gobyexample.jcbhmr.com/)), realizzata dalla community italiana di golang ([golang-it](http://golangit.github.io/)).
 
+<br>
+
 <style>
 /* Make draft links from included SUMMARY.md on README.md non-clickable. */
 #content a[href=""] {

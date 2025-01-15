@@ -1,0 +1,18 @@
+[book]
+authors = ["spinute"]
+language = "ja"
+multilingual = false
+src = "src"
+title = "サンプルで学ぶ Go 言語"
+
+[build]
+build-dir = "../book/ja/"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/ja/{{path}}"
+site-url = "/ja/"
+theme = "../theme/"
+
+[output.html.playground]
+editable = true
