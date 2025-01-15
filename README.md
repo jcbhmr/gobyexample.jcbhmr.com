@@ -8,12 +8,9 @@
 🔀 Forked from [mmcgrana/gobyexample](https://github.com/mmcgrana/gobyexample)
 
 <p align=center>
-  <img src="https://github.com/user-attachments/assets/5845558f-9bc2-4074-a079-421edbbde149">
-</p>
-
-<p align=center>
-  <a href="https://gobyexample.jcbhmr.com/">Website</a>
-  | <a href="https://crowdin.com/project/gobyexamplejcbhmrcom">Crowdin (translations)</a>
+  <a href="https://gobyexample.jcbhmr.com/hello-world.html">
+    <img src="https://github.com/user-attachments/assets/5845558f-9bc2-4074-a079-421edbbde149">
+  </a>
 </p>
 
 🌎 Translations all in one place \
