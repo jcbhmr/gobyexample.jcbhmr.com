@@ -47,6 +47,15 @@ Every so often remember to run [`mdbook test`](https://rust-lang.github.io/mdBoo
 ./scripts/mdbook-test-go.go ./fr/ # French
 ```
 
+You can preview the full multilingual site by first building each language (`mdbook build <dir>`) and then serving the `book/` directory with your favorite static file server.
+
+```sh
+mdbook build # English
+mdbook build ./fr/ # French
+# ...
+python -m http.server -d ./book/
+```
+
 ### Why fork?
 
 - **The original is not mobile-friendly.** This is my #1 gripe. This website is mobile friendly. Thanks mdBook!
