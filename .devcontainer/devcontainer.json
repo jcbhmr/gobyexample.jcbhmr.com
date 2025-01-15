@@ -3,5 +3,5 @@
     "features": {
         "ghcr.io/devcontainers/features/rust": {}
     },
-    "updateContentCommand": "cargo install mdbook mdbook-i18n-helpers i18n-report"
+    "updateContentCommand": "cargo install mdbook"
 }
