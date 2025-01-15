@@ -9,5 +9,8 @@ title = "Go by Example"
 git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
 edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/{{path}}"
 
+[output.html.code.hidelines]
+go = "~"
+
 [output.html.playground]
 editable = true
