@@ -40,16 +40,16 @@ jobs:
         uses: actions/configure-pages@v5
 
       - run: mdbook build # English (default)
-      # - run: mdbook build ./zh # Chinese
+      - run: mdbook build ./zh # Chinese
       - run: mdbook build ./fr # French
       - run: mdbook build ./it # Italian
-      # - run: mdbook build ./ja # Japanese
-      # - run: mdbook build ./ko # Korean
-      # - run: mdbook build ./ru # Russian
-      # - run: mdbook build ./uk # Ukrainian
-      # - run: mdbook build ./pt-BR # Brazilian Portuguese
-      # - run: mdbook build ./vi # Vietnamese
-      # - run: mdbook build ./my # Burmese
+      - run: mdbook build ./ja # Japanese
+      - run: mdbook build ./ko # Korean
+      - run: mdbook build ./ru # Russian
+      - run: mdbook build ./uk # Ukrainian
+      - run: mdbook build ./pt-BR # Brazilian Portuguese
+      - run: mdbook build ./vi # Vietnamese
+      - run: mdbook build ./my # Burmese
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
