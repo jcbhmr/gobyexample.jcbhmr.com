@@ -1,0 +1,18 @@
+[book]
+authors = ["s6k Gopher"]
+language = "vi"
+multilingual = false
+src = "src"
+title = "Go by Example"
+
+[build]
+build-dir = "../book/vi/"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/vi/{{path}}"
+site-url = "/vi/"
+theme = "../theme/"
+
+[output.html.playground]
+editable = true

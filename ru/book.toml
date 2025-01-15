@@ -1,0 +1,18 @@
+[book]
+authors = ["badkaktus"]
+language = "ru"
+multilingual = false
+src = "src"
+title = "Go by Example"
+
+[build]
+build-dir = "../book/ru/"
+
+[output.html]
+git-repository-url = "https://github.com/jcbhmr/gobyexample.jcbhmr.com"
+edit-url-template = "https://github.com/jcbhmr/gobyexample.jcbhmr.com/edit/main/ru/{{path}}"
+site-url = "/ru/"
+theme = "../theme/"
+
+[output.html.playground]
+editable = true

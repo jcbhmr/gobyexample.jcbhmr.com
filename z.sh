@@ -14,7 +14,7 @@ IFS=$new_ifs
 for title in $(cat examples.txt); do
     IFS=$old_ifs
     n=$((n+1))
-    slug=$(echo "$title" | awk -F'->' '{ print $1 }' | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's|/|-|g' | sed "s/'//g" | sed 's/--/-/g' | sed 's/--/-/g')
+    slug=$(echo "$title" | awk -F'->' '{ print $1 }' | cut -d'|' -f2 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's|/|-|g' | sed "s/'//g" | sed 's/--/-/g' | sed 's/--/-/g')
     echo "- [$title]($slug.md)" >> src/SUMMARY.md
     go_code=$(cat examples/"$slug"/*.go)
     sh_code=$(cat examples/"$slug"/*.sh)
