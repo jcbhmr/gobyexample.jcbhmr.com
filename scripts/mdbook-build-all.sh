@@ -4,7 +4,7 @@ mdbook build # English (default)
 mdbook build --dest-dir ./book/zh ./zh # Chinese
 mdbook build --dest-dir ./book/fr ./fr # French
 mdbook build --dest-dir ./book/it ./it # Italian
-mdbook build --dest-dir ./book/jp ./jp # Japanese
+mdbook build --dest-dir ./book/ja ./ja # Japanese
 mdbook build --dest-dir ./book/ko ./ko # Korean
 mdbook build --dest-dir ./book/ru ./ru # Russian
 mdbook build --dest-dir ./book/uk ./uk # Ukrainian

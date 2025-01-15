@@ -4,7 +4,7 @@ mdbook watch & # English (default)
 mdbook watch --dest-dir ./book/zh ./zh & # Chinese
 mdbook watch --dest-dir ./book/fr ./fr & # French
 mdbook watch --dest-dir ./book/it ./it & # Italian
-mdbook watch --dest-dir ./book/jp ./jp & # Japanese
+mdbook watch --dest-dir ./book/ja ./ja & # Japanese
 mdbook watch --dest-dir ./book/ko ./ko & # Korean
 mdbook watch --dest-dir ./book/ru ./ru & # Russian
 mdbook watch --dest-dir ./book/uk ./uk & # Ukrainian
