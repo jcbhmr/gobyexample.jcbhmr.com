@@ -1,5 +1,18 @@
-# https://rust-lang.github.io/mdBook/
-book
+#region https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
+#endregion
 
 #region https://github.com/github/gitignore/blob/main/Go.gitignore
 # If you prefer the allow list template instead of the deny list, see community template:
