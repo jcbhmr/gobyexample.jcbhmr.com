@@ -1,0 +1,79 @@
+{{ $id := md5 .Inner }} {{ .Inner }}
+
+<div id="{{ $id }}" class="hugo-goplay-result"></div>
+<div class="hugo-goplay-toolbox">
+  <button role="button" class="hugo-goplay-button" onclick={{ safeJS (print "goplayRenderCompile_" $id "()") }}>Run</button>
+  <button role="button" class="hugo-goplay-button" onclick={{ safeJS (print "goplayOpenShare_" $id "()") }}>
+    Try it yourself &#8599;
+  </button>
+  <button role="button" class="hugo-goplay-button" onclick={{ safeJS (print "goplayOpenShare_" $id "()") }}>Share &#8599;</button>
+</div>
+
+<style>
+  .hugo-goplay-result .system {
+    color: green;
+  }
+  .hugo-goplay-result .stderr {
+    color: red;
+  }
+  .hugo-goplay-toolbox {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+  }
+  .hugo-goplay-toolbox .hugo-goplay-button {
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+    /* padding: 0.15rem 0.75rem; */
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    /* color: var(--primary); */
+    /* background-color: var(--theme); */
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  .hugo-goplay-toolbox .hugo-goplay-button:hover {
+    border: 1px solid var(--theme);
+    /* color: var(--theme); */
+    /* background-color: var(--primary); */
+    color: #ddd;
+    background-color: #181818;
+  }
+  .hugo-goplay-toolbox .hugo-goplay-button:first-child {
+    margin-left: 0;
+  }
+</style>
+
+<script type="module">
+  import { GoPlayProxy } from "https://unpkg.com/@ggicci/goplay/dist/index.js";
+  const goplay = new GoPlayProxy("https://corsproxy.io?url=https://go.dev");
+
+  function normalizeCode(code) {
+    return code
+      .trim()
+      .replace(/^```go/, "")
+      .replace(/^```/, "")
+      .replace(/```$/, "")
+      .trim();
+  }
+
+  const normalizedCode = normalizeCode("{{ .Inner }}")
+
+  window["goplayRenderCompile_" + "{{ $id }}"] = () => {
+    const parent = document.getElementById("{{ $id }}")
+    const pre = document.createElement('pre')
+    const container = document.createElement('code')
+    container.classList.add('text')
+    pre.appendChild(container)
+    parent.replaceChildren(pre)
+    goplay.renderCompile(container,normalizedCode);
+  };
+
+  window["goplayOpenShare_" + "{{ $id }}"] = async() => {
+    const shareUrl = await goplay.share(normalizedCode)
+    window.open(shareUrl, "_blank").focus();
+  };
+</script>

@@ -2,10 +2,12 @@
 weight: 54
 ---
 # Analyse d'URL
-```go
-// Les URLs fournissent une [manière uniforme de localiser des ressources](http://adam.heroku.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/).
-// Voici comment analyser les URLs en Go.
 
+Les URLs fournissent une [manière uniforme de localiser des ressources](http://adam.heroku.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_resources/). Voici comment analyser les URLs en Go.
+
+{{% goplay %}}
+
+```go
 package main
 
 import "fmt"
@@ -53,6 +55,9 @@ func main() {
     fmt.Println(m["k"][0])
 }
 ```
+
+{{% /goplay %}}
+
 ```sh
 # Exécuter notre programme d'analyse d'URL montre tous
 # les différentes morceaux que nous avons extrait.
