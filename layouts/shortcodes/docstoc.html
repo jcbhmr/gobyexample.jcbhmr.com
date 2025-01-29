@@ -1,0 +1,9 @@
+<ul>
+    {{ range .Site.Sections }}
+        {{ if eq .Section "docs" }}
+            {{ range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a></li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+</ul>

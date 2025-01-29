@@ -1,0 +1,73 @@
+baseURL = "https://gobyexample.jcbhmr.com/"
+defaultContentLanguage = "en"
+theme = "book"
+
+[languages.en]
+contentDir = "content/en"
+languageCode = "en"
+languageName = "English"
+title = "Go by Example"
+
+[languages.fr]
+contentDir = "content/fr"
+languageCode = "fr"
+languageName = "Français"
+title = "Le Go par l'exemple"
+
+[languages.it]
+contentDir = "content/it"
+languageCode = "it"
+languageName = "Italiano"
+title = "Go by Example"
+
+[languages.ja]
+contentDir = "content/ja"
+languageCode = "ja"
+languageName = "日本語"
+title = "Go by Example"
+
+[languages.ko]
+contentDir = "content/ko"
+languageCode = "ko"
+languageName = "한국어"
+title = "Go by Example"
+
+[languages.my]
+contentDir = "content/my"
+languageCode = "my"
+languageName = "မြန်မာဘာသာ"
+title = "Go by Example"
+
+[languages.pt-BR]
+contentDir = "content/pt-BR"
+languageCode = "pt-BR"
+languageName = "Português"
+title = "Go by Example"
+
+[languages.ru]
+contentDir = "content/ru"
+languageCode = "ru"
+languageName = "Русский"
+title = "Go by Example"
+
+[languages.uk]
+contentDir = "content/uk"
+languageCode = "uk"
+languageName = "Українська"
+title = "Go by Example"
+
+[languages.zh]
+contentDir = "content/zh"
+languageCode = "zh"
+languageName = "简体中文"
+title = "Go by Example"
+
+[permalinks.page]
+docs = "/:filename/"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+BookTheme = "auto"
+BookSearch = false
