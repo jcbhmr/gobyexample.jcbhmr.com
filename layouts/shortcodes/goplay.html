@@ -52,12 +52,16 @@
   const goplay = new GoPlayProxy("https://corsproxy.io?url=https://go.dev");
 
   function normalizeCode(code) {
-    return code
+    code = code
       .trim()
       .replace(/^```go/, "")
       .replace(/^```/, "")
       .replace(/```$/, "")
       .trim();
+    if (!code.includes("func main() {")) {
+      code = `package main\nfunc main() {\n${code}\n}`;
+    }
+    return code;
   }
 
   const normalizedCode = normalizeCode("{{ .Inner }}")

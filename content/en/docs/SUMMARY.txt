@@ -1,9 +1,3 @@
-# Summary
-
-[Go by Example](README.md)
-
----
-
 - [Hello World](hello-world.md)
 - [Values](values.md)
 - [Variables](variables.md)
